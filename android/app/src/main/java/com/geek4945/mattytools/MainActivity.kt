@@ -1,5 +1,6 @@
 package com.geek4945.mattytools
 
+import android.net.Uri
 import android.Manifest
 import android.content.Intent
 import android.os.Build
@@ -188,7 +189,7 @@ fun HomeScreen(
                     }
                 }
                 Text(
-                    "Tools curated from Matty McTech's newsletter and sheets, sorted by what they're for.",
+                    "Handy tools and sites, sorted by what they're for.",
                     style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 if (newTools.isNotEmpty()) {
@@ -386,21 +387,34 @@ fun AboutScreen(catalog: Catalog) {
                 Column(Modifier.padding(16.dp)) {
                     Text("Unofficial, fan-made toolkit", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
                     Spacer(Modifier.height(6.dp))
-                    Text("JD's Toolkit is NOT made by, affiliated with, or endorsed by Matty McTech or beehiiv. It is an independent, fan-made index that links to the tools and websites featured in the newsletter.")
+                    Text("JD's Toolkit is an independent, fan-made index. It is NOT made by, affiliated with, or endorsed by the people or sites credited below or the tools it links to.")
+                }
+            }
+        }
+        item { Text("Credits", fontWeight = FontWeight.SemiBold, style = MaterialTheme.typography.titleMedium) }
+        items(catalog.credits.size) { i ->
+            val c = catalog.credits[i]
+            Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
+                Column(Modifier.padding(16.dp)) {
+                    Text(c.name, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleSmall)
+                    Spacer(Modifier.height(4.dp))
+                    Text(c.contribution)
+                    if (c.url != null) {
+                        Spacer(Modifier.height(8.dp))
+                        OutlinedButton(onClick = { openUrl(ctx, c.url) }, modifier = Modifier.fillMaxWidth()) { Text("Open ${Uri.parse(c.url).host?.removePrefix("www.") ?: "link"}") }
+                    }
                 }
             }
         }
         item {
-            Text("All credit for finding and featuring these tools goes to Matty McTech and his newsletter, " +
-                "\"Matty's Powerful Newsletter You Should Know\". Each tool shows the post it came from; tap it to read the original. " +
-                "If you enjoy this list, please subscribe to the newsletter - it has more tools, demos and tips than this directory can show.")
+            Text("Each tool also shows where it came from on its \"From:\" line. Thank you to everyone who shares good finds.",
+                style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
-        item { Button(onClick = { openUrl(ctx, BuildConfig.NEWSLETTER_URL) }, modifier = Modifier.fillMaxWidth()) { Text("Open mattymctech.com") } }
         item {
             Text("What is in the list", fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(4.dp))
-            Text("Catalog v${catalog.version} (${catalog.date}): ${catalog.tools.size} tools from ${catalog.posts.size} newsletter posts. " +
-                "Many posts show only their first few tools without signing up to the newsletter, so this directory only lists what is openly readable. " +
+            Text("Catalog v${catalog.version} (${catalog.date}): ${catalog.tools.size} tools. " +
+                "Only openly readable parts of sources are listed (nothing behind a sign-up or paywall). " +
                 "Categories and tags are assigned automatically from keywords, so a few may be off.")
         }
         item {

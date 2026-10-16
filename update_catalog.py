@@ -22,6 +22,7 @@ Usage
   python3 update_catalog.py                      # crawl live site, rewrite catalog.json
   python3 update_catalog.py --cache .cache       # keep downloaded HTML in .cache (re-run offline with --offline)
   python3 update_catalog.py --dry-run            # show what would change, write nothing
+  python3 update_catalog.py --credits-only       # no crawl: copy credits.json (About > Credits) into catalog.json
 """
 import argparse, csv, datetime as dt, html, io, json, os, re, sys, time
 import urllib.request, urllib.error
@@ -548,12 +549,55 @@ def load_json(path, default):
     except FileNotFoundError:
         return default
 
+
+# ----------------------------------------------------------------------------- credits
+def load_credits(path):
+    """Read credits.json: {"credits": [{"name", "contribution", "url" (optional)}]}. Raises ValueError on bad entries."""
+    data = load_json(path, {"credits": []})
+    raw = data.get("credits", []) if isinstance(data, dict) else data
+    out = []
+    for i, c in enumerate(raw):
+        if not isinstance(c, dict): raise ValueError(f"credits[{i}] must be an object")
+        name = str(c.get("name", "")).strip(); what = str(c.get("contribution", "")).strip()
+        if not name or not what: raise ValueError(f"credits[{i}] needs a name and a contribution")
+        e = {"name": name, "contribution": what}
+        url = str(c.get("url", "") or "").strip()
+        if url:
+            if not re.match(r"https?://[^\s]+$", url): raise ValueError(f"credits[{i}] url must start with http:// or https://")
+            e["url"] = url
+        out.append(e)
+    return out
+
+def apply_credits(cat, credits, today=None):
+    """Put the credits list into the catalog dict. A change bumps catalog version/date so installed apps pick it up.
+    Returns True if the credits changed."""
+    if cat.get("credits") == credits: return False
+    cat["credits"] = credits
+    return True
+
+def bump_for_credits(cat, old_version, today=None):
+    """Make sure the version moved if only the credits changed."""
+    if int(cat.get("version", 0)) <= old_version:
+        cat["version"] = old_version + 1
+        cat["date"] = today or dt.date.today().isoformat()
+
+def write_catalog(cat, paths):
+    for path in filter(None, paths):
+        os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(cat, f, ensure_ascii=False, indent=1); f.write("\n")
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--catalog", default=os.path.join(HERE, "catalog.json"))
     ap.add_argument("--sources", default=os.path.join(HERE, "sources.json"))
     ap.add_argument("--manual", default=os.path.join(HERE, "manual_items.json"))
     ap.add_argument("--overrides", default=os.path.join(HERE, "overrides.json"))
+    ap.add_argument("--credits", default=os.path.join(HERE, "credits.json"), help="credits shown in the app's About screen")
+    ap.add_argument("--docs", default=os.path.join(HERE, "docs/catalog.json"),
+                    help="also copy the catalog here (offline snapshot of the iPhone/web app); '' to skip")
+    ap.add_argument("--credits-only", action="store_true",
+                    help="no crawling: just copy credits.json into catalog.json (bumps the version if it changed)")
     ap.add_argument("--cache", default=None, help="directory to cache downloaded pages")
     ap.add_argument("--offline", action="store_true", help="only use --cache, no network")
     ap.add_argument("--delay", type=float, default=1.2, help="seconds between requests")
@@ -565,6 +609,21 @@ def main(argv=None):
     old = load_json(a.catalog, {"version": 0, "items": [], "posts": []})
     overrides = load_json(a.overrides, {})
     sources = load_json(a.sources, {"sheets": []})
+    try:
+        credits = load_credits(a.credits)
+    except ValueError as e:
+        print(f"error: {a.credits}: {e}", file=sys.stderr); return 2
+    outputs = [a.catalog, a.assets, a.docs]
+
+    if a.credits_only:
+        old_version = int(old.get("version", 0))
+        if apply_credits(old, credits):
+            bump_for_credits(old, old_version)
+            if not a.dry_run: write_catalog(old, outputs)
+            print(f"credits updated ({len(credits)} entries), catalog version {old_version} -> {old['version']}", file=sys.stderr)
+        else:
+            print("credits unchanged", file=sys.stderr)
+        return 0
 
     post_urls = list_post_urls(a.cache, a.offline, a.delay)
     print(f"found {len(post_urls)} posts", file=sys.stderr)
@@ -618,9 +677,10 @@ def main(argv=None):
 
     incoming = normalise(raw, overrides)
     new_cat, added = merge_catalog(old, incoming)
+    if apply_credits(new_cat, credits): bump_for_credits(new_cat, int(old.get("version", 0)))
     new_cat.update({
         "schema": 1,
-        "title": "Matty McTech tools directory (unofficial)",
+        "title": "JD's Toolkit catalog",
         "source": BASE, "posts": sorted(posts, key=lambda p: p["date"], reverse=True),
         "sheets": sheet_report or old.get("sheets", []),
         "categories": [{"id": c[0], "name": c[1], "blurb": c[2]} for c in CATEGORIES],
@@ -629,10 +689,7 @@ def main(argv=None):
     })
     print(f"posts={len(posts)} items={len(new_cat['items'])} new={len(added)} version={new_cat['version']}", file=sys.stderr)
     if not a.dry_run:
-        for path in filter(None, [a.catalog, a.assets]):
-            os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
-            with open(path, "w", encoding="utf-8") as f:
-                json.dump(new_cat, f, ensure_ascii=False, indent=1); f.write("\n")
+        write_catalog(new_cat, outputs)
     for it in added: print("NEW:", it["name"], it["url"], "->", CAT_NAMES[it["category"]])
     return 0
 

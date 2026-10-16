@@ -4,9 +4,8 @@
 (function () {
   'use strict';
 
-  var APP_VERSION = '1.0.1-web';
+  var APP_VERSION = '1.0.2-web';
   var REMOTE_URL = 'https://raw.githubusercontent.com/geek4945-creator/matty-tools-directory/main/catalog.json';
-  var NEWSLETTER_URL = 'https://www.mattymctech.com/';
   var REPO_URL = 'https://github.com/geek4945-creator/matty-tools-directory';
   var CHECK_EVERY_MS = 30 * 86400000;
   var NEW_DAYS = 30;
@@ -83,9 +82,11 @@
     });
     var cats = (Array.isArray(raw.categories) ? raw.categories : []).filter(function (c) { return c && c.id && c.name; })
       .map(function (c) { return { id: String(c.id), name: String(c.name), blurb: String(c.blurb || '') }; });
+    var credits = (Array.isArray(raw.credits) ? raw.credits : []).filter(function (c) { return c && String(c.name || '').trim() && String(c.contribution || '').trim(); })
+      .map(function (c) { return { name: String(c.name).trim(), contribution: String(c.contribution).trim(), url: c.url ? safeUrl(c.url) : null }; });
     return {
       version: raw.version, date: String(raw.date || ''), categories: cats, tools: tools,
-      posts: Array.isArray(raw.posts) ? raw.posts : [], note: String(raw.note || '')
+      posts: Array.isArray(raw.posts) ? raw.posts : [], note: String(raw.note || ''), credits: credits
     };
   }
   function urlKey(u) {
@@ -110,7 +111,8 @@
     local.categories.concat(remote.categories).forEach(function (c) { if (!cats[c.id]) corder.push(c.id); cats[c.id] = c; });
     return {
       catalog: { version: remote.version, date: remote.date, categories: corder.map(function (i) { return cats[i]; }),
-        tools: order.map(function (i) { return map[i]; }), posts: remote.posts.length ? remote.posts : local.posts, note: remote.note || local.note },
+        tools: order.map(function (i) { return map[i]; }), posts: remote.posts.length ? remote.posts : local.posts, note: remote.note || local.note,
+        credits: remote.credits.length ? remote.credits : local.credits },
       added: added, updated: true
     };
   }
@@ -140,6 +142,7 @@
         var m = merge(stored, bundled);
         cur = m.catalog; markNew(m.added); sset('catalog', rawOf(cur));
       }
+      if (!cur.credits.length) cur.credits = bundled.credits;   // catalogs saved by older versions have no credits
       setCatalog(cur);
     }).catch(function (err) {
       var stored = normalize(sget('catalog', null));   // offline and not cached by the service worker yet
@@ -148,7 +151,7 @@
     });
   }
   function rawOf(c) {
-    return { version: c.version, date: c.date, note: c.note, categories: c.categories, posts: c.posts,
+    return { version: c.version, date: c.date, note: c.note, categories: c.categories, posts: c.posts, credits: c.credits,
       items: c.tools.map(function (t) { return { id: t.id, name: t.name, url: t.url, host: t.host, description: t.description, category: t.category, tags: t.tags, sources: t.sources, video: t.video }; }) };
   }
   function markNew(added) {
@@ -215,7 +218,7 @@
   }
   function shareTool(t) {
     var text = t.name + (t.description ? ' - ' + t.description.slice(0, 140) : '') + '\n' + t.url +
-      '\n(found in Matty McTech\'s newsletter, via an unofficial fan-made directory)';
+      '\n(shared from JD\'s Toolkit)';
     var done = function () { toast('Link copied'); };
     if (navigator.share) {
       navigator.share({ title: t.name, text: text, url: t.url }).catch(function (e) { if (e && e.name !== 'AbortError') copyText(t.url + '', done); });
@@ -285,6 +288,7 @@
     var v = h('div');
     var cats = catalog.categories.map(function (c) { return { c: c, n: toolsIn(c.id).length }; }).filter(function (x) { return x.n > 0; });
     var newTools = catalog.tools.filter(function (t) { return newIds[t.id]; });
+    v.appendChild(h('p', { class: 'muted', id: 'subtitle', text: "Handy tools and sites, sorted by what they're for." }));
     v.appendChild(h('p', { class: 'muted', text: plural(catalog.tools.length, 'tool') + ' in ' + plural(cats.length, 'category').replace('categorys', 'categories') + ' \u00B7 catalog v' + catalog.version }));
     if (newTools.length) {
       v.appendChild(sec('New', ['See all ' + newTools.length, '#/new']));
@@ -387,12 +391,15 @@
   function screenAbout() {
     var v = h('div');
     v.appendChild(h('div', { class: 'panel warn' }, [h('h3', { text: 'Unofficial, fan-made toolkit' }),
-      h('p', { text: "JD's Toolkit is NOT made by, affiliated with, or endorsed by Matty McTech or beehiiv. It is an independent, fan-made index that links to the tools and websites featured in the newsletter." })]));
-    v.appendChild(h('div', { class: 'panel' }, [
-      h('p', { text: 'All credit for finding and featuring these tools goes to Matty McTech and his newsletter, "Matty\'s Powerful Newsletter You Should Know". Each tool shows the post it came from; tap it to read the original. If you enjoy this list, please subscribe to the newsletter - it has more tools, demos and tips than this directory can show.' }),
-      h('a', { class: 'btn primary block', href: NEWSLETTER_URL, target: '_blank', rel: 'noopener noreferrer', text: 'Open mattymctech.com' })]));
+      h('p', { text: "JD's Toolkit is an independent, fan-made index. It is NOT made by, affiliated with, or endorsed by the people or sites credited below or the tools it links to." })]));
+    v.appendChild(h('h2', { class: 'sec' }, [h('span', { text: 'Credits' })]));
+    v.appendChild(h('div', { id: 'credits' }, catalog.credits.map(function (c) {
+      return h('div', { class: 'panel credit' }, [h('h3', { text: c.name }), h('p', { text: c.contribution }),
+        c.url ? h('a', { class: 'btn block', href: c.url, target: '_blank', rel: 'noopener noreferrer', text: 'Open ' + c.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/.*$/, '') }) : null]);
+    })));
+    v.appendChild(h('p', { class: 'muted', text: 'Each tool also shows where it came from on its "From:" line. Thank you to everyone who shares good finds.' }));
     v.appendChild(h('div', { class: 'panel' }, [h('h3', { text: 'What is in the list' }),
-      h('p', { text: 'Catalog v' + catalog.version + ' (' + catalog.date + '): ' + plural(catalog.tools.length, 'tool') + ' from ' + plural(catalog.posts.length, 'newsletter post') + '. Many posts show only their first few tools without signing up to the newsletter, so this directory only lists what is openly readable. Categories and tags are assigned automatically from keywords, so a few may be off.' })]));
+      h('p', { text: 'Catalog v' + catalog.version + ' (' + catalog.date + '): ' + plural(catalog.tools.length, 'tool') + '. Only openly readable parts of sources are listed (nothing behind a sign-up or paywall). Categories and tags are assigned automatically from keywords, so a few may be off.' })]));
     v.appendChild(h('div', { class: 'panel' }, [h('h3', { text: 'Privacy' }),
       h('p', { text: 'No account, no ads, no analytics. Favorites and history stay on your device. The only request this app makes itself is downloading the public catalog file from GitHub.' })]));
     v.appendChild(h('a', { class: 'btn block', href: REPO_URL, target: '_blank', rel: 'noopener noreferrer', text: 'Project page on GitHub' }));

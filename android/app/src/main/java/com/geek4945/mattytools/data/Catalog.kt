@@ -19,6 +19,9 @@ data class Tool(
     val added: String?,
 )
 
+/** Someone who contributed to the tool list; shown under Settings > About > Credits. `url` is optional (http/https only). */
+data class Credit(val name: String, val contribution: String, val url: String? = null)
+
 data class Category(val id: String, val name: String, val blurb: String)
 
 data class Post(val title: String, val date: String, val url: String, val gated: Boolean, val toolsFound: Int)
@@ -30,6 +33,7 @@ data class Catalog(
     val tools: List<Tool>,
     val posts: List<Post>,
     val note: String = "",
+    val credits: List<Credit> = emptyList(),
 ) {
     fun category(id: String): Category? = categories.firstOrNull { it.id == id }
     fun countIn(categoryId: String) = tools.count { it.category == categoryId }
@@ -70,7 +74,16 @@ object CatalogJson {
                 a.getJSONObject(i).let { Post(it.str("title"), it.str("date"), it.str("url"), it.optBoolean("gated"), it.optInt("toolsFound")) }
             }
         } ?: emptyList()
-        return Catalog(o.optInt("version", 0), o.str("date"), cats, tools, posts, o.str("note"))
+        val credits = o.optJSONArray("credits")?.let { a ->
+            (0 until a.length()).mapNotNull { i ->
+                val c = a.optJSONObject(i) ?: return@mapNotNull null
+                val name = c.str("name").trim(); val what = c.str("contribution").trim()
+                if (name.isEmpty() || what.isEmpty()) return@mapNotNull null
+                val link = c.str("url").trim()
+                Credit(name, what, if (link.startsWith("https://") || link.startsWith("http://")) link else null)
+            }
+        } ?: emptyList()
+        return Catalog(o.optInt("version", 0), o.str("date"), cats, tools, posts, o.str("note"), credits)
     }
 
     fun toJson(c: Catalog): String {
@@ -88,6 +101,7 @@ object CatalogJson {
                 .put("addedVersion", t.addedVersion)
                 .also { j -> t.video?.let { j.put("video", it) }; t.added?.let { j.put("added", it) } }
         }))
+        o.put("credits", JSONArray(c.credits.map { JSONObject().put("name", it.name).put("contribution", it.contribution).also { j -> it.url?.let { u -> j.put("url", u) } } }))
         o.put("posts", JSONArray(c.posts.map {
             JSONObject().put("title", it.title).put("date", it.date).put("url", it.url).put("gated", it.gated).put("toolsFound", it.toolsFound)
         }))
@@ -141,6 +155,7 @@ object CatalogMerge {
         val merged = Catalog(
             version = remote.version, date = remote.date, categories = cats.values.toList(),
             tools = byId.values.toList(), posts = remote.posts.ifEmpty { local.posts }, note = remote.note.ifEmpty { local.note },
+            credits = remote.credits.ifEmpty { local.credits },
         )
         return MergeResult(merged, added, true)
     }

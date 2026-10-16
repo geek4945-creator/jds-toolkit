@@ -48,7 +48,7 @@ fun shareTool(ctx: Context, t: Tool) {
     val text = buildString {
         append(t.name); if (t.description.isNotBlank()) append(" - ").append(t.description.take(140))
         append("\n").append(t.url)
-        append("\n(found in Matty McTech's newsletter, via an unofficial fan-made directory)")
+        append("\n(shared from JD's Toolkit)")
     }
     val i = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_SUBJECT, t.name).putExtra(Intent.EXTRA_TEXT, text)
     ctx.startActivity(Intent.createChooser(i, "Share ${t.name}").addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))

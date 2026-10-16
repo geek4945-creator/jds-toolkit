@@ -86,4 +86,35 @@ class CatalogTest {
         assertNotNull(r.catalog.category("live"))
         assertEquals(2, r.catalog.tools.size)
     }
+
+    @Test fun bundledCatalogCarriesCredits() {
+        val c = CatalogJson.parse(File("src/main/assets/catalog.json").readText())
+        assertTrue(c.credits.isNotEmpty())
+        val first = c.credits.first()
+        assertEquals("Matty McTech", first.name)
+        assertTrue(first.contribution.isNotBlank())
+        assertEquals("https://www.mattymctech.com/", first.url)
+        assertTrue(c.credits.all { it.url == null || it.url!!.startsWith("http") })
+    }
+
+    @Test fun creditsParseSkipBadEntriesAndRoundTrip() {
+        val json = """{"version":1,"items":[],"credits":[
+            {"name":"A","contribution":"found things","url":"https://a.example/"},
+            {"name":"B","contribution":"made a list"},
+            {"name":"","contribution":"no name"},
+            {"name":"C","contribution":"bad link","url":"javascript:alert(1)"}]}"""
+        val c = CatalogJson.parse(json)
+        assertEquals(listOf("A", "B", "C"), c.credits.map { it.name })
+        assertNull(c.credits[1].url); assertNull(c.credits[2].url)
+        assertEquals(c.credits, CatalogJson.parse(CatalogJson.toJson(c)).credits)
+    }
+
+    @Test fun mergeTakesNewCreditsAndKeepsOldWhenRemoteHasNone() {
+        val t = tool("a", "https://a.com")
+        val old = Catalog(1, "d", emptyList(), listOf(t), emptyList(), credits = listOf(Credit("Old", "x")))
+        val withNew = Catalog(2, "d", emptyList(), listOf(t), emptyList(), credits = listOf(Credit("Old", "x"), Credit("New", "y", "https://n.example")))
+        assertEquals(2, CatalogMerge.merge(old, withNew).catalog.credits.size)
+        val without = Catalog(2, "d", emptyList(), listOf(t), emptyList())
+        assertEquals(listOf(Credit("Old", "x")), CatalogMerge.merge(old, without).catalog.credits)
+    }
 }

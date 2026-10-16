@@ -1,7 +1,7 @@
 {
   "name": "JD's Toolkit",
   "short_name": "JD's Toolkit",
-  "description": "Unofficial, fan-made directory of tools and websites featured by Matty McTech.",
+  "description": "Unofficial, fan-made directory of handy tools and websites, sorted by what they're for.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

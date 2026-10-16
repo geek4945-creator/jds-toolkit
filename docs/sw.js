@@ -1,7 +1,7 @@
 /* Offline support: precache the app shell and the bundled catalog snapshot.
    Same-origin files: network first (4 s timeout) then cache, so a new deploy is picked up quickly and offline still works.
    Cross-origin requests (the remote catalog.json, tool websites) are never touched. */
-var CACHE = 'jds-toolkit-v1';
+var CACHE = 'jds-toolkit-v2';
 var SHELL = ['./', 'index.html', 'style.css', 'app.js', 'catalog.json', 'manifest.webmanifest',
   'icons/apple-touch-icon.png', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png', 'icons/favicon-32.png'];
 

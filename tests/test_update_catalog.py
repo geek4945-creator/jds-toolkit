@@ -167,6 +167,36 @@ class SheetImport(unittest.TestCase):
     def test_new_live_category_exists(self):
         self.assertEqual(u.CAT_NAMES["live"], "Live Maps & Trackers")
 
+class Credits(unittest.TestCase):
+    def write(self, d, obj):
+        p = os.path.join(d, "credits.json"); json.dump(obj, open(p, "w")); return p
+    def test_load_validates(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            ok = u.load_credits(self.write(d, {"credits": [{"name": " A ", "contribution": "x", "url": "https://a.example/"}, {"name": "B", "contribution": "y"}]}))
+            self.assertEqual(ok, [{"name": "A", "contribution": "x", "url": "https://a.example/"}, {"name": "B", "contribution": "y"}])
+            for bad in ([{"name": "A"}], [{"contribution": "x"}], [{"name": "A", "contribution": "x", "url": "javascript:alert(1)"}], ["nope"]):
+                with self.assertRaises(ValueError): u.load_credits(self.write(d, {"credits": bad}))
+    def test_credits_only_bumps_version_once_and_syncs_copies(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            cat = os.path.join(d, "catalog.json"); asset = os.path.join(d, "a", "catalog.json"); docs = os.path.join(d, "docs", "catalog.json")
+            json.dump({"version": 5, "date": "2026-01-01", "items": [], "posts": []}, open(cat, "w"))
+            cr = self.write(d, {"credits": [{"name": "A", "contribution": "x"}]})
+            args = ["--credits-only", "--catalog", cat, "--credits", cr, "--assets", asset, "--docs", docs]
+            self.assertEqual(u.main(args), 0)
+            c = json.load(open(cat)); self.assertEqual(c["version"], 6); self.assertEqual(c["credits"], [{"name": "A", "contribution": "x"}])
+            self.assertEqual(json.load(open(asset)), c); self.assertEqual(json.load(open(docs)), c)
+            self.assertEqual(u.main(args), 0)                       # unchanged -> no bump
+            self.assertEqual(json.load(open(cat))["version"], 6)
+            self.write(d, {"credits": [{"name": "A", "contribution": "x"}, {"name": "B", "contribution": "y", "url": "https://b.example"}]})
+            u.main(args); self.assertEqual(json.load(open(cat))["version"], 7)
+    def test_bad_credits_file_is_an_error(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            cat = os.path.join(d, "catalog.json"); json.dump({"version": 1, "items": [], "posts": []}, open(cat, "w"))
+            self.assertEqual(u.main(["--credits-only", "--catalog", cat, "--assets", "", "--docs", "", "--credits", self.write(d, {"credits": [{"name": "x"}]})]), 2)
+
 class Shipped(unittest.TestCase):
     def setUp(self):
         self.c = json.load(open(os.path.join(os.path.dirname(__file__), "..", "catalog.json")))
@@ -191,6 +221,14 @@ class Shipped(unittest.TestCase):
     def test_sources_json_lists_the_public_sheet(self):
         s = json.load(open(os.path.join(os.path.dirname(__file__), "..", "sources.json")))
         self.assertEqual(len(s["sheets"]), 1); self.assertIn("/pubhtml", s["sheets"][0]["url"])
+    def test_shipped_credits(self):
+        cr = u.load_credits(os.path.join(os.path.dirname(__file__), "..", "credits.json"))
+        self.assertEqual(cr[0]["name"], "Matty McTech"); self.assertEqual(cr[0]["url"], "https://www.mattymctech.com/")
+        self.assertEqual(self.c["credits"], cr)
+        self.assertGreaterEqual(self.c["version"], 3)
+    def test_docs_copy_matches(self):
+        p = os.path.join(os.path.dirname(__file__), "..", "docs/catalog.json")
+        self.assertEqual(json.load(open(p)), self.c)
     def test_bundled_asset_matches(self):
         p = os.path.join(os.path.dirname(__file__), "..", "android/app/src/main/assets/catalog.json")
         self.assertEqual(json.load(open(p)), self.c)

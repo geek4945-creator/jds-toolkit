@@ -7,7 +7,7 @@ and is hosted by GitHub Pages.
 
 It has the same features as the Android app: category cards with counts, category screens, search across every tool,
 use/tag filters, saved favorites, recently opened, share, NEW badges, light/dark/system theme, an About screen
-(credit to Matty McTech + the "unofficial fan-made" notice) and Settings with **Check for updates now** and the last-checked date.
+(Credits section + the "unofficial fan-made" notice, data-driven from `credits.json`) and Settings with **Check for updates now** and the last-checked date.
 It works offline and has no account, ads or analytics.
 
 > **Testing note.** The web app was tested in desktop Chrome emulating an iPhone (screen size, touch and iPhone user agent).

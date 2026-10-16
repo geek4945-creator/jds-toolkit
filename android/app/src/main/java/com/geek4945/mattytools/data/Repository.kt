@@ -59,7 +59,8 @@ class CatalogRepository(private val ctx: Context) {
             try {
                 val d = CatalogJson.parse(file.readText())
                 // A newer app build may ship a newer bundled catalog; use whichever is newer.
-                if (d.version >= b.version) return d
+                // Catalogs saved by older app versions have no credits: fall back to the bundled list.
+                if (d.version >= b.version) return if (d.credits.isEmpty()) d.copy(credits = b.credits) else d
             } catch (_: Exception) { /* fall back to bundled */ }
         }
         return b

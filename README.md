@@ -1,10 +1,23 @@
 # JD's Toolkit (unofficial)
 
-An Android app (plus a web-friendly `catalog.json`) called **JD's Toolkit** (repo: `matty-tools-directory`). Tools curated from Matty McTech's newsletter and sheets:
-**Matty's Powerful Newsletter You Should Know** by **Matty McTech** - <https://www.mattymctech.com/>.
+An Android app (plus a web-friendly `catalog.json`) called **JD's Toolkit** (repo: `matty-tools-directory`): a directory of handy tools and websites, sorted by category.
+The list started from Matty McTech's newsletter and public sheets; that credit (and any future ones) lives in **Settings > About > Credits**.
 
-> **Unofficial, fan-made.** Not made, endorsed or affiliated with Matty McTech or beehiiv. All credit for finding
-> these tools goes to Matty. Every entry links to the post it came from. If you like the list, subscribe to the newsletter.
+> **Unofficial, fan-made.** Not made, endorsed or affiliated with the people or sites credited in the app. Every tool shows where it came from on its "From:" line.
+
+## Credits (Settings > About)
+Credits are data, not code. They live in [`credits.json`](credits.json) and are copied into `catalog.json` (field `credits`), which is bundled in the Android app and the web app as a fallback and is downloaded by the monthly update check, so **new credits appear without an app update**.
+
+To add a credit:
+1. Add an entry to `credits.json`:
+   ```json
+   { "name": "Someone Great", "contribution": "Shared a big list of free design tools.", "url": "https://example.com/" }
+   ```
+   `name` and `contribution` are required; `url` is optional (must start with `http://` or `https://`).
+2. Run `python3 update_catalog.py --credits-only` (no crawling; it validates the file, copies it into `catalog.json`, the Android bundle and `docs/catalog.json`, and bumps the catalog version so installed apps accept it).
+3. Commit and push to `main`. Installed apps pick it up on their next monthly check (or **Settings > Check for updates now**). The next full `update_catalog.py` run / monthly GitHub Action also carries the credits along.
+
+Per-tool source credit is separate: each tool keeps its own `sources` (shown as "From: ..." on the tool card), so a tool added from a new source can be credited there as well.
 
 ## iPhone / web version
 An installable web app (PWA) lives in `docs/` and is hosted on GitHub Pages: <https://geek4945-creator.github.io/matty-tools-directory/>.
@@ -17,7 +30,7 @@ See [IOS.md](IOS.md) for install steps and the optional native App Store route (
 - Category screens, search across every tool, and **use/tag filters** (Free, PDF, Video, AI, Games, ...)
 - Favorites, recently opened, share a tool, "New" badges on newly added tools
 - Opens sites in an in-app browser (Chrome Custom Tab, falls back to your default browser)
-- Light, dark or system theme; About screen with credit + unofficial notice
+- Light, dark or system theme; About screen with data-driven Credits + unofficial notice
 - **Monthly update check** (WorkManager periodic work, ~30 days, network required): downloads the public
   `catalog.json` from this repo, compares versions, merges new tools (marked **NEW**) and posts a notification
   "N new tools added". Settings has a **Check for updates now** button and the last-checked date.
@@ -31,11 +44,11 @@ not all ~300 numbered websites. Posts that are fully open (e.g. 11-30, 51-60, 71
 The newsletter's full spreadsheet, if you want it, is offered to Patreon supporters - nothing here bypasses that either.
 
 ## Install the APK
-1. Download `jds-toolkit-v1.0.1.apk` (GitHub release page) to your phone.
+1. Download `jds-toolkit-v1.0.2.apk` (GitHub release page) to your phone.
 2. Open it. Android will ask to allow "install unknown apps" for your browser/file manager - allow it for this install.
 3. Tap Install. On Android 13+ allow notifications when prompted if you want the monthly "new tools" notice.
 
-(Or with a computer: `adb install -r jds-toolkit-v1.0.1.apk`.) Verify with `apksigner verify`; the release APK is signed with the
+(Or with a computer: `adb install -r jds-toolkit-v1.0.2.apk`.) Verify with `apksigner verify`; the release APK is signed with the
 project's own key. A debug build installs the same way but is signed with a debug key (uninstall one before installing the other).
 
 ## Build from source
@@ -73,6 +86,6 @@ Sheet rows are keyword-categorised like everything else; fixes go in `overrides.
 
 ## Layout
 ```
-update_catalog.py  catalog.json  overrides.json  manual_items.json  sources.json  tests/  .github/workflows/
+update_catalog.py  catalog.json  credits.json  overrides.json  manual_items.json  sources.json  tests/  .github/workflows/
 android/           Gradle project (app/src/main/java/com/geek4945/mattytools/{data,ui,work}, MainActivity.kt)
 ```

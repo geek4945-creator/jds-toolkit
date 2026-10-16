@@ -1,5 +1,5 @@
 {
- "version": 2,
+ "version": 3,
  "items": [
   {
    "id": "ai-art-tokyo-en",
@@ -5654,7 +5654,7 @@
  "date": "2026-10-16",
  "itemCount": 239,
  "schema": 1,
- "title": "Matty McTech tools directory (unofficial)",
+ "title": "JD's Toolkit catalog",
  "source": "https://www.mattymctech.com",
  "sheets": [
   {
@@ -5815,5 +5815,12 @@
    "blurb": "New items waiting for a category"
   }
  ],
- "note": "Unofficial fan-made directory. Only publicly readable (ungated) parts of posts are listed; categories for new items are keyword-guessed."
+ "note": "Unofficial fan-made directory. Only publicly readable (ungated) parts of posts are listed; categories for new items are keyword-guessed.",
+ "credits": [
+  {
+   "name": "Matty McTech",
+   "contribution": "Starting point for the tool list: his newsletter, \"Matty's Powerful Newsletter You Should Know\", and his public Website list sheets.",
+   "url": "https://www.mattymctech.com/"
+  }
+ ]
 }
