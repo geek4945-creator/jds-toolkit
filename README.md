@@ -6,6 +6,12 @@ An Android app (plus a web-friendly `catalog.json`) called **JD's Toolkit** (rep
 > **Unofficial, fan-made.** Not made, endorsed or affiliated with Matty McTech or beehiiv. All credit for finding
 > these tools goes to Matty. Every entry links to the post it came from. If you like the list, subscribe to the newsletter.
 
+## iPhone / web version
+An installable web app (PWA) lives in `docs/` and is hosted on GitHub Pages: <https://geek4945-creator.github.io/matty-tools-directory/>.
+On iPhone open it in Safari -> Share -> **Add to Home Screen**. It has the same features as the Android app and works offline, but iOS web apps
+cannot run background jobs or send reliable notifications, so it shows an in-app "N new tools added" banner when you open it instead.
+See [IOS.md](IOS.md) for install steps and the optional native App Store route (Capacitor, Mac + Xcode, $99/yr Apple Developer account).
+
 ## What the app does
 - Home screen with category cards and tool counts (12 categories + an "Uncategorized / New" bucket)
 - Category screens, search across every tool, and **use/tag filters** (Free, PDF, Video, AI, Games, ...)

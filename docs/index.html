@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JD's Toolkit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="JD's Toolkit: an unofficial, fan-made directory of tools and websites featured by Matty McTech.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="JD's Toolkit">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#FBFBFE">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar" id="topbar">
+  <button class="icon-btn" id="back" aria-label="Back" hidden>&#8249;</button>
+  <h1 id="title">JD's Toolkit</h1>
+</header>
+<div id="banner" class="banner" role="status" hidden></div>
+<main id="view" tabindex="-1"></main>
+<nav class="tabbar" id="tabbar" aria-label="Main">
+  <a href="#/" data-tab="home"><span class="ti" aria-hidden="true">&#8962;</span><span>Home</span></a>
+  <a href="#/search" data-tab="search"><span class="ti" aria-hidden="true">&#9906;</span><span>Search</span></a>
+  <a href="#/favorites" data-tab="favorites"><span class="ti" aria-hidden="true">&#9733;</span><span>Saved</span></a>
+  <a href="#/settings" data-tab="settings"><span class="ti" aria-hidden="true">&#9881;</span><span>Settings</span></a>
+</nav>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<noscript><p style="padding:16px">JD's Toolkit needs JavaScript.</p></noscript>
+<script src="app.js"></script>
+</body>
+</html>

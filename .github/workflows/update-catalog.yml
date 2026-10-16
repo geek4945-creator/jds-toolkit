@@ -21,12 +21,13 @@ jobs:
         run: python update_catalog.py
       - name: Commit if the catalog changed
         run: |
-          if git diff --quiet -- catalog.json android/app/src/main/assets/catalog.json; then
+          cp catalog.json docs/catalog.json   # offline snapshot bundled in the iPhone/web app
+          if git diff --quiet -- catalog.json android/app/src/main/assets/catalog.json docs/catalog.json; then
             echo "No new tools this month."
           else
             git config user.name "catalog-bot"
             git config user.email "catalog-bot@users.noreply.github.com"
-            git add catalog.json android/app/src/main/assets/catalog.json
+            git add catalog.json android/app/src/main/assets/catalog.json docs/catalog.json
             git commit -m "Monthly catalog refresh"
             git push
           fi
