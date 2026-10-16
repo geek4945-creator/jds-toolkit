@@ -105,7 +105,7 @@ fun AppRoot(repo: CatalogRepository, showNew: Boolean, onShowNewHandled: () -> U
                 title = {
                     Text(
                         when (current) {
-                            Screen.Home -> "Matty Tools Directory"
+                            Screen.Home -> "JD's Toolkit"
                             is Screen.CategoryScreen -> catalog.category(current.id)?.name ?: "Category"
                             Screen.Search -> "Search"
                             Screen.Favorites -> "Favorites & recent"
@@ -188,7 +188,7 @@ fun HomeScreen(
                     }
                 }
                 Text(
-                    "Websites and tools from Matty's Powerful Newsletter, sorted by what they're for.",
+                    "Tools curated from Matty McTech's newsletter and sheets, sorted by what they're for.",
                     style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 if (newTools.isNotEmpty()) {
@@ -370,7 +370,7 @@ fun SettingsScreen(repo: CatalogRepository, catalog: Catalog, onAbout: () -> Uni
             }
         }
         item { SectionTitle("More") }
-        item { OutlinedButton(onClick = onAbout, modifier = Modifier.fillMaxWidth()) { Icon(Icons.Filled.Info, null); Spacer(Modifier.width(8.dp)); Text("About this app") } }
+        item { OutlinedButton(onClick = onAbout, modifier = Modifier.fillMaxWidth()) { Icon(Icons.Filled.Info, null); Spacer(Modifier.width(8.dp)); Text("About JD's Toolkit") } }
     }
 }
 
@@ -384,9 +384,9 @@ fun AboutScreen(catalog: Catalog) {
         item {
             Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.tertiary.copy(alpha = 0.15f))) {
                 Column(Modifier.padding(16.dp)) {
-                    Text("Unofficial, fan-made directory", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
+                    Text("Unofficial, fan-made toolkit", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
                     Spacer(Modifier.height(6.dp))
-                    Text("This app is NOT made by, affiliated with, or endorsed by Matty McTech or beehiiv. It is an independent, fan-made index that links to the tools and websites featured in the newsletter.")
+                    Text("JD's Toolkit is NOT made by, affiliated with, or endorsed by Matty McTech or beehiiv. It is an independent, fan-made index that links to the tools and websites featured in the newsletter.")
                 }
             }
         }

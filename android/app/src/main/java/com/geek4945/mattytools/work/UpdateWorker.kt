@@ -65,7 +65,7 @@ class UpdateWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx
             val text = if (count == 1) "1 new tool added" else "$count new tools added"
             val n = NotificationCompat.Builder(ctx, CHANNEL)
                 .setSmallIcon(android.R.drawable.ic_popup_sync)
-                .setContentTitle(text).setContentText("Tap to see what's new in Matty Tools Directory")
+                .setContentTitle("JD's Toolkit").setContentText("$text - tap to see what's new")
                 .setContentIntent(open).setAutoCancel(true).build()
             NotificationManagerCompat.from(ctx).notify(1001, n)
         }
