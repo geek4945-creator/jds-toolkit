@@ -1,0 +1,4 @@
+{
+  "_comment": "Optional extra sources. 'sheets' = PUBLIC Google Sheets / CSV links (anyone-with-the-link, no sign-in). update_catalog.py turns a normal Google Sheets URL into its CSV export URL, maps columns (name/tool/site, url/link, description, category, use, pricing, notes) and merges the rows into the catalog. Never list a private, sign-in, email-signup or paid (Patreon) sheet here. Currently none are known to be public - see README.",
+  "sheets": []
+}

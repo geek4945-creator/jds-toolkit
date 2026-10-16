@@ -1,0 +1,8 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <!-- a 2x2 grid of tiles (a "directory"), white on indigo -->
+    <path android:fillColor="#FFFFFF" android:pathData="M30,30h20a4,4 0 0 1 4,4v16a4,4 0 0 1 -4,4H34a4,4 0 0 1 -4,-4z"/>
+    <path android:fillColor="#C7D2FE" android:pathData="M58,30h16a4,4 0 0 1 4,4v16a4,4 0 0 1 -4,4H58a4,4 0 0 1 -4,-4V34a4,4 0 0 1 4,-4z"/>
+    <path android:fillColor="#C7D2FE" android:pathData="M34,58h16a4,4 0 0 1 4,4v16a4,4 0 0 1 -4,4H34a4,4 0 0 1 -4,-4V62a4,4 0 0 1 4,-4z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M58,58h16a4,4 0 0 1 4,4v16a4,4 0 0 1 -4,4H58a4,4 0 0 1 -4,-4V62a4,4 0 0 1 4,-4z"/>
+</vector>

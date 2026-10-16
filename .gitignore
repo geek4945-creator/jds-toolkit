@@ -1,0 +1,10 @@
+.cache/
+build/
+.gradle/
+*.apk
+*.jks
+local.properties
+keystore.properties
+__pycache__/
+*.pyc
+/mattymctech-app.zip

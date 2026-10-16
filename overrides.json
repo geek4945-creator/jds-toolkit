@@ -1,0 +1,192 @@
+{
+ "lumalabs.ai/genie": {
+  "category": "ai",
+  "tags": [
+   "ai",
+   "games"
+  ],
+  "_name": "Lumalabs Genie"
+ },
+ "myheritage.com/deep-nostalgia": {
+  "category": "ai",
+  "tags": [
+   "photo"
+  ],
+  "_name": "MyHeritage – Deep Nostalgia"
+ },
+ "amazon.com/stylesnap": {
+  "category": "shopping",
+  "tags": [
+   "photo"
+  ],
+  "_name": "Amazon Style Snap"
+ },
+ "broadcastify.com": {
+  "category": "music",
+  "tags": [
+   "music"
+  ],
+  "_name": "Broadcastify"
+ },
+ "radiooooo.com": {
+  "category": "music",
+  "tags": [
+   "music"
+  ],
+  "_name": "Radiooooo"
+ },
+ "tunefind.com": {
+  "category": "music",
+  "tags": [
+   "music"
+  ],
+  "_name": "Tunefind"
+ },
+ "melodice.org": {
+  "category": "music",
+  "tags": [
+   "games",
+   "music"
+  ],
+  "_name": "Melodice"
+ },
+ "musclewiki.com": {
+  "category": "lifestyle",
+  "tags": [
+   "no-signup"
+  ],
+  "_name": "MuscleWiki"
+ },
+ "bodyvisualizer.is.tue.mpg.de": {
+  "category": "lifestyle",
+  "tags": [],
+  "_name": "Body Visualizer"
+ },
+ "roomstyler.com": {
+  "category": "lifestyle",
+  "tags": [],
+  "_name": "Roomstyler"
+ },
+ "deskspacing.com": {
+  "category": "lifestyle",
+  "tags": [],
+  "_name": "Deskspacing"
+ },
+ "housecreep.com": {
+  "category": "lifestyle",
+  "tags": [],
+  "_name": "Housecreep"
+ },
+ "stilltasty.com": {
+  "category": "lifestyle",
+  "tags": [],
+  "_name": "StillTasty"
+ },
+ "tosdr.org/en": {
+  "category": "security",
+  "tags": [],
+  "_name": "ToS;DR"
+ },
+ "whichbook.net": {
+  "category": "learning",
+  "tags": [],
+  "_name": "Whichbook"
+ },
+ "findagrave.com": {
+  "category": "learning",
+  "tags": [],
+  "_name": "FindAGrave"
+ },
+ "outrider.org/nuclear-weapons/interactive/bomb-blast": {
+  "category": "learning",
+  "tags": [],
+  "_name": "Outrider Bomb Blast"
+ },
+ "smmry.com": {
+  "category": "productivity",
+  "tags": [],
+  "_name": "Smmry"
+ },
+ "omnicalculator.com": {
+  "category": "productivity",
+  "tags": [],
+  "_name": "Omni Calculator"
+ },
+ "apps.irs.gov/app/freefile": {
+  "category": "money",
+  "tags": [
+   "free",
+   "in-browser"
+  ],
+  "_name": "IRS Free File"
+ },
+ "importyeti.com": {
+  "category": "money",
+  "tags": [],
+  "_name": "ImportYeti"
+ },
+ "pranx.com/hacker": {
+  "category": "fun",
+  "tags": [
+   "kids-safe-fun"
+  ],
+  "_name": "Pranx Hacker Screen"
+ },
+ "donjon.bin.sh": {
+  "category": "fun",
+  "tags": [
+   "map"
+  ],
+  "_name": "DonJon"
+ },
+ "dungeonscrawl.com": {
+  "category": "fun",
+  "tags": [
+   "map"
+  ],
+  "_name": "Dungeonscrawl"
+ },
+ "mapgenie.io": {
+  "category": "fun",
+  "tags": [
+   "games",
+   "map",
+   "video"
+  ],
+  "_name": "Map Genie"
+ },
+ "geoguessr.com": {
+  "category": "fun",
+  "tags": [],
+  "_name": "GeoGuessr"
+ },
+ "driveandlisten.herokuapp.com": {
+  "category": "fun",
+  "tags": [
+   "music"
+  ],
+  "url": "https://driveandlisten.app/",
+  "_name": "Drive and Listen",
+  "_why": "herokuapp address is dead (404); site moved"
+ },
+ "essaytyper.com": {
+  "category": "fun",
+  "tags": [],
+  "_name": "Essay Typer"
+ },
+ "campfirewriting.com": {
+  "category": "design",
+  "tags": [],
+  "_name": "Campfire Writing"
+ },
+ "datenightmovies.com": {
+  "skip": true,
+  "_name": "Date Night Movies",
+  "_why": "site no longer exists per the post"
+ },
+ "gentype.withgoogle.com": {
+  "skip": true,
+  "_name": "Google GenType",
+  "_why": "returns 404 (experiment appears retired)"
+ }
+}
