@@ -19,6 +19,13 @@ To add a credit:
 
 Per-tool source credit is separate: each tool keeps its own `sources` (shown as "From: ..." on the tool card), so a tool added from a new source can be credited there as well.
 
+## Category icons
+Every category card (home) and category screen shows an icon. The artwork and the category -> icon map are data, shared by the Android app and the web app:
+- [`icons.json`](icons.json) (repo root) holds the icon paths (Material Icons, Round style, Apache License 2.0, 24x24 grid, drawn as inline vectors, no downloads at runtime) and `categories` (category id -> icon name). `default` is the icon used for any category without one.
+- Each category in `catalog.json` also has an `icon` field. Lookup order: the category's own `icon` -> the id map in `icons.json` -> the default folder icon. So a **new category added later** shows the folder icon, or any icon you name in its `icon` field.
+- To change or add an icon: edit `icons.json` (and `CATEGORIES` in `update_catalog.py` for a new category), then run `python3 update_catalog.py --sync-icons`. It copies `icons.json` into the Android assets and `docs/`, and refreshes the `icon` fields in the catalog files (no catalog version bump). The monthly GitHub Action does the same copy.
+- Headless check of the web version: `node tests/pwa_icons_check.js` (needs `playwright-core` and Chrome).
+
 ## iPhone / web version
 An installable web app (PWA) lives in `docs/` and is hosted on GitHub Pages: <https://geek4945-creator.github.io/matty-tools-directory/>.
 On iPhone open it in Safari -> Share -> **Add to Home Screen**. It has the same features as the Android app and works offline, but iOS web apps
@@ -44,11 +51,11 @@ not all ~300 numbered websites. Posts that are fully open (e.g. 11-30, 51-60, 71
 The newsletter's full spreadsheet, if you want it, is offered to Patreon supporters - nothing here bypasses that either.
 
 ## Install the APK
-1. Download `jds-toolkit-v1.0.2.apk` (GitHub release page) to your phone.
+1. Download `jds-toolkit-v1.0.3.apk` (GitHub release page) to your phone.
 2. Open it. Android will ask to allow "install unknown apps" for your browser/file manager - allow it for this install.
 3. Tap Install. On Android 13+ allow notifications when prompted if you want the monthly "new tools" notice.
 
-(Or with a computer: `adb install -r jds-toolkit-v1.0.2.apk`.) Verify with `apksigner verify`; the release APK is signed with the
+(Or with a computer: `adb install -r jds-toolkit-v1.0.3.apk`.) Verify with `apksigner verify`; the release APK is signed with the
 project's own key. A debug build installs the same way but is signed with a debug key (uninstall one before installing the other).
 
 ## Build from source

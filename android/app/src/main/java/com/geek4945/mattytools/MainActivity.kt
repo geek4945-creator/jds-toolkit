@@ -144,7 +144,7 @@ fun AppRoot(repo: CatalogRepository, showNew: Boolean, onShowNewHandled: () -> U
                     onSeeNew = { go(Screen.NewItems) }, actions = actions)
                 is Screen.CategoryScreen -> ToolListScreen(
                     tools = catalog.tools.filter { it.category == s.id }.sortedBy { it.name.lowercase() },
-                    actions = actions, header = catalog.category(s.id)?.blurb ?: "")
+                    actions = actions, header = catalog.category(s.id)?.blurb ?: "", category = catalog.category(s.id))
                 Screen.Search -> SearchScreen(catalog, actions)
                 Screen.Favorites -> SavedScreen(favorites.mapNotNull { toolById[it] }, recents.mapNotNull { toolById[it] }, actions)
                 Screen.NewItems -> NewScreen(newIds.keys.mapNotNull { toolById[it] }, actions) { repo.clearNew() }
@@ -217,7 +217,7 @@ fun HomeScreen(
             ) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(CATEGORY_EMOJI[c.id] ?: "\uD83D\uDCC1", fontSize = 30.sp)
+                        CategoryBadge(c)
                         Spacer(Modifier.weight(1f))
                         if (newInCat > 0) NewBadge()
                     }
@@ -244,12 +244,17 @@ fun HomeScreen(
 
 /** Reusable list with the "use" tag filter on top. */
 @Composable
-fun ToolListScreen(tools: List<Tool>, actions: ToolActions, header: String = "", emptyText: String = "Nothing here yet.") {
+fun ToolListScreen(tools: List<Tool>, actions: ToolActions, header: String = "", emptyText: String = "Nothing here yet.", category: Category? = null) {
     var selected by rememberSaveable { mutableStateOf(setOf<String>()) }
     val tags = remember(tools) { tools.flatMap { it.tags }.groupingBy { it }.eachCount().entries.sortedByDescending { it.value }.map { it.key } }
     val shown = tools.filter { t -> selected.all { it in t.tags } }
     LazyColumn(contentPadding = PaddingValues(bottom = 16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        if (header.isNotBlank()) item { Text(header, Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.onSurfaceVariant) }
+        if (category != null) item {
+            Row(Modifier.padding(horizontal = 16.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                CategoryBadge(category, tile = 40.dp, glyph = 22.dp)
+                if (header.isNotBlank()) Text(header, Modifier.weight(1f), color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        } else if (header.isNotBlank()) item { Text(header, Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.onSurfaceVariant) }
         if (tags.isNotEmpty()) item { TagFilterRow(tags, selected) { t -> selected = if (t in selected) selected - t else selected + t } }
         if (shown.isEmpty()) item { Text(emptyText, Modifier.padding(24.dp).fillMaxWidth(), textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onSurfaceVariant) }
         items(shown, key = { it.id }) { t -> Box(Modifier.padding(horizontal = 16.dp)) { ToolCardFor(t, actions, showCategory = false) } }

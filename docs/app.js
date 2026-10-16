@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  var APP_VERSION = '1.0.2-web';
+  var APP_VERSION = '1.0.3-web';
   var REMOTE_URL = 'https://raw.githubusercontent.com/geek4945-creator/matty-tools-directory/main/catalog.json';
   var REPO_URL = 'https://github.com/geek4945-creator/matty-tools-directory';
   var CHECK_EVERY_MS = 30 * 86400000;
@@ -31,6 +31,7 @@
   var searchState = { q: '', tags: [] };
   var catTags = {};              // category id -> selected tags
   var checking = false;
+  var iconSet = null;            // icons.json: {default, categories:{id:name}, icons:{name:[svg path d,...]}} (shared with the Android app)
 
   /* ---------- helpers ---------- */
   function $(id) { return document.getElementById(id); }
@@ -81,7 +82,7 @@
       });
     });
     var cats = (Array.isArray(raw.categories) ? raw.categories : []).filter(function (c) { return c && c.id && c.name; })
-      .map(function (c) { return { id: String(c.id), name: String(c.name), blurb: String(c.blurb || '') }; });
+      .map(function (c) { return { id: String(c.id), name: String(c.name), blurb: String(c.blurb || ''), icon: String(c.icon || '') }; });
     var credits = (Array.isArray(raw.credits) ? raw.credits : []).filter(function (c) { return c && String(c.name || '').trim() && String(c.contribution || '').trim(); })
       .map(function (c) { return { name: String(c.name).trim(), contribution: String(c.contribution).trim(), url: c.url ? safeUrl(c.url) : null }; });
     return {
@@ -127,6 +128,32 @@
     var cnt = {};
     tools.forEach(function (t) { t.tags.forEach(function (g) { cnt[g] = (cnt[g] || 0) + 1; }); });
     return Object.keys(cnt).sort(function (a, b) { return cnt[b] - cnt[a] || (a < b ? -1 : 1); }).slice(0, n);
+  }
+
+  /* ---------- category icons (inline SVG from icons.json; no CDN, follows the theme via currentColor) ---------- */
+  function loadIcons() {
+    return fetch('icons.json').then(function (r) { if (!r.ok) throw new Error('icons HTTP ' + r.status); return r.json(); })
+      .then(function (j) { if (j && j.icons) iconSet = j; }).catch(function (e) { console.warn('Category icons unavailable: ' + e.message); });
+  }
+  function iconName(cat) {
+    var set = iconSet; if (!set) return null;
+    var def = set.default || 'folder';
+    if (cat.icon && set.icons[cat.icon]) return cat.icon;
+    var m = set.categories && set.categories[cat.id];
+    if (m && set.icons[m]) return m;
+    return set.icons[def] ? def : null;
+  }
+  function svgIcon(name) {
+    var NS = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 24 24'); svg.setAttribute('aria-hidden', 'true'); svg.setAttribute('focusable', 'false');
+    iconSet.icons[name].forEach(function (d) { var p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); svg.appendChild(p); });
+    return svg;
+  }
+  /* rounded tile holding the category icon; returns null if icons failed to load (cards still work without them) */
+  function catBadge(cat, small) {
+    var n = iconName(cat); if (!n) return null;
+    var b = h('span', { class: 'cat-ico' + (small ? ' sm' : ''), 'data-icon': n }); b.appendChild(svgIcon(n)); return b;
   }
 
   function loadCatalog() {
@@ -302,6 +329,7 @@
     v.appendChild(sec('Categories'));
     v.appendChild(h('div', { class: 'grid' }, cats.map(function (x) {
       return h('a', { class: 'cat', href: '#/c/' + encodeURIComponent(x.c.id) }, [
+        catBadge(x.c, false),
         h('div', { class: 'n', text: x.c.name }), h('div', { class: 'b', text: x.c.blurb }), h('div', { class: 'c', text: plural(x.n, 'tool') })
       ]);
     })));
@@ -313,7 +341,8 @@
     var all = toolsIn(cid), sel = catTags[cid] || [];
     var shown = all.filter(function (t) { return sel.every(function (g) { return t.tags.indexOf(g) >= 0; }); });
     var v = h('div');
-    if (c.blurb) v.appendChild(h('p', { class: 'muted', text: c.blurb }));
+    var badge = catBadge(c, true);
+    if (badge || c.blurb) v.appendChild(h('div', { class: 'cat-head' }, [badge, c.blurb ? h('p', { class: 'muted', text: c.blurb }) : null]));
     v.appendChild(tagChips(topTags(all, 24), sel, function (g) { catTags[cid] = toggleIn(sel, g); render(true); }));
     v.appendChild(h('p', { class: 'muted', text: plural(shown.length, 'tool') }));
     v.appendChild(listOf(shown, 'No tools match these filters.'));
@@ -460,7 +489,7 @@
 
   /* ---------- start ---------- */
   function start() {
-    loadCatalog().then(function () { render(); maybeAutoCheck(); }).catch(function (e) {
+    Promise.all([loadIcons(), loadCatalog()]).then(function () { render(); maybeAutoCheck(); }).catch(function (e) {
       console.error(e);
       $('view').appendChild(h('div', { class: 'empty' }, [h('p', { text: 'Could not load the tool catalog. Check your connection and reload.' }),
         h('button', { class: 'btn primary', type: 'button', text: 'Reload', onclick: function () { location.reload(); } })]));

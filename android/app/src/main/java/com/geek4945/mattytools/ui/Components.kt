@@ -24,12 +24,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.geek4945.mattytools.data.Tool
 
-val CATEGORY_EMOJI = mapOf(
-    "ai" to "\uD83E\uDD16", "tv" to "\uD83D\uDCFA", "fun" to "\uD83C\uDFAE", "music" to "\uD83C\uDFA7",
-    "design" to "\uD83C\uDFA8", "productivity" to "\uD83E\uDDF0", "learning" to "\uD83C\uDF93", "security" to "\uD83D\uDD12",
-    "shopping" to "\uD83D\uDED2", "money" to "\uD83D\uDCBC", "lifestyle" to "\uD83C\uDF4E", "travel" to "\uD83D\uDDFA\uFE0F", "uncat" to "\u2728",
-)
-
 fun tagLabel(t: String) = t.replace('-', ' ').replaceFirstChar { it.uppercase() }
 
 /** Opens the page in a Chrome Custom Tab (in-app browser); falls back to any browser. */

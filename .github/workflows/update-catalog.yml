@@ -21,7 +21,7 @@ jobs:
         run: python update_catalog.py
       - name: Commit if the catalog changed
         run: |
-          cp catalog.json docs/catalog.json   # offline snapshot bundled in the iPhone/web app
+          cp catalog.json docs/catalog.json; cp icons.json docs/icons.json; cp icons.json android/app/src/main/assets/icons.json   # offline snapshot bundled in the iPhone/web app
           if git diff --quiet -- catalog.json android/app/src/main/assets/catalog.json docs/catalog.json; then
             echo "No new tools this month."
           else

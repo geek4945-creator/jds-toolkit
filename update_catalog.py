@@ -52,6 +52,32 @@ CATEGORIES = [
 ]
 CAT_NAMES = {c[0]: c[1] for c in CATEGORIES}
 
+# ----------------------------------------------------------------------------- category icons
+# icons.json (repo root) is the single source for the icon artwork and the category -> icon map. It is copied
+# next to the Android bundle and the web app (see ICON_COPIES) so both platforms always match.
+ICONS_FILE = os.path.join(HERE, "icons.json")
+ICON_COPIES = [os.path.join(HERE, "android/app/src/main/assets/icons.json"), os.path.join(HERE, "docs/icons.json")]
+
+def load_icons(path=None):
+    try:
+        with open(path or ICONS_FILE, encoding="utf-8") as f: return json.load(f)
+    except (OSError, ValueError): return {"default": "folder", "categories": {}, "icons": {}}
+
+def icon_for(cat_id, icons=None):
+    """Icon name for a category id; unknown or missing -> the default icon. Always a name present in icons['icons']."""
+    icons = icons or load_icons()
+    name = icons.get("categories", {}).get(cat_id) or icons.get("default", "folder")
+    return name if name in icons.get("icons", {}) else icons.get("default", "folder")
+
+def category_entries():
+    icons = load_icons()
+    return [{"id": c[0], "name": c[1], "blurb": c[2], "icon": icon_for(c[0], icons)} for c in CATEGORIES]
+
+def sync_icons(copies=None, src=None):
+    import shutil
+    for dst in (copies if copies is not None else ICON_COPIES):
+        os.makedirs(os.path.dirname(dst), exist_ok=True); shutil.copyfile(src or ICONS_FILE, dst)
+
 # keyword rules: (category id, tag, regex). Scored by number of matches in name+description+Category hint.
 CATEGORY_RULES = [
     ("ai", r"(?-i:\bAI\b)|artificial intelligence|machine learning|\bGPT\b|text[- ]to[- ](speech|image|video)|generat(e|es|ive|or)\b.*\b(image|art|voice|video|music)|face swap|deepfake"),
@@ -598,6 +624,9 @@ def main(argv=None):
                     help="also copy the catalog here (offline snapshot of the iPhone/web app); '' to skip")
     ap.add_argument("--credits-only", action="store_true",
                     help="no crawling: just copy credits.json into catalog.json (bumps the version if it changed)")
+    ap.add_argument("--sync-icons", action="store_true",
+                    help="no crawling: copy icons.json into the Android bundle and docs/, and add the 'icon' field to the "
+                         "catalog categories (does not change the catalog version)")
     ap.add_argument("--cache", default=None, help="directory to cache downloaded pages")
     ap.add_argument("--offline", action="store_true", help="only use --cache, no network")
     ap.add_argument("--delay", type=float, default=1.2, help="seconds between requests")
@@ -614,6 +643,13 @@ def main(argv=None):
     except ValueError as e:
         print(f"error: {a.credits}: {e}", file=sys.stderr); return 2
     outputs = [a.catalog, a.assets, a.docs]
+
+    if a.sync_icons:
+        sync_icons()
+        old["categories"] = category_entries()
+        if not a.dry_run: write_catalog(old, outputs)
+        print("icons synced", file=sys.stderr)
+        return 0
 
     if a.credits_only:
         old_version = int(old.get("version", 0))
@@ -683,13 +719,14 @@ def main(argv=None):
         "title": "JD's Toolkit catalog",
         "source": BASE, "posts": sorted(posts, key=lambda p: p["date"], reverse=True),
         "sheets": sheet_report or old.get("sheets", []),
-        "categories": [{"id": c[0], "name": c[1], "blurb": c[2]} for c in CATEGORIES],
+        "categories": category_entries(),
         "note": "Unofficial fan-made directory. Only publicly readable (ungated) parts of posts are listed; "
                 "categories for new items are keyword-guessed.",
     })
     print(f"posts={len(posts)} items={len(new_cat['items'])} new={len(added)} version={new_cat['version']}", file=sys.stderr)
     if not a.dry_run:
         write_catalog(new_cat, outputs)
+        sync_icons()
     for it in added: print("NEW:", it["name"], it["url"], "->", CAT_NAMES[it["category"]])
     return 0
 

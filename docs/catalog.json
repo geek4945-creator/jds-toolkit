@@ -5747,72 +5747,86 @@
   {
    "id": "ai",
    "name": "AI Tools",
-   "blurb": "Generate, summarise and create with AI"
+   "blurb": "Generate, summarise and create with AI",
+   "icon": "auto_awesome"
   },
   {
    "id": "tv",
    "name": "Free TV & Movies",
-   "blurb": "Streaming, TV and what to watch"
+   "blurb": "Streaming, TV and what to watch",
+   "icon": "movie"
   },
   {
    "id": "fun",
    "name": "Fun & Games",
-   "blurb": "Games, pranks, curiosities and time-wasters"
+   "blurb": "Games, pranks, curiosities and time-wasters",
+   "icon": "sports_esports"
   },
   {
    "id": "music",
    "name": "Music & Audio",
-   "blurb": "Listen, make and remix sound"
+   "blurb": "Listen, make and remix sound",
+   "icon": "headphones"
   },
   {
    "id": "design",
    "name": "Design & Creative",
-   "blurb": "Photo, video, art and design tools"
+   "blurb": "Photo, video, art and design tools",
+   "icon": "palette"
   },
   {
    "id": "productivity",
    "name": "Productivity & Utilities",
-   "blurb": "PDFs, files, calculators and everyday helpers"
+   "blurb": "PDFs, files, calculators and everyday helpers",
+   "icon": "handyman"
   },
   {
    "id": "learning",
    "name": "Learning & Reference",
-   "blurb": "Courses, books, science and how-things-work"
+   "blurb": "Courses, books, science and how-things-work",
+   "icon": "school"
   },
   {
    "id": "security",
    "name": "Security & Privacy",
-   "blurb": "Stay safe, private and informed online"
+   "blurb": "Stay safe, private and informed online",
+   "icon": "security"
   },
   {
    "id": "shopping",
    "name": "Shopping & Deals",
-   "blurb": "Coupons, price checks and cheaper alternatives"
+   "blurb": "Coupons, price checks and cheaper alternatives",
+   "icon": "shopping_bag"
   },
   {
    "id": "money",
    "name": "Money, Jobs & Business",
-   "blurb": "Side hustles, remote jobs, finance and business"
+   "blurb": "Side hustles, remote jobs, finance and business",
+   "icon": "payments"
   },
   {
    "id": "lifestyle",
    "name": "Health, Food & Home",
-   "blurb": "Fitness, recipes, home, garden and health"
+   "blurb": "Fitness, recipes, home, garden and health",
+   "icon": "health_and_safety"
   },
   {
    "id": "travel",
    "name": "Travel, Maps & Local",
-   "blurb": "Maps, travel, cars and local info"
+   "blurb": "Maps, travel, cars and local info",
+   "icon": "explore"
   },
   {
    "id": "live",
    "name": "Live Maps & Trackers",
-   "blurb": "Watch the world: flights, ships, weather, space, webcams and virtual travel"
+   "blurb": "Watch the world: flights, ships, weather, space, webcams and virtual travel",
+   "icon": "satellite_alt"
   },
   {
    "id": "uncat",
    "name": "Uncategorized / New",
-   "blurb": "New items waiting for a category"
+   "blurb": "New items waiting for a category",
+   "icon": "inbox"
   }
  ],
  "note": "Unofficial fan-made directory. Only publicly readable (ungated) parts of posts are listed; categories for new items are keyword-guessed.",

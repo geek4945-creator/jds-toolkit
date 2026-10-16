@@ -22,7 +22,7 @@ data class Tool(
 /** Someone who contributed to the tool list; shown under Settings > About > Credits. `url` is optional (http/https only). */
 data class Credit(val name: String, val contribution: String, val url: String? = null)
 
-data class Category(val id: String, val name: String, val blurb: String)
+data class Category(val id: String, val name: String, val blurb: String, val icon: String = "")
 
 data class Post(val title: String, val date: String, val url: String, val gated: Boolean, val toolsFound: Int)
 
@@ -48,7 +48,7 @@ object CatalogJson {
     fun parse(text: String): Catalog {
         val o = JSONObject(text)
         val cats = o.optJSONArray("categories")?.let { a ->
-            (0 until a.length()).map { i -> a.getJSONObject(i).let { Category(it.getString("id"), it.getString("name"), it.str("blurb")) } }
+            (0 until a.length()).map { i -> a.getJSONObject(i).let { Category(it.getString("id"), it.getString("name"), it.str("blurb"), it.str("icon")) } }
         } ?: emptyList()
         val tools = o.getJSONArray("items").let { a ->
             (0 until a.length()).mapNotNull { i ->
@@ -90,7 +90,7 @@ object CatalogJson {
         val o = JSONObject()
         o.put("schema", 1)
         o.put("version", c.version); o.put("date", c.date); o.put("note", c.note)
-        o.put("categories", JSONArray(c.categories.map { JSONObject().put("id", it.id).put("name", it.name).put("blurb", it.blurb) }))
+        o.put("categories", JSONArray(c.categories.map { JSONObject().put("id", it.id).put("name", it.name).put("blurb", it.blurb).also { j -> if (it.icon.isNotEmpty()) j.put("icon", it.icon) } }))
         o.put("items", JSONArray(c.tools.map { t ->
             JSONObject().put("id", t.id).put("name", t.name).put("url", t.url).put("host", t.host)
                 .put("description", t.description).put("category", t.category)

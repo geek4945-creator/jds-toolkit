@@ -233,5 +233,31 @@ class Shipped(unittest.TestCase):
         p = os.path.join(os.path.dirname(__file__), "..", "android/app/src/main/assets/catalog.json")
         self.assertEqual(json.load(open(p)), self.c)
 
+class CategoryIcons(unittest.TestCase):
+    root = os.path.join(os.path.dirname(__file__), "..")
+    def setUp(self):
+        self.icons = json.load(open(os.path.join(self.root, "icons.json")))
+        self.c = json.load(open(os.path.join(self.root, "catalog.json")))
+    def test_every_category_has_a_distinct_known_icon(self):
+        names = [u.icon_for(cid, self.icons) for cid, *_ in u.CATEGORIES]
+        self.assertEqual(len(names), len(set(names)))
+        for n in names:
+            self.assertIn(n, self.icons["icons"]); self.assertTrue(all(d[:1] in "Mm" for d in self.icons["icons"][n]))
+    def test_unknown_category_gets_default(self):
+        self.assertEqual(u.icon_for("brand-new", self.icons), self.icons["default"])
+        self.assertIn(self.icons["default"], self.icons["icons"])
+    def test_catalog_categories_carry_matching_icon_field(self):
+        self.assertEqual([c["icon"] for c in self.c["categories"]], [u.icon_for(c["id"], self.icons) for c in self.c["categories"]])
+        self.assertEqual(len(self.c["categories"]), len(u.CATEGORIES))
+    def test_copies_are_identical(self):
+        src = open(os.path.join(self.root, "icons.json"), "rb").read()
+        for dst in ("docs/icons.json", "android/app/src/main/assets/icons.json"):
+            self.assertEqual(open(os.path.join(self.root, dst), "rb").read(), src, dst)
+    def test_sync_icons_copies_file(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            dst = os.path.join(d, "x", "icons.json"); u.sync_icons([dst])
+            self.assertEqual(json.load(open(dst)), self.icons)
+
 if __name__ == "__main__":
     unittest.main()
