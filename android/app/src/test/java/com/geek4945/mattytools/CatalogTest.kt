@@ -73,4 +73,17 @@ class CatalogTest {
         val r = CatalogMerge.merge(local, cat(2, tool("a", "https://a.com", cat = "ai")))
         assertEquals("a", r.catalog.tools[0].id); assertEquals("ai", r.catalog.tools[0].category)
     }
+
+    @Test fun sheetSourceWithBlankDateAndNewCategorySurviveUpdate() {
+        val sheetTool = Tool("geoguessr-com", "Geo Guessr", "https://www.geoguessr.com/", "geoguessr.com", "Guess where", "live",
+            listOf("cure-boredom"), listOf(Source("Sheet: Cure Boredom", "", "https://docs.google.com/spreadsheets/d/e/x/pubhtml", 1)), null, 2, "2026-11-01")
+        val remote = Catalog(2, "2026-11-01", listOf(Category("fun", "Fun", ""), Category("live", "Live Maps & Trackers", "")), listOf(sheetTool), emptyList())
+        val back = CatalogJson.parse(CatalogJson.toJson(remote))
+        assertEquals("", back.tools[0].sources[0].date)
+        val r = CatalogMerge.merge(cat(1, tool("a", "https://a.com")), back)
+        assertTrue(r.updated)
+        assertEquals(listOf("geoguessr-com"), r.newTools.map { it.id })
+        assertNotNull(r.catalog.category("live"))
+        assertEquals(2, r.catalog.tools.size)
+    }
 }

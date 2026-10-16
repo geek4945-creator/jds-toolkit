@@ -46,6 +46,7 @@ CATEGORIES = [
     ("money", "Money, Jobs & Business", "Side hustles, remote jobs, finance and business"),
     ("lifestyle", "Health, Food & Home", "Fitness, recipes, home, garden and health"),
     ("travel", "Travel, Maps & Local", "Maps, travel, cars and local info"),
+    ("live", "Live Maps & Trackers", "Watch the world: flights, ships, weather, space, webcams and virtual travel"),
     ("uncat", UNCAT, "New items waiting for a category"),
 ]
 CAT_NAMES = {c[0]: c[1] for c in CATEGORIES}
@@ -214,8 +215,8 @@ def clean_url(u):
     if not re.match(r"^https?://", u): u = "https://" + u
     p = urlparse(u)
     q = [(k, v) for k, v in parse_qsl(p.query, keep_blank_values=True) if not k.lower().startswith("utm_")]
-    host = p.netloc.lower()
-    path = p.path
+    host = re.sub(r"\.{2,}", ".", p.netloc.lower().strip())
+    path = p.path.strip()
     return urlunparse((p.scheme.lower(), host, path, "", urlencode(q), ""))
 
 def url_key(u):
@@ -368,9 +369,10 @@ def make_id(url):
     return slugify(url_key(url))[:80]
 
 def categorize(name, desc, hint=None, host="", overrides=None, key=""):
-    if overrides and key in overrides:
+    if overrides and key in overrides and "category" in overrides[key]:
         o = overrides[key]
-        return o["category"], list(o.get("tags", []))
+        if "tags" in o: return o["category"], list(o["tags"])
+        return o["category"], [t for t, rx in USE_TAGS if re.search(rx, f"{name} {desc} {host}", re.I)]
     text = f"{name} {desc} {host}"
     scores = {}
     for cid, rx in CATEGORY_RULES:
@@ -388,44 +390,86 @@ def categorize(name, desc, hint=None, host="", overrides=None, key=""):
 
 # ----------------------------------------------------------------------------- spreadsheets
 SHEET_COLS = {
-    "name": ("name", "tool", "site", "website", "title", "app"),
+    "name": ("name", "tool", "site", "website", "website name", "title", "app"),
     "url": ("url", "link", "website url", "site url", "web"),
-    "description": ("description", "desc", "what it does", "about", "notes", "summary"),
+    "description": ("description", "desc", "what it does", "about", "summary"),
     "category": ("category", "type", "section"),
     "use": ("use", "uses", "use case", "use it for", "tags", "tag"),
     "pricing": ("pricing", "price", "cost", "free?"),
     "notes": ("notes", "note", "comment", "comments"),
 }
+# Layout of the published "Powerful Websites" sheet, which has no header row on its first tab:
+#   column A = number, B = name, C = link, D = description
+POSITIONAL = {"number": 0, "name": 1, "url": 2, "description": 3}
+SHORTENER = re.compile(r"^(https?://)?(www\.)?(bit\.ly|tinyurl\.com|t\.co|goo\.gl|ow\.ly)/", re.I)
+TIKTOK_ROW = re.compile(r"\blink to tiktok\b|\btiktok (video|showing)\b", re.I)
 
-def sheet_csv_url(u):
-    """Turn a normal Google Sheets share URL into a CSV export URL (only works for sheets shared 'anyone with the link')."""
+def sheet_csv_url(u, gid=None):
+    """Turn a Google Sheets URL into a CSV URL (only works for sheets published to the web / shared 'anyone with the link')."""
+    if "output=csv" in u or "export?format=csv" in u: return u
+    m = re.match(r"(https://docs\.google\.com/spreadsheets/d/e/[\w-]+)/pub(?:html)?", u)
+    if m:  # "Publish to web" link
+        g = gid if gid is not None else (re.search(r"[#&?]gid=(\d+)", u) or [None, None])[1]
+        return f"{m.group(1)}/pub?" + (f"gid={g}&" if g is not None else "") + "single=true&output=csv"
     m = re.match(r"https://docs\.google\.com/spreadsheets/d/([\w-]+)", u)
-    if m and "export?format=csv" not in u and "output=csv" not in u:
-        gid = re.search(r"[#&?]gid=(\d+)", u)
-        return f"https://docs.google.com/spreadsheets/d/{m.group(1)}/export?format=csv" + (f"&gid={gid.group(1)}" if gid else "")
+    if m:
+        g = gid if gid is not None else (re.search(r"[#&?]gid=(\d+)", u) or [None, None])[1]
+        return f"https://docs.google.com/spreadsheets/d/{m.group(1)}/export?format=csv" + (f"&gid={g}" if g is not None else "")
     return u
 
-def parse_sheet_csv(text, source_name, source_url):
-    rows = list(csv.reader(io.StringIO(text)))
-    if not rows: return []
-    head = [h.strip().lower() for h in rows[0]]
-    def col(field):
-        for a in SHEET_COLS[field]:
-            if a in head: return head.index(a)
-        return None
-    idx = {f: col(f) for f in SHEET_COLS}
-    if idx["url"] is None:  # maybe the name column holds URLs
-        return []
+def discover_tabs(pubhtml):
+    """List (gid, name) of every tab on a published-to-web sheet page."""
     out = []
-    for r in rows[1:]:
-        g = lambda f: (r[idx[f]].strip() if idx[f] is not None and idx[f] < len(r) else "")
-        url = g("url")
-        if not url or " " in url or "." not in url: continue
-        name = g("name") or domain_name(url)
-        it = {"name": name, "url": url, "description": g("description"), "hint": g("category") or None,
-              "replaces": None, "video": None, "number": None,
-              "post": {"title": f"Sheet: {source_name}", "date": dt.date.today().isoformat(), "url": source_url},
-              "extra": {k: g(k) for k in ("use", "pricing", "notes") if g(k)}}
+    for m in re.finditer(r'items\.push\(\{name: "((?:[^"\\]|\\.)*)", pageUrl: "[^"]*", gid: "(\d+)"', pubhtml):
+        out.append((m.group(2), json.loads('"' + m.group(1) + '"')))
+    return out
+
+def _find_header(rows):
+    for i, r in enumerate(rows[:10]):
+        low = [c.strip().lower() for c in r]
+        if any(c in SHEET_COLS["url"] for c in low) and any(c in SHEET_COLS["name"] for c in low):
+            return i, low
+    return None, None
+
+def parse_sheet_csv(text, source_name, source_url, tab=None, report=None):
+    """Rows of a published sheet tab -> raw items. Rows without a usable web address are skipped (and counted in report)."""
+    tab = tab or {}
+    rows = list(csv.reader(io.StringIO(text)))
+    rep = report if report is not None else {}
+    rep.setdefault("skipped", [])
+    def skip(r, why): rep["skipped"].append({"row": [c for c in r if c.strip()][:3], "why": why})
+    hi, head = _find_header(rows)
+    if hi is not None:
+        def col(field):
+            for a in SHEET_COLS[field]:
+                if a in head: return head.index(a)
+            return None
+        idx = {f: col(f) for f in SHEET_COLS}
+        idx["number"] = 0 if head and head[0] == "" else None
+        if idx["description"] is None: idx["description"] = col("notes")
+        body = rows[hi + 1:]
+    else:
+        idx = {f: None for f in SHEET_COLS}; idx.update(POSITIONAL); body = rows
+    title = f"Sheet: {tab.get('name') or source_name}" if tab.get("name") else f"Sheet: {source_name}"
+    out = []
+    for r in body:
+        if not any(c.strip() for c in r): continue
+        g = lambda f: (r[idx[f]].strip() if idx.get(f) is not None and idx[f] < len(r) else "")
+        url, name, desc = g("url"), g("name"), g("description")
+        if not url:
+            if name or desc: skip(r, "no web address")
+            continue
+        if re.match(r"^https?://(www\.)?(buymeacoffee|patreon)\.com", url, re.I): skip(r, "support/donation link, not a tool"); continue
+        if " " in url or "." not in url or "'" in url: skip(r, "not a web address"); continue
+        if re.search(r"tiktok\.com", url, re.I) or (SHORTENER.match(url) and TIKTOK_ROW.search(desc + " " + name)):
+            skip(r, "link to a TikTok video, not a tool"); continue
+        extra = {k: g(k) for k in ("use", "pricing", "notes") if g(k) and idx.get(k) != idx.get("description")}
+        n = g("number")
+        it = {"name": name or domain_name(url), "url": url, "description": desc,
+              "hint": g("category") or tab.get("hint") or None,
+              "replaces": None, "video": None, "number": int(n) if n.isdigit() else None,
+              "post": {"title": title, "date": "", "url": source_url}, "extra": extra}
+        if tab.get("tag"): it["extra_tags"] = [tab["tag"]]
         out.append(it)
     return out
 
@@ -471,16 +515,19 @@ def normalise(raw_items, overrides):
         if (overrides.get(key) or {}).get("url"):  # corrected address for a moved site
             url = clean_url(overrides[key]["url"]); key = url_key(url)
         host = re.sub(r"^www\.", "", urlparse(url).netloc)
+        if (overrides.get(orig_key) or {}).get("name"): r = dict(r, name=overrides[orig_key]["name"])
         src = {"title": r["post"]["title"], "date": r["post"]["date"], "url": r["post"]["url"]}
         if r.get("number"): src["number"] = r["number"]
         if key in by:
             ex = by[key]
             if src not in ex["sources"]: ex["sources"].append(src)
             if len(r.get("description", "")) > len(ex["description"]): ex["description"] = r["description"]
+            ex["tags"] = sorted(set(ex["tags"]) | set(r.get("extra_tags", [])))
             continue
         cat, tags = categorize(r["name"], r.get("description", ""), r.get("hint"), host, overrides, orig_key)
         extra = r.get("extra") or {}
         if r.get("replaces"): tags.append("alternative")
+        tags += r.get("extra_tags", [])
         for k in ("use", "pricing"):
             if extra.get(k):
                 tags += [slugify(x) for x in re.split(r"[;,/|]", extra[k]) if x.strip()][:4]
@@ -540,17 +587,34 @@ def main(argv=None):
     # public spreadsheets (optional)
     sheet_report = []
     for s in sources.get("sheets", []):
+        rep = {"name": s.get("name"), "url": s["url"], "tabs": []}
         try:
-            csv_url = sheet_csv_url(s["url"])
-            text = cached_fetch(csv_url, a.cache, a.offline, a.delay)
-            if text.lstrip().lower().startswith(("<!doctype", "<html")):
-                raise RuntimeError("not a public CSV (sign-in or access page returned) - skipped, nothing bypassed")
-            its = parse_sheet_csv(text, s.get("name", "sheet"), s["url"])
-            raw += its; sheet_report.append({"name": s.get("name"), "url": s["url"], "items": len(its)})
-            print(f"  sheet {s.get('name')}: {len(its)} items", file=sys.stderr)
+            hints = {str(t["gid"]): t for t in s.get("tabs", [])}
+            tabs = []
+            if re.search(r"/pubhtml", s["url"]):
+                try:
+                    tabs = [(g, n) for g, n in discover_tabs(cached_fetch(s["url"], a.cache, a.offline, a.delay))]
+                except Exception as e:
+                    print(f"warn: could not list tabs of {s.get('name')}: {e}", file=sys.stderr)
+            for g in hints:  # configured tabs are always tried, even if discovery failed
+                if g not in [x[0] for x in tabs]: tabs.append((g, hints[g].get("name", "")))
+            if not tabs: tabs = [(None, "")]
+            for gid, tname in tabs:
+                tab = dict(hints.get(str(gid), {})); tab.setdefault("name", tname)
+                trep = {"gid": gid, "name": tab.get("name")}
+                try:
+                    text = cached_fetch(sheet_csv_url(s["url"], gid), a.cache, a.offline, a.delay)
+                    if text.lstrip().lower().startswith(("<!doctype", "<html")):
+                        raise RuntimeError("not a public CSV (sign-in or access page returned) - skipped, nothing bypassed")
+                    its = parse_sheet_csv(text, s.get("name", "sheet"), s["url"], tab, trep)
+                    raw += its; trep["items"] = len(its)
+                    print(f"  sheet {s.get('name')} / {tab.get('name')}: {len(its)} items, {len(trep['skipped'])} skipped", file=sys.stderr)
+                except Exception as e:
+                    trep["error"] = str(e); print(f"warn: sheet tab {tab.get('name')}: {e}", file=sys.stderr)
+                rep["tabs"].append(trep)
         except Exception as e:
-            sheet_report.append({"name": s.get("name"), "url": s.get("url"), "error": str(e)})
-            print(f"warn: sheet {s.get('name')}: {e}", file=sys.stderr)
+            rep["error"] = str(e); print(f"warn: sheet {s.get('name')}: {e}", file=sys.stderr)
+        sheet_report.append(rep)
 
     incoming = normalise(raw, overrides)
     new_cat, added = merge_catalog(old, incoming)
@@ -569,7 +633,7 @@ def main(argv=None):
             os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
             with open(path, "w", encoding="utf-8") as f:
                 json.dump(new_cat, f, ensure_ascii=False, indent=1); f.write("\n")
-    for it in added[:50]: print("NEW:", it["name"], it["url"], "->", CAT_NAMES[it["category"]])
+    for it in added: print("NEW:", it["name"], it["url"], "->", CAT_NAMES[it["category"]])
     return 0
 
 if __name__ == "__main__":

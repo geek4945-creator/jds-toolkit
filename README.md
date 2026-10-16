@@ -56,12 +56,14 @@ python3 -m unittest discover -s tests
 - **Categorisation is rule-based keywords** (`CATEGORY_RULES` in the script) with a fallback bucket "Uncategorized / New". It is a rough guess: new items may land in
   the wrong category until someone corrects them. Hand-made fixes live in `overrides.json` (category/tags, a corrected `url`, or `skip`) and always win.
 - `manual_items.json`: hand-added entries taken from openly readable post text (e.g. VLC from the "Free TV" post).
-- `sources.json`: optional **public** spreadsheet/CSV links to import (name/url/description/category/use/pricing/notes columns become fields and tags). Empty today - see below.
+- `sources.json`: **public** spreadsheets to import. Today it lists the public "Website list" Google Sheet (published to the web, 2 tabs: Powerful Websites, Cure Boredom). The script lists every tab of the published sheet itself, downloads each tab as CSV, maps number / name / link / description (and category / use / pricing / notes columns when a tab has them), skips rows without a usable web address (blank rows, donation links, links to TikTok videos, shortened links that only point to a video), and merges the rest with the newsletter tools by normalised URL, recording the sheet as an extra source.
 - `.github/workflows/update-catalog.yml` runs the tests and the script monthly (and on demand) and commits a changed `catalog.json`. The app's monthly check then picks it up.
 
 ### Spreadsheets
-Matty's "Website list in a Google Sheet" is members-only (Patreon, from $1) according to the page title/search listing; no public sheet link exists on mattymctech.com.
-Nothing was imported from it. If you get access and the owner is OK with it, export it to a CSV you may share, or add a public CSV URL to `sources.json`.
+The newsletter's *public* website list (a Google Sheet published to the web, link provided by the app's owner) is imported on every run of `update_catalog.py`,
+so the monthly GitHub Action and the in-app monthly check both pick up rows Matty adds later, including new tabs.
+Matty's separate members-only (Patreon) sheets are **not** read, and nothing here bypasses them. Never put a private, sign-in or paid sheet in `sources.json`.
+Sheet rows are keyword-categorised like everything else; fixes go in `overrides.json` (`category`, `name`, `url`, `skip`).
 
 ## Layout
 ```

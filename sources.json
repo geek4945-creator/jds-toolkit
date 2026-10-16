@@ -1,4 +1,13 @@
 {
-  "_comment": "Optional extra sources. 'sheets' = PUBLIC Google Sheets / CSV links (anyone-with-the-link, no sign-in). update_catalog.py turns a normal Google Sheets URL into its CSV export URL, maps columns (name/tool/site, url/link, description, category, use, pricing, notes) and merges the rows into the catalog. Never list a private, sign-in, email-signup or paid (Patreon) sheet here. Currently none are known to be public - see README.",
-  "sheets": []
+  "_comment": "Extra sources. 'sheets' = PUBLIC Google Sheets (published to the web, or CSV links; anyone can open them, no sign-in). update_catalog.py lists every tab of a published sheet itself, downloads each tab as CSV, maps the columns (number, name, link, description, plus category/use/pricing/notes when a tab has them) and merges the rows into the catalog. 'tabs' is optional and only adds hints per tab (gid): 'hint' = category hint, 'tag' = extra tag. Never list a private, sign-in, email-signup or paid (Patreon) sheet here.",
+  "sheets": [
+    {
+      "name": "Matty McTech website list",
+      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+      "tabs": [
+        { "gid": "0", "name": "Powerful Websites" },
+        { "gid": "343771459", "name": "Cure Boredom", "hint": "fun", "tag": "cure-boredom" }
+      ]
+    }
+  ]
 }

@@ -188,5 +188,176 @@
   "skip": true,
   "_name": "Google GenType",
   "_why": "returns 404 (experiment appears retired)"
+ },
+ "bit.ly/3ew4oz4": {
+  "url": "https://www.google.com/maps/d/viewer?mid=1Z1dI8hoBZSJNWFx2xr_MMxSxSxY",
+  "name": "Airport WiFi Map",
+  "category": "travel",
+  "tags": [
+   "map",
+   "free"
+  ]
+ },
+ "wolframalpha.com": {
+  "name": "Wolfram Alpha",
+  "category": "learning"
+ },
+ "tailorbrands.go2cloud.org/sh4y": {
+  "url": "https://www.tailorbrands.com",
+  "name": "Tailor Brands"
+ },
+ "bit.ly/2y5rmda": {
+  "url": "https://www.kickresume.com/en/",
+  "name": "Kickresume"
+ },
+ "flightradar24.com": {
+  "category": "live"
+ },
+ "marinetraffic.com": {
+  "category": "live"
+ },
+ "lightningmaps.org": {
+  "category": "live"
+ },
+ "rsoe-edis.org": {
+  "category": "live"
+ },
+ "platform.leolabs.space/visualization": {
+  "category": "live"
+ },
+ "ocearch.org/tracker": {
+  "category": "live"
+ },
+ "ufostalker.com": {
+  "category": "live"
+ },
+ "explore.org": {
+  "category": "live"
+ },
+ "window-swap.com": {
+  "category": "live"
+ },
+ "thetruesize.com": {
+  "category": "live"
+ },
+ "2050.earth": {
+  "category": "live"
+ },
+ "cityprotect.com": {
+  "category": "live"
+ },
+ "virtualvacation.us": {
+  "category": "live"
+ },
+ "hoodmaps.com": {
+  "category": "live"
+ },
+ "framesynthesis.com/drivingsimulator/maps": {
+  "category": "live"
+ },
+ "geo-fs.com": {
+  "category": "live"
+ },
+ "noclip.website": {
+  "category": "fun"
+ },
+ "azgaar.github.io/fantasy-map-generator": {
+  "category": "fun"
+ },
+ "futureme.org": {
+  "category": "fun"
+ },
+ "hownormalami.eu": {
+  "category": "fun"
+ },
+ "playretrogames.com": {
+  "category": "fun"
+ },
+ "seatguru.com": {
+  "category": "travel"
+ },
+ "snapdrop.net": {
+  "category": "productivity"
+ },
+ "draftmap.com": {
+  "category": "productivity"
+ },
+ "dictation.io": {
+  "category": "productivity"
+ },
+ "hemingwayapp.com": {
+  "category": "productivity"
+ },
+ "prepostseo.com": {
+  "category": "productivity"
+ },
+ "slidescarnival.com": {
+  "category": "productivity"
+ },
+ "gethuman.com": {
+  "category": "productivity"
+ },
+ "systemrequirementslab.com": {
+  "category": "productivity"
+ },
+ "theofficestaremachine.com": {
+  "category": "productivity"
+ },
+ "naturalhistory.si.edu/visit/virtual-tour": {
+  "category": "learning"
+ },
+ "litsolutions.org": {
+  "category": "learning"
+ },
+ "classcentral.com/report/free-certificates": {
+  "category": "learning"
+ },
+ "forebears.io": {
+  "category": "learning"
+ },
+ "codingame.com/start": {
+  "category": "learning"
+ },
+ "playphrase.me": {
+  "category": "tv"
+ },
+ "nvidia-research-mingyuliu.com/gaugan": {
+  "category": "ai"
+ },
+ "cleanup.pictures": {
+  "category": "design"
+ },
+ "unscreen.com": {
+  "category": "design"
+ },
+ "blackmagicdesign.com": {
+  "category": "design"
+ },
+ "mcbroken.com": {
+  "category": "lifestyle"
+ },
+ "bodyvisualizer.com": {
+  "category": "lifestyle"
+ },
+ "web.extension.illinois.edu/stain": {
+  "category": "lifestyle"
+ },
+ "hackthemenu.com": {
+  "category": "lifestyle"
+ },
+ "namechk.com": {
+  "category": "security"
+ },
+ "temp-mail.org/en": {
+  "category": "security"
+ },
+ "accountkiller.com/en/home": {
+  "category": "security"
+ },
+ "yandex.com/images": {
+  "category": "security"
+ },
+ "openpaymentsdata.cms.gov": {
+  "category": "money"
  }
 }

@@ -102,7 +102,7 @@ fun ToolCard(
             }
             tool.sources.firstOrNull()?.let { s ->
                 TextButton(onClick = { onOpenPost(s.url) }, contentPadding = PaddingValues(horizontal = 0.dp, vertical = 2.dp)) {
-                    Text("From: ${s.title.trim()} (${s.date})", style = MaterialTheme.typography.labelSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text("From: ${s.title.trim()}" + if (s.date.isNotBlank()) " (${s.date})" else "", style = MaterialTheme.typography.labelSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 }
             }
         }

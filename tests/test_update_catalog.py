@@ -100,6 +100,73 @@ class Sheets(unittest.TestCase):
         self.assertEqual(u.sheet_csv_url("https://docs.google.com/spreadsheets/d/ABC_1/edit#gid=5"),
                          "https://docs.google.com/spreadsheets/d/ABC_1/export?format=csv&gid=5")
 
+PUB = "https://docs.google.com/spreadsheets/d/e/2PACX-abc/pubhtml"
+HEADERLESS = (",,,\n,Want to Support? Buy me a coffee,,\n,https://www.buymeacoffee.com/x,,\n,,,\n"
+              "1,Muscle Wiki,https://musclewiki.com/,Pick a muscle and find workouts\n"
+              "2,Airport Wifi,https://bit.ly/abc,Find the WiFi Passwords at airports\n"
+              "3,3 Websites for School,https://bit.ly/zzz,Link to TikTok Showing websites for School\n"
+              "4,Old TikTok,https://www.tiktok.com/@x/video/1,demo\n"
+              "Bonus 5,Coding Game,https://www.codingame.com/start,Learn how to code\n"
+              ",,https://www.wolframalpha.com/,Solve homework\n"
+              "6,This is it!,You're literally here already,List of all Websites\n"
+              "7,Typo,https://www..ilovepdf.com ,All PDF tools\n")
+HEADED = ",Website Name,Link,Description\n1,Geo Guessr,https://www.geoguessr.com/,Guess where you are\n2,OOPS Forgot this one,,\n"
+
+class SheetImport(unittest.TestCase):
+    def test_headerless_tab_is_mapped_by_position_and_junk_rows_skipped(self):
+        rep = {}
+        its = u.parse_sheet_csv(HEADERLESS, "Site list", PUB, {"name": "Powerful Websites"}, rep)
+        self.assertEqual([i["name"] for i in its], ["Muscle Wiki", "Airport Wifi", "Coding Game", "Wolframalpha", "Typo"])
+        self.assertEqual(its[0]["number"], 1); self.assertIsNone(its[2]["number"])  # "Bonus 5" is not a plain number
+        self.assertEqual(its[0]["description"], "Pick a muscle and find workouts")
+        whys = sorted(x["why"] for x in rep["skipped"])
+        self.assertIn("link to a TikTok video, not a tool", whys)
+        self.assertIn("not a web address", whys)
+        self.assertEqual(sum(w.startswith("link to a TikTok") for w in whys), 2)
+        self.assertFalse(any("buymeacoffee" in json.dumps(i) for i in its))
+
+    def test_header_tab_with_website_name_column(self):
+        rep = {}
+        its = u.parse_sheet_csv(HEADED, "Site list", PUB, {"name": "Cure Boredom", "hint": "fun", "tag": "cure-boredom"}, rep)
+        self.assertEqual(len(its), 1)
+        self.assertEqual((its[0]["name"], its[0]["hint"]), ("Geo Guessr", "fun"))
+        self.assertEqual(rep["skipped"][0]["why"], "no web address")
+        items = u.normalise(its, {})
+        self.assertIn("cure-boredom", items[0]["tags"])
+        self.assertEqual(items[0]["sources"], [{"title": "Sheet: Cure Boredom", "date": "", "url": PUB, "number": 1}])
+
+    def test_sheet_source_is_stable_so_monthly_runs_do_not_bump_version(self):
+        its = u.parse_sheet_csv(HEADED, "S", PUB, {"name": "T"})
+        a = u.normalise(its, {}); old, _ = u.merge_catalog({"version": 1, "items": []}, a, today="2026-01-01")
+        again = u.normalise(u.parse_sheet_csv(HEADED, "S", PUB, {"name": "T"}), {})
+        out, added = u.merge_catalog(old, again, today="2026-02-01")
+        self.assertEqual((out["version"], added), (2, []))
+
+    def test_sheet_row_merges_into_newsletter_item_and_records_both_sources(self):
+        post = {"name": "Geo", "url": "https://geoguessr.com", "description": "", "post": {"title": "Post", "date": "2026-01-01", "url": "pu"}}
+        its = u.parse_sheet_csv(HEADED, "S", PUB, {"name": "T"})
+        items = u.normalise([post] + its, {})
+        self.assertEqual(len(items), 1)
+        self.assertEqual([s["title"] for s in items[0]["sources"]], ["Post", "Sheet: T"])
+        self.assertEqual(items[0]["description"], "Guess where you are")
+
+    def test_tabs_are_discovered_from_pubhtml_and_csv_urls_built(self):
+        html_ = ('items.push({name: "Powerful Websites", pageUrl: "https:\\/\\/x\\/pubhtml\\/sheet?headers\\x3dfalse&gid=0", gid: "0", initialSheet: true});'
+                 'items.push({name: "Cure Boredom", pageUrl: "https:\\/\\/x", gid: "343771459", initialSheet: false});')
+        self.assertEqual(u.discover_tabs(html_), [("0", "Powerful Websites"), ("343771459", "Cure Boredom")])
+        self.assertEqual(u.sheet_csv_url(PUB, "343771459"), "https://docs.google.com/spreadsheets/d/e/2PACX-abc/pub?gid=343771459&single=true&output=csv")
+
+    def test_override_can_rename_and_fix_url_without_forcing_category(self):
+        ov = {"wolframalpha.com": {"name": "Wolfram Alpha"}, "bit.ly/abc": {"url": "https://example.org/real", "name": "Real"}}
+        its = u.parse_sheet_csv(HEADERLESS, "S", PUB, {"name": "T"})
+        items = {i["name"]: i for i in u.normalise(its, ov)}
+        self.assertIn("Wolfram Alpha", items); self.assertIn("Real", items)
+        self.assertEqual(items["Real"]["url"], "https://example.org/real")
+        self.assertEqual(items["Typo"]["url"], "https://www.ilovepdf.com")
+
+    def test_new_live_category_exists(self):
+        self.assertEqual(u.CAT_NAMES["live"], "Live Maps & Trackers")
+
 class Shipped(unittest.TestCase):
     def setUp(self):
         self.c = json.load(open(os.path.join(os.path.dirname(__file__), "..", "catalog.json")))
@@ -113,7 +180,17 @@ class Shipped(unittest.TestCase):
             self.assertTrue(i["url"].startswith("http"), i)
             self.assertIn(i["category"], cats)
             self.assertTrue(i["name"] and i["sources"])
-        self.assertGreaterEqual(self.c["version"], 1)
+        self.assertGreaterEqual(self.c["version"], 2)
+    def test_sheet_import_is_in_the_shipped_catalog(self):
+        sheet_items = [i for i in self.c["items"] if any(s["title"].startswith("Sheet:") for s in i["sources"])]
+        self.assertGreater(len(sheet_items), 150)
+        self.assertGreater(len(self.c["items"]), 200)
+        self.assertEqual(sorted(t["name"] for t in self.c["sheets"][0]["tabs"]), ["Cure Boredom", "Powerful Websites"])
+        blob = json.dumps(self.c["items"])
+        self.assertNotIn("go2cloud", blob); self.assertNotIn("bit.ly", blob); self.assertNotIn("tiktok.com/@setupspawn/video/6951742734872988934", blob)
+    def test_sources_json_lists_the_public_sheet(self):
+        s = json.load(open(os.path.join(os.path.dirname(__file__), "..", "sources.json")))
+        self.assertEqual(len(s["sheets"]), 1); self.assertIn("/pubhtml", s["sheets"][0]["url"])
     def test_bundled_asset_matches(self):
         p = os.path.join(os.path.dirname(__file__), "..", "android/app/src/main/assets/catalog.json")
         self.assertEqual(json.load(open(p)), self.c)

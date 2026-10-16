@@ -1,6 +1,28 @@
 {
- "version": 1,
+ "version": 2,
  "items": [
+  {
+   "id": "ai-art-tokyo-en",
+   "name": "AI Gahaku",
+   "url": "https://ai-art.tokyo/en/",
+   "host": "ai-art.tokyo",
+   "description": "Turn your picture into a masterpiece",
+   "category": "ai",
+   "tags": [
+    "ai",
+    "photo"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 51
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
   {
    "id": "buildai-space",
    "name": "BuildAI",
@@ -43,6 +65,28 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/7077568869027679530",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "hypnogram-xyz",
+   "name": "Hypnogram",
+   "url": "https://hypnogram.xyz/",
+   "host": "hypnogram.xyz",
+   "description": "Let AI create art using a prompt",
+   "category": "ai",
+   "tags": [
+    "ai",
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 52
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -128,10 +172,35 @@
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
      "number": 57
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 57
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6969938830623280389",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "naturalreaders-com",
+   "name": "Natural Readers",
+   "url": "https://www.naturalreaders.com/",
+   "host": "naturalreaders.com",
+   "description": "Powerful Text to Speech",
+   "category": "ai",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 69
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -155,6 +224,27 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6964715520272747781",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "nvidia-research-mingyuliu-com-gaugan",
+   "name": "Nvidia Gaugan",
+   "url": "http://nvidia-research-mingyuliu.com/gaugan",
+   "host": "nvidia-research-mingyuliu.com",
+   "description": "Let ai turn your basic landscape into artwork",
+   "category": "ai",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 8
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -202,10 +292,35 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 80
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6989619005476637957?utm_source=chatgpt.com",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "uberduck-ai",
+   "name": "Uberduck",
+   "url": "https://www.uberduck.ai",
+   "host": "uberduck.ai",
+   "description": "Celebrity Text to speech",
+   "category": "ai",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 120
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -232,6 +347,27 @@
    "added": "2026-10-16"
   },
   {
+   "id": "vo-codes",
+   "name": "Vo Codes",
+   "url": "https://vo.codes/",
+   "host": "vo.codes",
+   "description": "Deep fake text to speech with celebrities",
+   "category": "ai",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 19
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "app-wombo-art",
    "name": "Wombo Art",
    "url": "https://app.wombo.art",
@@ -254,6 +390,25 @@
    "added": "2026-10-16"
   },
   {
+   "id": "sketch-metademolab-com",
+   "name": "Animated Drawings",
+   "url": "https://www.sketch.metademolab.com/",
+   "host": "sketch.metademolab.com",
+   "description": "Turn your child's drawing or yours into an animated drawing",
+   "category": "design",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 119
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "animatron-com",
    "name": "Animatron",
    "url": "https://animatron.com",
@@ -268,10 +423,37 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 72
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6984395818870525189",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "autodraw-com",
+   "name": "Autodraw",
+   "url": "https://www.autodraw.com/",
+   "host": "autodraw.com",
+   "description": "Draw things fast",
+   "category": "design",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 18
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -292,6 +474,49 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/7330745468105788718?lang=en",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "cleanup-pictures",
+   "name": "Cleanup Pictures",
+   "url": "https://cleanup.pictures/",
+   "host": "cleanup.pictures",
+   "description": "Delete objects from pictures",
+   "category": "design",
+   "tags": [
+    "photo"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 107
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "blackmagicdesign-com",
+   "name": "Davinci Resolve",
+   "url": "https://www.blackmagicdesign.com/",
+   "host": "blackmagicdesign.com",
+   "description": "Free video editing software",
+   "category": "design",
+   "tags": [
+    "free",
+    "video"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 62
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -332,6 +557,12 @@
      "title": "Matty McTech – (Powerful Websites 11-20)",
      "date": "2025-06-25",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-11-20",
+     "number": 13
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 13
     }
    ],
@@ -383,6 +614,69 @@
    "added": "2026-10-16"
   },
   {
+   "id": "neal-fun-logos-from-memory",
+   "name": "Logos from Memory",
+   "url": "https://neal.fun/logos-from-memory/",
+   "host": "neal.fun",
+   "description": "See if you can draw logos from memory",
+   "category": "design",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 35
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "nvidia-com-research-inpainting-index-html",
+   "name": "Nvidia Inpainting",
+   "url": "https://www.nvidia.com/research/inpainting/index.html",
+   "host": "nvidia.com",
+   "description": "Let ai retouch your photos",
+   "category": "design",
+   "tags": [
+    "photo"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 78
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "paint-wtf",
+   "name": "Paint WTF",
+   "url": "https://paint.wtf/",
+   "host": "paint.wtf",
+   "description": "Create a drawing to match a prompt and get graded on it",
+   "category": "design",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 36
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "palette-fm",
    "name": "Palette",
    "url": "https://www.palette.fm",
@@ -422,6 +716,12 @@
      "date": "2025-08-01",
      "url": "https://www.mattymctech.com/p/powerful-websites-61-70",
      "number": 61
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 61
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6974019420142243077",
@@ -446,9 +746,36 @@
      "title": "Free Alternatives to Adobe Software",
      "date": "2025-09-14",
      "url": "https://www.mattymctech.com/p/adobe-software-alternatives"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 34
     }
    ],
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "quickdraw-withgoogle-com",
+   "name": "Quick Draw",
+   "url": "https://quickdraw.withgoogle.com/",
+   "host": "quickdraw.withgoogle.com",
+   "description": "Can Google guess what you are drawing?",
+   "category": "design",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 11
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -467,10 +794,35 @@
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
      "number": 26
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 26
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6948757145546394886",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "tailorbrands-com",
+   "name": "Tailor Brands",
+   "url": "https://www.tailorbrands.com",
+   "host": "tailorbrands.com",
+   "description": "Create your own Logo",
+   "category": "design",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 68
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -488,6 +840,12 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 71
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6983351838649142534",
@@ -511,10 +869,37 @@
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
      "number": 25
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 25
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6948015273332968709",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "unscreen-com",
+   "name": "Unscreen",
+   "url": "https://www.unscreen.com/",
+   "host": "unscreen.com",
+   "description": "Remove the background from videos",
+   "category": "design",
+   "tags": [
+    "video"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 63
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -536,6 +921,113 @@
     }
    ],
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "myfonts-com-whatthefont",
+   "name": "What the Font?",
+   "url": "https://www.myfonts.com/WhatTheFont/",
+   "host": "myfonts.com",
+   "description": "Identify the font from pictures",
+   "category": "design",
+   "tags": [
+    "photo"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 94
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "neal-fun-ten-years-ago",
+   "name": "10 Years ago",
+   "url": "https://neal.fun/ten-years-ago/",
+   "host": "neal.fun",
+   "description": "See what websites looked like 10 years ago today",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 49
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "neal-fun-auction-game",
+   "name": "Auction Game",
+   "url": "https://neal.fun/auction-game/",
+   "host": "neal.fun",
+   "description": "Guess how much different art work sold for",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 43
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "azgaar-github-io-fantasy-map-generator",
+   "name": "Azgaar Map",
+   "url": "https://azgaar.github.io/Fantasy-Map-Generator/",
+   "host": "azgaar.github.io",
+   "description": "Generate maps for DND or writing",
+   "category": "fun",
+   "tags": [
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 127
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "boredbutton-com-random",
+   "name": "Bored Button",
+   "url": "https://www.boredbutton.com/random",
+   "host": "boredbutton.com",
+   "description": "Discover random websites when you're bored",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "weird-fun"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 25
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -561,6 +1053,50 @@
    "added": "2026-10-16"
   },
   {
+   "id": "classicreload-com",
+   "name": "Classic reload",
+   "url": "https://classicreload.com/",
+   "host": "classicreload.com",
+   "description": "Play classic games in your browser",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 24
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "neal-fun-deep-sea",
+   "name": "Deep Sea",
+   "url": "https://neal.fun/deep-sea/",
+   "host": "neal.fun",
+   "description": "Explore the Deep sea to see how far it goes",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 56
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "donjon-bin-sh",
    "name": "DonJon",
    "url": "https://donjon.bin.sh",
@@ -575,6 +1111,12 @@
      "title": "Matty McTech - (Powerful Websites 91–100)",
      "date": "2025-10-12",
      "url": "https://www.mattymctech.com/p/powerful-websites-91-100",
+     "number": 91
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 91
     }
    ],
@@ -597,6 +1139,12 @@
      "title": "Matty McTech – (Powerful Websites 11-20)",
      "date": "2025-06-25",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-11-20",
+     "number": 12
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 12
     }
    ],
@@ -627,6 +1175,50 @@
    "added": "2026-10-16"
   },
   {
+   "id": "emupedia-net-beta-emuos",
+   "name": "Emu OS",
+   "url": "https://emupedia.net/beta/emuos/",
+   "host": "emupedia.net",
+   "description": "Load up old windows operating systems",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 29
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "emulatorgames-online",
+   "name": "Emulator Games Online",
+   "url": "https://emulatorgames.online/",
+   "host": "emulatorgames.online",
+   "description": "Play console games within your browser!",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 42
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "essaytyper-com",
    "name": "Essay Typer",
    "url": "https://essaytyper.com",
@@ -639,6 +1231,12 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 77
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6987385636374220038",
@@ -661,10 +1259,57 @@
      "date": "2026-01-26",
      "url": "https://www.mattymctech.com/p/websites-to-cure-boredom-part-1-10",
      "number": 2
+    },
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 2
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6957387201265044741",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "freerice-com",
+   "name": "Free Rice",
+   "url": "https://freerice.com/",
+   "host": "freerice.com",
+   "description": "Answer trivia questions to donate rice",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "free"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 47
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "futureme-org",
+   "name": "Future Me",
+   "url": "https://www.futureme.org/",
+   "host": "futureme.org",
+   "description": "Write a letter to your future self",
+   "category": "fun",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 40
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -681,10 +1326,232 @@
      "date": "2026-01-26",
      "url": "https://www.mattymctech.com/p/websites-to-cure-boredom-part-1-10",
      "number": 1
+    },
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 1
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6956937549772377350",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "googlefeud-online",
+   "name": "Google Feud",
+   "url": "https://googlefeud.online/",
+   "host": "googlefeud.online",
+   "description": "Guess top google autocomplete searches",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 22
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "higherlowergame-com",
+   "name": "Higher Lower Game",
+   "url": "http://www.higherlowergame.com/",
+   "host": "higherlowergame.com",
+   "description": "Guess which monthly google search is higher or lower",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 32
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "hownormalami-eu",
+   "name": "How Normal am I",
+   "url": "https://www.hownormalami.eu/",
+   "host": "hownormalami.eu",
+   "description": "Find out how normal you are.",
+   "category": "fun",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 43
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "humanbenchmark-com",
+   "name": "Human Benchmark",
+   "url": "https://humanbenchmark.com/",
+   "host": "humanbenchmark.com",
+   "description": "Measure your abilities with brain games",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 34
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "incredibox-com",
+   "name": "Incredibox",
+   "url": "https://www.incredibox.com",
+   "host": "incredibox.com",
+   "description": "Create beats by using chracters who sing",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 54
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "archive-org-details-internetarcade",
+   "name": "Internet Arcade",
+   "url": "https://archive.org/details/internetarcade",
+   "host": "archive.org",
+   "description": "Play Arcade games from every decade",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 46
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "jellymar-io",
+   "name": "Jelly Mario",
+   "url": "https://jellymar.io/",
+   "host": "jellymar.io",
+   "description": "Play a weird version of Mario",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "weird-fun"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 45
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "krunker-io",
+   "name": "Krunker",
+   "url": "https://krunker.io/",
+   "host": "krunker.io",
+   "description": "Play a cool FPS game directly in your Browser!",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 57
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "neal-fun-life-stats",
+   "name": "Life Stats",
+   "url": "https://neal.fun/life-stats/",
+   "host": "neal.fun",
+   "description": "Read cool stats about how long you've been alive",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 40
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "littlealchemy2-com",
+   "name": "Little Alchemy 2",
+   "url": "https://littlealchemy2.com/",
+   "host": "littlealchemy2.com",
+   "description": "Play a game where you create different elements",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 37
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -712,6 +1579,50 @@
    "added": "2026-10-16"
   },
   {
+   "id": "mecabricks-com",
+   "name": "Meca Bricks",
+   "url": "https://www.mecabricks.com/",
+   "host": "mecabricks.com",
+   "description": "Build legos in your browser",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 30
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "classic-minecraft-net",
+   "name": "Minecraft Classic",
+   "url": "https://classic.minecraft.net/",
+   "host": "classic.minecraft.net",
+   "description": "Play minecraft classic in your browser",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 23
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "minecraft-tools",
    "name": "Minecraft Tools",
    "url": "https://minecraft.tools",
@@ -729,6 +1640,74 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/7158472572026375467",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "myemulator-online",
+   "name": "My Emulator Online",
+   "url": "https://myemulator.online/",
+   "host": "myemulator.online",
+   "description": "Play games from different consoles in your browser",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 50
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "noclip-website",
+   "name": "No Clip",
+   "url": "https://noclip.website/",
+   "host": "noclip.website",
+   "description": "Travel around video game maps",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games",
+    "map",
+    "video"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 26
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "playretrogames-com",
+   "name": "Play Retro Games",
+   "url": "https://playretrogames.com",
+   "host": "playretrogames.com",
+   "description": "Play retros games from the past on your PC",
+   "category": "fun",
+   "tags": [
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 18
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -771,10 +1750,58 @@
      "date": "2026-01-26",
      "url": "https://www.mattymctech.com/p/websites-to-cure-boredom-part-1-10",
      "number": 3
+    },
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 3
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6958779496686226693",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "spend-elon-fortune-netlify-app",
+   "name": "Spend Elons Fortune",
+   "url": "https://spend-elon-fortune.netlify.app/",
+   "host": "spend-elon-fortune.netlify.app",
+   "description": "See how fast you can spend Elon Musk's money",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 27
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "sporcle-com",
+   "name": "Sporcle",
+   "url": "https://www.sporcle.com/",
+   "host": "sporcle.com",
+   "description": "Browse through hundreds of quizzes",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 17
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -800,6 +1827,182 @@
    "added": "2026-10-16"
   },
   {
+   "id": "sites-google-com-site-tyronesgameshack",
+   "name": "Tyrone Unblocked Games",
+   "url": "https://sites.google.com/site/tyronesgameshack/",
+   "host": "sites.google.com",
+   "description": "Play unblocked games in your browser",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games",
+    "in-browser"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 39
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "sites-google-com-site-unblockedgames66ez",
+   "name": "Unblocked Games",
+   "url": "https://sites.google.com/site/unblockedgames66ez/",
+   "host": "sites.google.com",
+   "description": "Play games that are unblocked for your school",
+   "category": "fun",
+   "tags": [
+    "cure-boredom",
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 51
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "theuselessweb-com",
+   "name": "Useless Web",
+   "url": "https://www.theuselessweb.com",
+   "host": "theuselessweb.com",
+   "description": "Click a button that takes you to a useless website",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 55
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "windows93-net",
+   "name": "Windows 93",
+   "url": "https://www.windows93.net/",
+   "host": "windows93.net",
+   "description": "Run a fake version of windows 93 with cool easter eggs",
+   "category": "fun",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 38
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "cheatography-com",
+   "name": "2 School Websites",
+   "url": "https://cheatography.com",
+   "host": "cheatography.com",
+   "description": "Printable cheat sheets for school courses",
+   "category": "learning",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 36
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 117
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "classcentral-com-report-free-certificates",
+   "name": "Class Central",
+   "url": "https://www.classcentral.com/report/free-certificates/",
+   "host": "classcentral.com",
+   "description": "List of thousands of free certificates and badges",
+   "category": "learning",
+   "tags": [
+    "free"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 124
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "codingame-com-start",
+   "name": "Coding Game",
+   "url": "https://www.codingame.com/start",
+   "host": "codingame.com",
+   "description": "Learn how to code video games",
+   "category": "learning",
+   "tags": [
+    "games",
+    "learning",
+    "video"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml"
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "docsity-com-en",
+   "name": "Docsity",
+   "url": "https://www.docsity.com/en/",
+   "host": "docsity.com",
+   "description": "Find past documents and exams for school courses",
+   "category": "learning",
+   "tags": [
+    "learning"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 113
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "edx-org",
    "name": "EDX",
    "url": "https://www.edx.org",
@@ -817,6 +2020,12 @@
      "title": "Matty McTech -(Powerful Websites Parts 101–110)",
      "date": "2025-10-16",
      "url": "https://www.mattymctech.com/p/powerful-websites-101-110",
+     "number": 103
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 103
     }
    ],
@@ -838,10 +2047,35 @@
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
      "number": 58
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 58
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6970362991552367878",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "forebears-io",
+   "name": "Forebears",
+   "url": "https://forebears.io/",
+   "host": "forebears.io",
+   "description": "Get cool facts about your last name",
+   "category": "learning",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 45
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -913,6 +2147,46 @@
    "added": "2026-10-16"
   },
   {
+   "id": "litsolutions-org",
+   "name": "Lit Solutions",
+   "url": "https://www.litsolutions.org/",
+   "host": "litsolutions.org",
+   "description": "Step by step textbook solutions",
+   "category": "learning",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 110
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "naturalhistory-si-edu-visit-virtual-tour",
+   "name": "National Museum Tour",
+   "url": "https://naturalhistory.si.edu/visit/virtual-tour",
+   "host": "naturalhistory.si.edu",
+   "description": "Take a tour of the Smithsonian",
+   "category": "learning",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 12
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "outrider-org-nuclear-weapons-interactive-bomb-blast",
    "name": "Outrider Bomb Blast",
    "url": "https://outrider.org/nuclear-weapons/interactive/bomb-blast/",
@@ -925,6 +2199,12 @@
      "title": "🧑‍💻Matty McTech - (Powerful Websites 51-60)",
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
+     "number": 52
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 52
     }
    ],
@@ -947,6 +2227,12 @@
      "title": "🧑‍💻Matty McTech - (Powerful Websites 51-60)",
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
+     "number": 56
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 56
     }
    ],
@@ -1008,10 +2294,56 @@
      "date": "2025-08-30",
      "url": "https://www.mattymctech.com/p/powerful-websites-81-90",
      "number": 85
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 84
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6994825200386723077?utm_source=chatgpt.com",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "thewikigame-com",
+   "name": "Wiki Game",
+   "url": "https://www.thewikigame.com/",
+   "host": "thewikigame.com",
+   "description": "Race to make it from one wiki page to another by clicking links",
+   "category": "learning",
+   "tags": [
+    "cure-boredom",
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 53
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "wolframalpha-com",
+   "name": "Wolfram Alpha",
+   "url": "https://www.wolframalpha.com/",
+   "host": "wolframalpha.com",
+   "description": "Have the computer solve your homework problems",
+   "category": "learning",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml"
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1032,6 +2364,25 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6944338662419107077",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "bodyvisualizer-com",
+   "name": "Body Visualizer",
+   "url": "https://bodyvisualizer.com/",
+   "host": "bodyvisualizer.com",
+   "description": "Create different body proportions",
+   "category": "lifestyle",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 15
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1057,6 +2408,25 @@
    "added": "2026-10-16"
   },
   {
+   "id": "darebee-com",
+   "name": "Darebee",
+   "url": "https://darebee.com/",
+   "host": "darebee.com",
+   "description": "Printable workout sheets",
+   "category": "lifestyle",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 114
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "deskspacing-com",
    "name": "Deskspacing",
    "url": "https://deskspacing.com",
@@ -1070,10 +2440,37 @@
      "date": "2025-08-30",
      "url": "https://www.mattymctech.com/p/powerful-websites-81-90",
      "number": 88
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 87
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6998164893086043398?utm_source=chatgpt.com",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "eatthismuch-com",
+   "name": "Eat This Much",
+   "url": "https://www.eatthismuch.com/",
+   "host": "eatthismuch.com",
+   "description": "Create a meal plan for your Diet",
+   "category": "lifestyle",
+   "tags": [
+    "recipes"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 8
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1129,10 +2526,35 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 73
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6985148084191857925",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "hackthemenu-com",
+   "name": "Hack the Menu",
+   "url": "http://hackthemenu.com/",
+   "host": "hackthemenu.com",
+   "description": "Discover secret menu items at fast food restaurants",
+   "category": "lifestyle",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 98
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1149,10 +2571,37 @@
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
      "number": 24
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 24
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6947643069504294149",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "justtherecipe-com",
+   "name": "Just The Recipe",
+   "url": "https://www.justtherecipe.com/",
+   "host": "justtherecipe.com",
+   "description": "Paste a recipe article to remove all the stories and get just the recipe",
+   "category": "lifestyle",
+   "tags": [
+    "recipes"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 3
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1169,10 +2618,35 @@
      "date": "2025-06-25",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-11-20",
      "number": 16
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 16
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6944732375330884870",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "mcbroken-com",
+   "name": "McBroken",
+   "url": "https://mcbroken.com/",
+   "host": "mcbroken.com",
+   "description": "Find working Mcdonalds Ice Cream Machines",
+   "category": "lifestyle",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 5
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1191,10 +2665,37 @@
      "date": "2025-06-23",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-1-10-ed17",
      "number": 1
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 1
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6939691438288440581",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "myfridgefood-com",
+   "name": "My Fridge Food",
+   "url": "https://myfridgefood.com/",
+   "host": "myfridgefood.com",
+   "description": "Find recipes for ingredients in your fridge",
+   "category": "lifestyle",
+   "tags": [
+    "recipes"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 6
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1212,6 +2713,12 @@
      "title": "Matty McTech – (Powerful Websites 11-20)",
      "date": "2025-06-25",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-11-20",
+     "number": 19
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 19
     }
    ],
@@ -1233,6 +2740,12 @@
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
      "number": 53
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 53
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6966212267943759109",
@@ -1252,10 +2765,35 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 76
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6987030172889337094",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "web-extension-illinois-edu-stain",
+   "name": "Stain Solutions",
+   "url": "https://web.extension.illinois.edu/stain/",
+   "host": "web.extension.illinois.edu",
+   "description": "List the best way to remove stains from different materials",
+   "category": "lifestyle",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 129
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1279,6 +2817,399 @@
    "added": "2026-10-16"
   },
   {
+   "id": "tasteatlas-com",
+   "name": "Taste Atlas",
+   "url": "https://www.tasteatlas.com/",
+   "host": "tasteatlas.com",
+   "description": "Discover food from around the world",
+   "category": "lifestyle",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 93
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "whatthefuckshouldimakefordinner-com",
+   "name": "What Should I Make for Dinner?",
+   "url": "http://whatthefuckshouldimakefordinner.com/",
+   "host": "whatthefuckshouldimakefordinner.com",
+   "description": "Get recommendations/recipes on what you should make for dinner",
+   "category": "lifestyle",
+   "tags": [
+    "recipes"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 105
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "yummly-com",
+   "name": "Yummly",
+   "url": "https://www.yummly.com/",
+   "host": "yummly.com",
+   "description": "Find recipes just for you",
+   "category": "lifestyle",
+   "tags": [
+    "recipes"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 32
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "2050-earth",
+   "name": "2050 Earth",
+   "url": "https://2050.earth",
+   "host": "2050.earth",
+   "description": "A prediction on what earth will look like in 2050",
+   "category": "live",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 16
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "cityprotect-com",
+   "name": "City Protect",
+   "url": "https://cityprotect.com",
+   "host": "cityprotect.com",
+   "description": "Find police incidents within your city",
+   "category": "live",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 35
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "rsoe-edis-org",
+   "name": "Emergency and Disaster Info",
+   "url": "https://rsoe-edis.org/",
+   "host": "rsoe-edis.org",
+   "description": "Map of global emergencies and disasters",
+   "category": "live",
+   "tags": [
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 47
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "explore-org",
+   "name": "Explore",
+   "url": "https://explore.org/",
+   "host": "explore.org",
+   "description": "Watch animal livestreams from around the world",
+   "category": "live",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 37
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "flightradar24-com",
+   "name": "Flight Radar 24",
+   "url": "https://www.flightradar24.com/",
+   "host": "flightradar24.com",
+   "description": "Live global flight tracking (real time)",
+   "category": "live",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 46
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "framesynthesis-com-drivingsimulator-maps",
+   "name": "Frame Synthesis Driving",
+   "url": "https://framesynthesis.com/drivingsimulator/maps/",
+   "host": "framesynthesis.com",
+   "description": "Drive on google maps",
+   "category": "live",
+   "tags": [
+    "cure-boredom",
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 14
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "geo-fs-com",
+   "name": "GeoFS",
+   "url": "https://www.geo-fs.com/",
+   "host": "geo-fs.com",
+   "description": "Fly around google maps",
+   "category": "live",
+   "tags": [
+    "cure-boredom",
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 31
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "hoodmaps-com",
+   "name": "Hood Maps",
+   "url": "https://hoodmaps.com/",
+   "host": "hoodmaps.com",
+   "description": "Honest Map of cities and neighborhoods",
+   "category": "live",
+   "tags": [
+    "cure-boredom",
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 41
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "platform-leolabs-space-visualization",
+   "name": "Leo Labs",
+   "url": "https://platform.leolabs.space/visualization",
+   "host": "platform.leolabs.space",
+   "description": "Tracks all satellites and debri in space",
+   "category": "live",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 54
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "lightningmaps-org",
+   "name": "Lightning Maps",
+   "url": "https://www.lightningmaps.org/",
+   "host": "lightningmaps.org",
+   "description": "Track real time lightning strikes",
+   "category": "live",
+   "tags": [
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 70
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "marinetraffic-com",
+   "name": "marine Traffic",
+   "url": "https://www.marinetraffic.com/",
+   "host": "marinetraffic.com",
+   "description": "Live map of global marine traffic",
+   "category": "live",
+   "tags": [
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 49
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "ocearch-org-tracker",
+   "name": "Ocearch Shark Tracker",
+   "url": "https://www.ocearch.org/tracker/",
+   "host": "ocearch.org",
+   "description": "Track sharks around the world",
+   "category": "live",
+   "tags": [
+    "cure-boredom",
+    "privacy"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 4
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "thetruesize-com",
+   "name": "True Size of",
+   "url": "https://thetruesize.com/",
+   "host": "thetruesize.com",
+   "description": "Find the true size of countries",
+   "category": "live",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 13
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "ufostalker-com",
+   "name": "UFO Stalker",
+   "url": "https://ufostalker.com/",
+   "host": "ufostalker.com",
+   "description": "Discover UFO sightings around the world",
+   "category": "live",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 20
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "virtualvacation-us",
+   "name": "Virtual Vacation",
+   "url": "https://virtualvacation.us/",
+   "host": "virtualvacation.us",
+   "description": "Guess what city you were dropped in",
+   "category": "live",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 7
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "window-swap-com",
+   "name": "Window Swap",
+   "url": "https://www.window-swap.com/",
+   "host": "window-swap.com",
+   "description": "View the World from a random window",
+   "category": "live",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 10
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "arc-dev",
    "name": "Arc",
    "url": "https://arc.dev",
@@ -1296,6 +3227,25 @@
     }
    ],
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "app-capitoltrades-com",
+   "name": "Capitol Trades",
+   "url": "https://www.app.capitoltrades.com",
+   "host": "app.capitoltrades.com",
+   "description": "Follow stock market trades from politicians",
+   "category": "money",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 126
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1339,6 +3289,27 @@
    "added": "2026-10-16"
   },
   {
+   "id": "goodjobsfirst-org-violation-tracker",
+   "name": "Good Jobs First",
+   "url": "http://goodjobsfirst.org/violation-tracker",
+   "host": "goodjobsfirst.org",
+   "description": "Find violations and fines made by companies",
+   "category": "money",
+   "tags": [
+    "jobs"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 118
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "hireflow-net",
    "name": "Hireflow",
    "url": "https://hireflow.net",
@@ -1374,6 +3345,12 @@
      "date": "2025-08-30",
      "url": "https://www.mattymctech.com/p/powerful-websites-81-90",
      "number": 83
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 82
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6991498807980707078?utm_source=chatgpt.com",
@@ -1426,6 +3403,44 @@
    "added": "2026-10-16"
   },
   {
+   "id": "kickresume-com-en",
+   "name": "Kickresume",
+   "url": "https://www.kickresume.com/en/",
+   "host": "kickresume.com",
+   "description": "Create a resume using proven resume templates",
+   "category": "money",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 30
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "openpaymentsdata-cms-gov",
+   "name": "Open Payments",
+   "url": "https://openpaymentsdata.cms.gov/",
+   "host": "openpaymentsdata.cms.gov",
+   "description": "Find payments made to doctors and hospitals",
+   "category": "money",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 109
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "quiverquant-com",
    "name": "QuiverQuant",
    "url": "https://www.quiverquant.com",
@@ -1438,6 +3453,12 @@
      "title": "Matty McTech -(Powerful Websites Parts 101–110)",
      "date": "2025-10-16",
      "url": "https://www.mattymctech.com/p/powerful-websites-101-110",
+     "number": 102
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 102
     }
    ],
@@ -1478,6 +3499,12 @@
      "title": "Matty McTech -(Powerful Websites Parts 111–120)",
      "date": "2025-10-19",
      "url": "https://www.mattymctech.com/p/powerful-websites-111-120",
+     "number": 111
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 111
     }
    ],
@@ -1542,10 +3569,38 @@
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
      "number": 27
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 27
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6949128373822164229",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "boilthefrog-playlistmachinery-com",
+   "name": "Boil the Frog",
+   "url": "http://boilthefrog.playlistmachinery.com/",
+   "host": "boilthefrog.playlistmachinery.com",
+   "description": "Create the perfect music playlist",
+   "category": "music",
+   "tags": [
+    "cure-boredom",
+    "music"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 5
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1563,6 +3618,12 @@
      "title": "🧑‍💻Matty McTech - (Powerful Websites 51-60)",
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
+     "number": 59
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 59
     }
    ],
@@ -1610,6 +3671,12 @@
      "date": "2025-08-30",
      "url": "https://www.mattymctech.com/p/powerful-websites-81-90",
      "number": 87
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 86
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6995570718519889157?utm_source=chatgpt.com",
@@ -1633,10 +3700,81 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 79
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6989238583706045702",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "dood-al-pinktrombone",
+   "name": "Pink Trombone",
+   "url": "https://dood.al/pinktrombone/",
+   "host": "dood.al",
+   "description": "Make noises with a model of the human vocal tract",
+   "category": "music",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 33
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "playback-fm",
+   "name": "Playback Fm",
+   "url": "https://playback.fm/",
+   "host": "playback.fm",
+   "description": "Find the top song when you were born",
+   "category": "music",
+   "tags": [
+    "cure-boredom",
+    "music"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 48
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "radio-garden",
+   "name": "Radio Garden",
+   "url": "http://radio.garden/",
+   "host": "radio.garden",
+   "description": "Listen to radio stations from around the world",
+   "category": "music",
+   "tags": [
+    "cure-boredom",
+    "music"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 44
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1654,10 +3792,37 @@
      "title": "Matty McTech - (Powerful Websites 41-50)",
      "date": "2025-07-19",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-41-50-post-9901"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 41
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6957754199392193797",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "rave-dj",
+   "name": "Rave DJ",
+   "url": "https://rave.dj/",
+   "host": "rave.dj",
+   "description": "Create cool mashups with songs",
+   "category": "music",
+   "tags": [
+    "music"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 67
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1698,6 +3863,12 @@
      "date": "2025-06-25",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-11-20",
      "number": 17
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 17
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6945049299654937862",
@@ -1721,6 +3892,12 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 75
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6986335632410905862",
@@ -1748,6 +3925,27 @@
    "added": "2026-10-16"
   },
   {
+   "id": "whosampled-com",
+   "name": "Who Sampled",
+   "url": "https://www.whosampled.com/",
+   "host": "whosampled.com",
+   "description": "Find covers of songs and artists who sampled songs",
+   "category": "music",
+   "tags": [
+    "music"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 99
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "you-dj",
    "name": "You DJ",
    "url": "https://you.dj",
@@ -1763,6 +3961,12 @@
      "title": "Matty McTech - (Powerful Websites 71-80)",
      "date": "2025-08-15",
      "url": "https://www.mattymctech.com/p/powerful-websites-71-80"
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 74
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6985929676703272197",
@@ -1786,10 +3990,37 @@
      "date": "2025-06-25",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-11-20",
      "number": 20
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 20
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6945951875241889029",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "systemrequirementslab-com",
+   "name": "Can you run it?",
+   "url": "https://www.systemrequirementslab.com/",
+   "host": "systemrequirementslab.com",
+   "description": "Find out if you can run a PC game on your computer",
+   "category": "productivity",
+   "tags": [
+    "games"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 116
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1830,10 +4061,56 @@
      "date": "2026-01-07",
      "url": "https://www.mattymctech.com/p/powerful-websites-121-130",
      "number": 122
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 122
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/7049041720331455791",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "dictation-io",
+   "name": "Dictation io",
+   "url": "https://dictation.io/",
+   "host": "dictation.io",
+   "description": "Type with your voice",
+   "category": "productivity",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 64
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "draftmap-com",
+   "name": "Draft Map",
+   "url": "https://www.draftmap.com",
+   "host": "draftmap.com",
+   "description": "Paste text and find mistakes in your essays",
+   "category": "productivity",
+   "tags": [
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 125
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -1859,6 +4136,86 @@
    "added": "2026-10-16"
   },
   {
+   "id": "gethuman-com",
+   "name": "Get Human",
+   "url": "https://www.gethuman.com",
+   "host": "gethuman.com",
+   "description": "Find the quickest way to get human customer support at companies",
+   "category": "productivity",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 123
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "hemingwayapp-com",
+   "name": "Hemingway App",
+   "url": "https://hemingwayapp.com/",
+   "host": "hemingwayapp.com",
+   "description": "Let ai help you improve your essays",
+   "category": "productivity",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 96
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "ilovepdf-com",
+   "name": "I Love PDF",
+   "url": "https://www.ilovepdf.com",
+   "host": "ilovepdf.com",
+   "description": "All the PDF tools you will need. Merge, Split, Protect, + More",
+   "category": "productivity",
+   "tags": [
+    "pdf"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 128
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "theofficestaremachine-com",
+   "name": "Office stare machine",
+   "url": "http://theofficestaremachine.com/",
+   "host": "theofficestaremachine.com",
+   "description": "Find clips from the office based on the emotion you type",
+   "category": "productivity",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 21
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "omnicalculator-com",
    "name": "Omni Calculator",
    "url": "https://www.omnicalculator.com",
@@ -1872,6 +4229,12 @@
      "date": "2025-08-30",
      "url": "https://www.mattymctech.com/p/powerful-websites-81-90",
      "number": 84
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 83
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6993733771488988421?utm_source=chatgpt.com",
@@ -1894,6 +4257,12 @@
      "title": "🧑‍💻Matty McTech - (Powerful Websites 51-60)",
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
+     "number": 60
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 60
     }
    ],
@@ -1926,6 +4295,25 @@
    "added": "2026-10-16"
   },
   {
+   "id": "prepostseo-com",
+   "name": "Pre Post Seo",
+   "url": "https://www.prepostseo.com/",
+   "host": "prepostseo.com",
+   "description": "Chek for plagiarism and rewrite articles / essays",
+   "category": "productivity",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 108
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "simplepdf-eu",
    "name": "SimplePDF",
    "url": "https://simplepdf.eu",
@@ -1949,6 +4337,25 @@
    "added": "2026-10-16"
   },
   {
+   "id": "slidescarnival-com",
+   "name": "Slides Carnival",
+   "url": "https://www.slidescarnival.com/",
+   "host": "slidescarnival.com",
+   "description": "Find slides and templates for powerpoint presentations",
+   "category": "productivity",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 50
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "smmry-com",
    "name": "Smmry",
    "url": "https://smmry.com",
@@ -1962,10 +4369,96 @@
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
      "number": 21
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 21
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6946321856261639430",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "snapdrop-net",
+   "name": "Snapdrop",
+   "url": "https://snapdrop.net/",
+   "host": "snapdrop.net",
+   "description": "Transfer files over your WiFi",
+   "category": "productivity",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 65
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "yt5s-com-en10",
+   "name": "Youtube Downloader",
+   "url": "https://yt5s.com/en10",
+   "host": "yt5s.com",
+   "description": "Easy way to download youtube videos",
+   "category": "productivity",
+   "tags": [
+    "video"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 81
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "yt5s-com-en12",
+   "name": "YT5s",
+   "url": "https://yt5s.com/en12",
+   "host": "yt5s.com",
+   "description": "Download Youtube Videos",
+   "category": "productivity",
+   "tags": [
+    "video"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 101
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "accountkiller-com-en-home",
+   "name": "Account Killer",
+   "url": "https://www.accountkiller.com/en/home",
+   "host": "accountkiller.com",
+   "description": "Find out how to delete social media accounts",
+   "category": "security",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 106
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2027,10 +4520,35 @@
      "date": "2025-07-06",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-31-40",
      "number": 31
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 31
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6950999580074888453",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "namechk-com",
+   "name": "Namechk",
+   "url": "https://namechk.com/",
+   "host": "namechk.com",
+   "description": "Check if a username is availble on multiple social media sites",
+   "category": "security",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 104
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2047,10 +4565,35 @@
      "date": "2025-07-23",
      "url": "https://www.mattymctech.com/p/powerful-websites-51-60",
      "number": 55
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 55
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6967335590010309893",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "temp-mail-org-en",
+   "name": "TempMail",
+   "url": "https://temp-mail.org/en/",
+   "host": "temp-mail.org",
+   "description": "Get a temporary email address",
+   "category": "security",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 2
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2073,6 +4616,46 @@
    "added": "2026-10-16"
   },
   {
+   "id": "tosdr-org",
+   "name": "TOSDR",
+   "url": "https://www.tosdr.org",
+   "host": "tosdr.org",
+   "description": "Summarized and graded terms of service for companies",
+   "category": "security",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 121
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "yandex-com-images",
+   "name": "Yandex",
+   "url": "https://yandex.com/images/",
+   "host": "yandex.com",
+   "description": "Reverse image search using facial recognition",
+   "category": "security",
+   "tags": [
+    "photo"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 115
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "amazon-com-outlet",
    "name": "Amazon Outlet",
    "url": "https://www.amazon.com/Outlet",
@@ -2087,6 +4670,12 @@
      "title": "Matty McTech - (Powerful Websites 21-30)",
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
+     "number": 28
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 28
     }
    ],
@@ -2110,10 +4699,58 @@
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
      "number": 22
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 22
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6946605652936609029",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "amazon-com-warehouse-deals",
+   "name": "Amazon Warehouse",
+   "url": "https://www.amazon.com/Warehouse-Deals",
+   "host": "amazon.com",
+   "description": "Search through Amazon returns for deals.",
+   "category": "shopping",
+   "tags": [
+    "deals"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 39
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "camelcamelcamel-com",
+   "name": "Camel Camel Camel",
+   "url": "https://camelcamelcamel.com/",
+   "host": "camelcamelcamel.com",
+   "description": "Get the price history and set alerts for Amazon Products",
+   "category": "shopping",
+   "tags": [
+    "deals"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 44
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2162,6 +4799,50 @@
    "added": "2026-10-16"
   },
   {
+   "id": "isthereanydeal-com",
+   "name": "Is there any Deal",
+   "url": "https://isthereanydeal.com/",
+   "host": "isthereanydeal.com",
+   "description": "Find deals on video games",
+   "category": "shopping",
+   "tags": [
+    "deals",
+    "games",
+    "video"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 90
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "lozo-com",
+   "name": "Lozo",
+   "url": "https://lozo.com/",
+   "host": "lozo.com",
+   "description": "Get coupons for retail stores",
+   "category": "shopping",
+   "tags": [
+    "deals"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 38
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "retailmenot-com",
    "name": "RetailMeNot",
    "url": "https://retailmenot.com",
@@ -2176,6 +4857,12 @@
      "title": "Matty McTech - (Powerful Websites 21-30)",
      "date": "2025-06-30",
      "url": "https://www.mattymctech.com/p/matty-mctech-powerful-websites-21-30-1",
+     "number": 29
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 29
     }
    ],
@@ -2197,6 +4884,12 @@
      "date": "2025-08-30",
      "url": "https://www.mattymctech.com/p/powerful-websites-81-90",
      "number": 89
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 88
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6999674078286171398?utm_source=chatgpt.com",
@@ -2222,6 +4915,28 @@
     }
    ],
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "google-com-maps-d-viewer-mid-1z1di8hobzsjnwfx2xr-mmxsxsxy",
+   "name": "Airport WiFi Map",
+   "url": "https://www.google.com/maps/d/viewer?mid=1Z1dI8hoBZSJNWFx2xr_MMxSxSxY",
+   "host": "google.com",
+   "description": "Find the WiFi Passwords at different airports",
+   "category": "travel",
+   "tags": [
+    "free",
+    "map"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 4
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2289,6 +5004,44 @@
    "added": "2026-10-16"
   },
   {
+   "id": "seatguru-com",
+   "name": "Seat Guru",
+   "url": "https://www.seatguru.com/",
+   "host": "seatguru.com",
+   "description": "Find the best seats on an airplane",
+   "category": "travel",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 95
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "wifispc-com",
+   "name": "WiFi spc",
+   "url": "https://wifispc.com",
+   "host": "wifispc.com",
+   "description": "Get WiFi Passwords for different stores and restaurants.",
+   "category": "travel",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 14
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "wifimap-io",
    "name": "Wifimap",
    "url": "https://www.wifimap.io",
@@ -2303,6 +5056,12 @@
      "title": "Matty McTech -(Powerful Websites Parts 111–120)",
      "date": "2025-10-19",
      "url": "https://www.mattymctech.com/p/powerful-websites-111-120",
+     "number": 112
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 112
     }
    ],
@@ -2324,10 +5083,54 @@
      "date": "2025-08-30",
      "url": "https://www.mattymctech.com/p/powerful-websites-81-90",
      "number": 86
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 85
     }
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6995199935520017670?utm_source=chatgpt.com",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "autum-com",
+   "name": "Autum",
+   "url": "https://autum.com/",
+   "host": "autum.com",
+   "description": "Find the next movie or tv show to binge based on filters",
+   "category": "tv",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 97
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "justwatch-com",
+   "name": "Just Watch",
+   "url": "https://www.justwatch.com",
+   "host": "justwatch.com",
+   "description": "Find streaming sites for movies and TV Shows",
+   "category": "tv",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 9
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2348,6 +5151,46 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/7274319739252428075?lang=en",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "my70stv-com",
+   "name": "My 70s TV",
+   "url": "https://www.my70stv.com/",
+   "host": "my70stv.com",
+   "description": "Watch tv from the 70s",
+   "category": "tv",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 9
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "my90stv-com",
+   "name": "My 90s Tv",
+   "url": "https://my90stv.com/",
+   "host": "my90stv.com",
+   "description": "Watch 90s TV Shows",
+   "category": "tv",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 7
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2384,9 +5227,36 @@
      "date": "2026-10-05",
      "url": "https://www.mattymctech.com/p/powerful-websites-296-301",
      "number": 298
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 66
     }
    ],
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "playphrase-me",
+   "name": "Play Phrase",
+   "url": "https://www.playphrase.me/",
+   "host": "playphrase.me",
+   "description": "Find quotes that were used in movies",
+   "category": "tv",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 15
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -2402,6 +5272,12 @@
      "title": "Matty McTech - (Powerful Websites 91–100)",
      "date": "2025-10-12",
      "url": "https://www.mattymctech.com/p/powerful-websites-91-100",
+     "number": 92
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 92
     }
    ],
@@ -2450,6 +5326,46 @@
     }
    ],
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "wornontv-net",
+   "name": "Worn On TV",
+   "url": "https://www.wornontv.net",
+   "host": "wornontv.net",
+   "description": "Find clothing from TV shows",
+   "category": "tv",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 10
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "yarn-co",
+   "name": "Yarn",
+   "url": "https://yarn.co/",
+   "host": "yarn.co",
+   "description": "Find clips in movies and tv shows",
+   "category": "tv",
+   "tags": [
+    "cure-boredom"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Cure Boredom",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 28
+    }
+   ],
+   "addedVersion": 2,
    "added": "2026-10-16"
   }
  ],
@@ -2736,11 +5652,97 @@
   }
  ],
  "date": "2026-10-16",
- "itemCount": 114,
+ "itemCount": 239,
  "schema": 1,
  "title": "Matty McTech tools directory (unofficial)",
  "source": "https://www.mattymctech.com",
- "sheets": [],
+ "sheets": [
+  {
+   "name": "Matty McTech website list",
+   "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+   "tabs": [
+    {
+     "gid": "0",
+     "name": "Powerful Websites",
+     "skipped": [
+      {
+       "row": [
+        "Want to Support? You can buy me a Coffee or become a Patron!"
+       ],
+       "why": "no web address"
+      },
+      {
+       "row": [
+        "https://www.buymeacoffee.com/setupspawn"
+       ],
+       "why": "no web address"
+      },
+      {
+       "row": [
+        "https://www.patreon.com/MattyMctech"
+       ],
+       "why": "no web address"
+      },
+      {
+       "row": [
+        "23",
+        "3 Websites for School",
+        "https://bit.ly/2XWenNw"
+       ],
+       "why": "link to a TikTok video, not a tool"
+      },
+      {
+       "row": [
+        "33",
+        "3 Work From Home Websites",
+        "https://bit.ly/3Fe0mMq"
+       ],
+       "why": "link to a TikTok video, not a tool"
+      },
+      {
+       "row": [
+        "42",
+        "3 Websites for School",
+        "https://bit.ly/3iiVDz6"
+       ],
+       "why": "link to a TikTok video, not a tool"
+      },
+      {
+       "row": [
+        "48",
+        "3 Websites for Summer Jobs",
+        "https://bit.ly/3zW9CAR"
+       ],
+       "why": "link to a TikTok video, not a tool"
+      },
+      {
+       "row": [
+        "100",
+        "This is it!",
+        "You're literally here already"
+       ],
+       "why": "not a web address"
+      }
+     ],
+     "items": 126
+    },
+    {
+     "gid": "343771459",
+     "name": "Cure Boredom",
+     "skipped": [
+      {
+       "row": [
+        "6",
+        "OOPS Forgot this one"
+       ],
+       "why": "no web address"
+      }
+     ],
+     "items": 56
+    }
+   ]
+  }
+ ],
  "categories": [
   {
    "id": "ai",
@@ -2801,6 +5803,11 @@
    "id": "travel",
    "name": "Travel, Maps & Local",
    "blurb": "Maps, travel, cars and local info"
+  },
+  {
+   "id": "live",
+   "name": "Live Maps & Trackers",
+   "blurb": "Watch the world: flights, ships, weather, space, webcams and virtual travel"
   },
   {
    "id": "uncat",
