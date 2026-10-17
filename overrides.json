@@ -359,5 +359,43 @@
  },
  "openpaymentsdata.cms.gov": {
   "category": "money"
+ },
+ "app.capitoltrades.com": {
+  "category": "money",
+  "tags": [],
+  "url": "https://www.capitoltrades.com/",
+  "id": "app-capitoltrades-com",
+  "_name": "Capitol Trades",
+  "_why": "sheet link www.app.capitoltrades.com does not exist; real site is www.capitoltrades.com (bot-protected, answers 429 to scripts)"
+ },
+ "amazon.com/warehouse-deals": {
+  "category": "shopping",
+  "tags": [
+   "deals"
+  ],
+  "url": "https://www.amazon.com/Amazon-Resale/b?ie=UTF8&node=10158976011",
+  "id": "amazon-com-warehouse-deals",
+  "name": "Amazon Resale (Warehouse Deals)",
+  "_why": "/Warehouse-Deals is a 404; Amazon renamed Warehouse to Amazon Resale"
+ },
+ "quiverquant.com/congresstrading": {
+  "category": "money",
+  "tags": [],
+  "_name": "Quiver Quantitative: Congress Trading"
+ },
+ "disclosures-clerk.house.gov/financialdisclosure": {
+  "category": "money",
+  "tags": [],
+  "_name": "House Financial Disclosures (official)"
+ },
+ "efdsearch.senate.gov/search/home": {
+  "category": "money",
+  "tags": [],
+  "_name": "Senate Financial Disclosures (official)"
+ },
+ "unusualwhales.com/politics": {
+  "category": "money",
+  "tags": [],
+  "_name": "Unusual Whales: Politician Trading"
  }
 }

@@ -542,6 +542,7 @@ def normalise(raw_items, overrides):
         if (overrides.get(key) or {}).get("url"):  # corrected address for a moved site
             url = clean_url(overrides[key]["url"]); key = url_key(url)
         host = re.sub(r"^www\.", "", urlparse(url).netloc)
+        fixed_id = (overrides.get(orig_key) or {}).get("id")  # keep an existing id when the address was corrected, so no duplicate is created
         if (overrides.get(orig_key) or {}).get("name"): r = dict(r, name=overrides[orig_key]["name"])
         src = {"title": r["post"]["title"], "date": r["post"]["date"], "url": r["post"]["url"]}
         if r.get("number"): src["number"] = r["number"]
@@ -559,7 +560,7 @@ def normalise(raw_items, overrides):
             if extra.get(k):
                 tags += [slugify(x) for x in re.split(r"[;,/|]", extra[k]) if x.strip()][:4]
         item = {
-            "id": make_id(url), "name": r["name"], "url": url, "host": host,
+            "id": fixed_id or make_id(url), "name": r["name"], "url": url, "host": host,
             "description": r.get("description", ""), "category": cat,
             "tags": sorted(set(tags)), "sources": [src],
         }

@@ -51,11 +51,11 @@ not all ~300 numbered websites. Posts that are fully open (e.g. 11-30, 51-60, 71
 The newsletter's full spreadsheet, if you want it, is offered to Patreon supporters - nothing here bypasses that either.
 
 ## Install the APK
-1. Download `jds-toolkit-v1.0.4.apk` (GitHub release page) to your phone.
+1. Download `jds-toolkit-v1.0.5.apk` (GitHub release page) to your phone.
 2. Open it. Android will ask to allow "install unknown apps" for your browser/file manager - allow it for this install.
 3. Tap Install. On Android 13+ allow notifications when prompted if you want the monthly "new tools" notice.
 
-(Or with a computer: `adb install -r jds-toolkit-v1.0.4.apk`.) Verify with `apksigner verify`; the release APK is signed with the
+(Or with a computer: `adb install -r jds-toolkit-v1.0.5.apk`.) Verify with `apksigner verify`; the release APK is signed with the
 project's own key. A debug build installs the same way but is signed with a debug key (uninstall one before installing the other).
 
 ## Build from source

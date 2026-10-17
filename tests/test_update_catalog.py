@@ -259,5 +259,31 @@ class CategoryIcons(unittest.TestCase):
             dst = os.path.join(d, "x", "icons.json"); u.sync_icons([dst])
             self.assertEqual(json.load(open(dst)), self.icons)
 
+class LinkFixes(unittest.TestCase):
+    root = os.path.join(os.path.dirname(__file__), "..")
+    def setUp(self):
+        self.c = json.load(open(os.path.join(self.root, "catalog.json")))
+        self.ov = json.load(open(os.path.join(self.root, "overrides.json")))
+        self.items = {i["id"]: i for i in self.c["items"]}
+    def test_capitol_trades_points_at_the_real_site(self):
+        i = self.items["app-capitoltrades-com"]
+        self.assertEqual((i["url"], i["host"], i["category"]), ("https://www.capitoltrades.com/", "capitoltrades.com", "money"))
+        self.assertFalse([x for x in self.c["items"] if "www.app." in x["url"]])
+    def test_amazon_warehouse_uses_resale_page(self):
+        self.assertIn("Amazon-Resale", self.items["amazon-com-warehouse-deals"]["url"])
+    def test_congress_trading_sources_added_under_money(self):
+        for iid in ("quiverquant-com-congresstrading", "disclosures-clerk-house-gov-financialdisclosure",
+                    "efdsearch-senate-gov-search-home", "unusualwhales-com-politics"):
+            self.assertEqual(self.items[iid]["category"], "money", iid)
+            self.assertTrue(self.items[iid]["url"].startswith("https://"))
+            self.assertGreaterEqual(self.items[iid]["addedVersion"], 4)
+    def test_sheet_row_with_bad_address_is_redirected_and_keeps_its_id(self):
+        raw = [{"name": "Capitol Trades", "url": "https://www.app.capitoltrades.com", "description": "d", "hint": None, "replaces": None,
+                "video": None, "number": None, "post": {"title": "Sheet", "date": "", "url": "x"}}]
+        out = u.normalise(raw, self.ov)
+        self.assertEqual([(o["id"], o["url"]) for o in out], [("app-capitoltrades-com", "https://www.capitoltrades.com/")])
+        merged, added = u.merge_catalog(self.c, out)
+        self.assertEqual(added, [])                                  # no duplicate on the next monthly crawl
+
 if __name__ == "__main__":
     unittest.main()

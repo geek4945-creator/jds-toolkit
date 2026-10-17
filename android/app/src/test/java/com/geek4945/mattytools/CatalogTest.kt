@@ -117,4 +117,21 @@ class CatalogTest {
         val without = Catalog(2, "d", emptyList(), listOf(t), emptyList())
         assertEquals(listOf(Credit("Old", "x")), CatalogMerge.merge(old, without).catalog.credits)
     }
+
+    @Test fun mergeAppliesCorrectedAddressToExistingTool() {
+        val local = cat(1, tool("cap", "https://www.app.capitoltrades.com").copy(host = "app.capitoltrades.com"))
+        val remote = cat(2, tool("cap", "https://www.capitoltrades.com/").copy(host = "capitoltrades.com"))
+        val r = CatalogMerge.merge(local, remote)
+        assertEquals(1, r.catalog.tools.size)
+        assertEquals("https://www.capitoltrades.com/", r.catalog.tools[0].url)
+        assertEquals("capitoltrades.com", r.catalog.tools[0].host)
+        assertTrue(r.newTools.isEmpty())   // a fixed link is not shown as a new tool
+    }
+
+    @Test fun bundledCatalogHasWorkingCapitolTradesAddress() {
+        val c = CatalogJson.parse(File("src/main/assets/catalog.json").readText())
+        val cap = c.tools.single { it.name == "Capitol Trades" }
+        assertEquals("https://www.capitoltrades.com/", cap.url)
+        assertTrue(c.tools.none { "www.app." in it.url })
+    }
 }

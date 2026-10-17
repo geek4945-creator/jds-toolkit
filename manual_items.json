@@ -6,5 +6,37 @@
   "post_title": "Turn Your Computer Into a Free TV",
   "post_date": "2026-09-04",
   "post_url": "https://www.mattymctech.com/p/vlc-tv"
+ },
+ {
+  "name": "Quiver Quantitative: Congress Trading",
+  "url": "https://www.quiverquant.com/congresstrading/",
+  "description": "Charts and tables of stock trades that members of Congress reported in their public STOCK Act disclosures. Some features may need a paid plan.",
+  "post_title": "Added to JD's Toolkit",
+  "post_date": "2026-10-16",
+  "post_url": "https://github.com/geek4945-creator/jds-toolkit"
+ },
+ {
+  "name": "House Financial Disclosures (official)",
+  "url": "https://disclosures-clerk.house.gov/FinancialDisclosure",
+  "description": "Official U.S. House Clerk search for financial disclosure reports and periodic transaction reports filed by House members. Public records.",
+  "post_title": "Added to JD's Toolkit",
+  "post_date": "2026-10-16",
+  "post_url": "https://github.com/geek4945-creator/jds-toolkit"
+ },
+ {
+  "name": "Senate Financial Disclosures (official)",
+  "url": "https://efdsearch.senate.gov/search/home/",
+  "description": "Official U.S. Senate electronic financial disclosure search for reports filed by senators. Public records; you accept a short use statement first.",
+  "post_title": "Added to JD's Toolkit",
+  "post_date": "2026-10-16",
+  "post_url": "https://github.com/geek4945-creator/jds-toolkit"
+ },
+ {
+  "name": "Unusual Whales: Politician Trading",
+  "url": "https://unusualwhales.com/politics",
+  "description": "Browse stock trades reported by U.S. politicians in public disclosures, with filters by person and company. Some data may need a paid plan.",
+  "post_title": "Added to JD's Toolkit",
+  "post_date": "2026-10-16",
+  "post_url": "https://github.com/geek4945-creator/jds-toolkit"
  }
 ]

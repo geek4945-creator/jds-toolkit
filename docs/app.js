@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  var APP_VERSION = '1.0.4-web';
+  var APP_VERSION = '1.0.5-web';
   var REMOTE_URL = 'https://raw.githubusercontent.com/geek4945-creator/jds-toolkit/main/catalog.json';
   var REPO_URL = 'https://github.com/geek4945-creator/jds-toolkit';
   var CHECK_EVERY_MS = 30 * 86400000;

@@ -142,7 +142,7 @@ object CatalogMerge {
             } else {
                 val old = byId.getValue(existingId)
                 byId[existingId] = old.copy(
-                    name = r.name.ifEmpty { old.name }, url = r.url.ifEmpty { old.url },
+                    name = r.name.ifEmpty { old.name }, url = r.url.ifEmpty { old.url }, host = r.host.ifEmpty { old.host },
                     description = r.description.ifEmpty { old.description },
                     category = r.category, tags = r.tags, sources = (old.sources + r.sources).distinct(),
                     video = r.video ?: old.video,

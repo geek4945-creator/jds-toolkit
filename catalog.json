@@ -1,5 +1,5 @@
 {
- "version": 3,
+ "version": 4,
  "items": [
   {
    "id": "ai-art-tokyo-en",
@@ -3232,8 +3232,8 @@
   {
    "id": "app-capitoltrades-com",
    "name": "Capitol Trades",
-   "url": "https://www.app.capitoltrades.com",
-   "host": "app.capitoltrades.com",
+   "url": "https://www.capitoltrades.com/",
+   "host": "capitoltrades.com",
    "description": "Follow stock market trades from politicians",
    "category": "money",
    "tags": [],
@@ -3243,6 +3243,11 @@
      "date": "",
      "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
      "number": 126
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "x"
     }
    ],
    "addedVersion": 2,
@@ -3329,6 +3334,24 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/7358190123541974314",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "disclosures-clerk-house-gov-financialdisclosure",
+   "name": "House Financial Disclosures (official)",
+   "url": "https://disclosures-clerk.house.gov/FinancialDisclosure",
+   "host": "disclosures-clerk.house.gov",
+   "description": "Official U.S. House Clerk search for financial disclosure reports and periodic transaction reports filed by House members. Public records.",
+   "category": "money",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Added to JD's Toolkit",
+     "date": "2026-10-16",
+     "url": "https://github.com/geek4945-creator/jds-toolkit"
+    }
+   ],
+   "addedVersion": 4,
    "added": "2026-10-16"
   },
   {
@@ -3441,6 +3464,24 @@
    "added": "2026-10-16"
   },
   {
+   "id": "quiverquant-com-congresstrading",
+   "name": "Quiver Quantitative: Congress Trading",
+   "url": "https://www.quiverquant.com/congresstrading/",
+   "host": "quiverquant.com",
+   "description": "Charts and tables of stock trades that members of Congress reported in their public STOCK Act disclosures. Some features may need a paid plan.",
+   "category": "money",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Added to JD's Toolkit",
+     "date": "2026-10-16",
+     "url": "https://github.com/geek4945-creator/jds-toolkit"
+    }
+   ],
+   "addedVersion": 4,
+   "added": "2026-10-16"
+  },
+  {
    "id": "quiverquant-com",
    "name": "QuiverQuant",
    "url": "https://www.quiverquant.com",
@@ -3510,6 +3551,42 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/7034230465422839087",
    "addedVersion": 1,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "efdsearch-senate-gov-search-home",
+   "name": "Senate Financial Disclosures (official)",
+   "url": "https://efdsearch.senate.gov/search/home/",
+   "host": "efdsearch.senate.gov",
+   "description": "Official U.S. Senate electronic financial disclosure search for reports filed by senators. Public records; you accept a short use statement first.",
+   "category": "money",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Added to JD's Toolkit",
+     "date": "2026-10-16",
+     "url": "https://github.com/geek4945-creator/jds-toolkit"
+    }
+   ],
+   "addedVersion": 4,
+   "added": "2026-10-16"
+  },
+  {
+   "id": "unusualwhales-com-politics",
+   "name": "Unusual Whales: Politician Trading",
+   "url": "https://unusualwhales.com/politics",
+   "host": "unusualwhales.com",
+   "description": "Browse stock trades reported by U.S. politicians in public disclosures, with filters by person and company. Some data may need a paid plan.",
+   "category": "money",
+   "tags": [],
+   "sources": [
+    {
+     "title": "Added to JD's Toolkit",
+     "date": "2026-10-16",
+     "url": "https://github.com/geek4945-creator/jds-toolkit"
+    }
+   ],
+   "addedVersion": 4,
    "added": "2026-10-16"
   },
   {
@@ -4684,6 +4761,32 @@
    "added": "2026-10-16"
   },
   {
+   "id": "amazon-com-warehouse-deals",
+   "name": "Amazon Resale (Warehouse Deals)",
+   "url": "https://www.amazon.com/Amazon-Resale/b?ie=UTF8&node=10158976011",
+   "host": "amazon.com",
+   "description": "Search through Amazon returns for deals.",
+   "category": "shopping",
+   "tags": [
+    "deals"
+   ],
+   "sources": [
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
+     "number": 39
+    },
+    {
+     "title": "Sheet: Powerful Websites",
+     "date": "",
+     "url": "x"
+    }
+   ],
+   "addedVersion": 2,
+   "added": "2026-10-16"
+  },
+  {
    "id": "amazon-com-stylesnap",
    "name": "Amazon Style Snap",
    "url": "https://www.amazon.com/stylesnap",
@@ -4709,27 +4812,6 @@
    ],
    "video": "https://www.tiktok.com/@setupspawn/video/6946605652936609029",
    "addedVersion": 1,
-   "added": "2026-10-16"
-  },
-  {
-   "id": "amazon-com-warehouse-deals",
-   "name": "Amazon Warehouse",
-   "url": "https://www.amazon.com/Warehouse-Deals",
-   "host": "amazon.com",
-   "description": "Search through Amazon returns for deals.",
-   "category": "shopping",
-   "tags": [
-    "deals"
-   ],
-   "sources": [
-    {
-     "title": "Sheet: Powerful Websites",
-     "date": "",
-     "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQMvTHtsEwB5LPF1zipHIZaVsUrQQBBVLazZLr-aaFOwrGAGEEUtWg9KRgweYLwcHKnevpk8ATT7skN/pubhtml",
-     "number": 39
-    }
-   ],
-   "addedVersion": 2,
    "added": "2026-10-16"
   },
   {
@@ -5652,7 +5734,7 @@
   }
  ],
  "date": "2026-10-16",
- "itemCount": 239,
+ "itemCount": 243,
  "schema": 1,
  "title": "JD's Toolkit catalog",
  "source": "https://www.mattymctech.com",
