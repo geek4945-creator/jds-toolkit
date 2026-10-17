@@ -1,6 +1,6 @@
 # JD's Toolkit (unofficial)
 
-An Android app (plus a web-friendly `catalog.json`) called **JD's Toolkit** (repo: `matty-tools-directory`): a directory of handy tools and websites, sorted by category.
+An Android app (plus a web-friendly `catalog.json`) called **JD's Toolkit** (repo: `jds-toolkit`): a directory of handy tools and websites, sorted by category.
 The list started from Matty McTech's newsletter and public sheets; that credit (and any future ones) lives in **Settings > About > Credits**.
 
 > **Unofficial, fan-made.** Not made, endorsed or affiliated with the people or sites credited in the app. Every tool shows where it came from on its "From:" line.
@@ -27,7 +27,7 @@ Every category card (home) and category screen shows an icon. The artwork and th
 - Headless check of the web version: `node tests/pwa_icons_check.js` (needs `playwright-core` and Chrome).
 
 ## iPhone / web version
-An installable web app (PWA) lives in `docs/` and is hosted on GitHub Pages: <https://geek4945-creator.github.io/matty-tools-directory/>.
+An installable web app (PWA) lives in `docs/` and is hosted on GitHub Pages: <https://geek4945-creator.github.io/jds-toolkit/>.
 On iPhone open it in Safari -> Share -> **Add to Home Screen**. It has the same features as the Android app and works offline, but iOS web apps
 cannot run background jobs or send reliable notifications, so it shows an in-app "N new tools added" banner when you open it instead.
 See [IOS.md](IOS.md) for install steps and the optional native App Store route (Capacitor, Mac + Xcode, $99/yr Apple Developer account).
@@ -51,11 +51,11 @@ not all ~300 numbered websites. Posts that are fully open (e.g. 11-30, 51-60, 71
 The newsletter's full spreadsheet, if you want it, is offered to Patreon supporters - nothing here bypasses that either.
 
 ## Install the APK
-1. Download `jds-toolkit-v1.0.3.apk` (GitHub release page) to your phone.
+1. Download `jds-toolkit-v1.0.4.apk` (GitHub release page) to your phone.
 2. Open it. Android will ask to allow "install unknown apps" for your browser/file manager - allow it for this install.
 3. Tap Install. On Android 13+ allow notifications when prompted if you want the monthly "new tools" notice.
 
-(Or with a computer: `adb install -r jds-toolkit-v1.0.3.apk`.) Verify with `apksigner verify`; the release APK is signed with the
+(Or with a computer: `adb install -r jds-toolkit-v1.0.4.apk`.) Verify with `apksigner verify`; the release APK is signed with the
 project's own key. A debug build installs the same way but is signed with a debug key (uninstall one before installing the other).
 
 ## Build from source

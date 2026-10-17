@@ -3,7 +3,7 @@
 JD's Toolkit (unofficial, fan-made) has an iPhone version: a **Progressive Web App (PWA)** that lives in this repo under `docs/`
 and is hosted by GitHub Pages.
 
-**Live URL:** <https://geek4945-creator.github.io/matty-tools-directory/>
+**Live URL:** <https://geek4945-creator.github.io/jds-toolkit/>
 
 It has the same features as the Android app: category cards with counts, category screens, search across every tool,
 use/tag filters, saved favorites, recently opened, share, NEW badges, light/dark/system theme, an About screen
@@ -19,7 +19,7 @@ It works offline and has no account, ads or analytics.
 
 You must use **Safari** (on iPhone, only Safari can add a web app to the Home Screen; Chrome/Firefox on iOS 16.4+ can too from their Share menu, but Safari is the safe choice).
 
-1. Open Safari on the iPhone and go to <https://geek4945-creator.github.io/matty-tools-directory/>.
+1. Open Safari on the iPhone and go to <https://geek4945-creator.github.io/jds-toolkit/>.
 2. Tap the **Share** button (square with an arrow pointing up; at the bottom, or top right on iPad).
 3. Scroll down and tap **Add to Home Screen**. (If you do not see it, scroll to the bottom of the list and tap **Edit Actions**, or make sure you are not in a private tab.)
 4. Leave the name as **JD's Toolkit** (or rename it) and tap **Add**.
@@ -62,8 +62,8 @@ These steps were written from Capacitor's documented workflow; they have **not**
 
 ### A. Create the wrapper
 ```bash
-git clone https://github.com/geek4945-creator/matty-tools-directory.git
-cd matty-tools-directory
+git clone https://github.com/geek4945-creator/jds-toolkit.git
+cd jds-toolkit
 npm init -y
 npm install @capacitor/core @capacitor/ios
 npm install -D @capacitor/cli
