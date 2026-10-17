@@ -51,6 +51,8 @@ class CatalogRepository(private val ctx: Context) {
     private val _notify = MutableStateFlow(prefs.getBoolean("notify", true))
     val notify: StateFlow<Boolean> = _notify
 
+    val tradesStore = TradesStore(ctx)
+
     private fun bundled(): Catalog = ctx.assets.open("catalog.json").bufferedReader().use { CatalogJson.parse(it.readText()) }
 
     private fun loadCatalog(): Catalog {
@@ -148,4 +150,49 @@ class CatalogRepository(private val ctx: Context) {
     }
 
     companion object { const val NEW_DAYS = 30 }
+}
+
+/**
+ * Politician-trades digest data: bundled assets/trades.json, replaced by a newer copy downloaded from the repo's public
+ * trades.json (static file, no key). A downloaded copy is only used if it parses and is not older than what we have.
+ */
+class TradesStore(private val ctx: Context) {
+    private val file = File(ctx.filesDir, "trades.json")
+    private val _data = MutableStateFlow<TradesData?>(load())
+    val data: StateFlow<TradesData?> = _data
+    private val _status = MutableStateFlow("")
+    val status: StateFlow<String> = _status
+
+    private fun bundled(): TradesData? = try { ctx.assets.open("trades.json").bufferedReader().use { TradesJson.parse(it.readText()) } } catch (_: Exception) { null }
+
+    private fun load(): TradesData? {
+        val b = bundled()
+        val d = try { if (file.exists()) TradesJson.parse(file.readText()) else null } catch (_: Exception) { null }
+        return if (d != null && (b == null || d.generated >= b.generated)) d else b
+    }
+
+    /** Downloads the latest trades.json. Returns a short message for the screen. Never throws. */
+    suspend fun refresh(url: String = BuildConfig.TRADES_URL): String = withContext(Dispatchers.IO) {
+        val msg = try {
+            val c = URL(url).openConnection() as HttpURLConnection
+            c.connectTimeout = 15_000; c.readTimeout = 25_000
+            c.setRequestProperty("User-Agent", "JDsToolkit/${BuildConfig.VERSION_NAME}")
+            c.setRequestProperty("Cache-Control", "no-cache")
+            val text = try {
+                if (c.responseCode != 200) throw IllegalStateException("HTTP ${c.responseCode}")
+                if (c.contentLengthLong > 8_000_000) throw IllegalStateException("file too large")
+                c.inputStream.bufferedReader().use { it.readText() }
+            } finally { c.disconnect() }
+            val fresh = TradesJson.parse(text)
+            val cur = _data.value
+            if (cur != null && fresh.generated < cur.generated) "Already have the newest list"
+            else {
+                val tmp = File(ctx.filesDir, "trades.json.tmp"); tmp.writeText(text)
+                if (!tmp.renameTo(file)) { file.writeText(text); tmp.delete() }
+                _data.value = fresh
+                if (cur != null && fresh.generated == cur.generated) "Already up to date" else "Updated"
+            }
+        } catch (e: Exception) { "Could not refresh (showing saved list): ${e.message ?: e.javaClass.simpleName}" }
+        _status.value = msg; msg
+    }
 }

@@ -19,6 +19,18 @@ To add a credit:
 
 Per-tool source credit is separate: each tool keeps its own `sources` (shown as "From: ..." on the tool card), so a tool added from a new source can be credited there as well.
 
+## Politician Trades digest (Money, Jobs & Business)
+A card at the top of **Money, Jobs & Business** opens a digest of recent stock trades that members of Congress reported in their public STOCK Act disclosures (politician, chamber, ticker/asset, buy/sell, amount range, trade date, filing date). It has search (politician, ticker, company), House/Senate and Buy/Sell filters, a "list refreshed" stamp, and links out to Capitol Trades, Quiver Quantitative, Unusual Whales and the official House and Senate disclosure sites. It is information only, not investment advice. Filings can be made up to 45 days after a trade, so recent trades may be missing.
+
+**Where the data comes from** (no API keys, nothing from sites that block bots):
+- **House:** the Clerk's public filing index and each Periodic Transaction Report PDF at `disclosures-clerk.house.gov`, read with `pdftotext`. [`update_trades.py`](update_trades.py) is slow (one request per 0.6 s), names this project in its User-Agent, and only downloads filings it has not seen. A filing whose row count does not match the number of assets listed is left out instead of guessed. Scanned/paper filings contain no text and are skipped (the digest says how many).
+- **Senate:** Senate eFD only answers after a click-through agreement in a browser session, which this project does not automate. Senate rows are copied from the community CC0 dataset [LuxAlgo/market-trackers-data](https://github.com/LuxAlgo/market-trackers-data) (which parses eFD), labelled as such with that dataset's own "as of" date. That dataset is small and was last updated on 2026-09-07 when this was built, so the Senate side is partial and may be stale. If it disappears the script keeps the last rows it had.
+- Capitol Trades, Quiver and Unusual Whales are never fetched, only linked.
+
+**How it updates:** [`.github/workflows/update-trades.yml`](.github/workflows/update-trades.yml) runs nightly, runs `python update_trades.py`, and commits `trades.json` (plus the copies in `docs/` and `android/app/src/main/assets/`) only if something changed. The apps read that static file: the Android app and the web app both try to fetch the newest copy when the digest opens and fall back to the bundled one. Run it yourself with `python3 update_trades.py` (needs `poppler-utils`). Tests: `python3 -m unittest discover -s tests` and `node tests/pwa_trades_check.js`.
+
+**Please note:** the House Clerk and Senate eFD portals state limits on how the data may be used (for example, not for commercial purposes or soliciting money). This is a free personal tool; check those terms before reusing the data elsewhere.
+
 ## Category icons
 Every category card (home) and category screen shows an icon. The artwork and the category -> icon map are data, shared by the Android app and the web app:
 - [`icons.json`](icons.json) (repo root) holds the icon paths (Material Icons, Round style, Apache License 2.0, 24x24 grid, drawn as inline vectors, no downloads at runtime) and `categories` (category id -> icon name). `default` is the icon used for any category without one.
@@ -51,11 +63,11 @@ not all ~300 numbered websites. Posts that are fully open (e.g. 11-30, 51-60, 71
 The newsletter's full spreadsheet, if you want it, is offered to Patreon supporters - nothing here bypasses that either.
 
 ## Install the APK
-1. Download `jds-toolkit-v1.0.5.apk` (GitHub release page) to your phone.
+1. Download `jds-toolkit-v1.0.6.apk` (GitHub release page) to your phone.
 2. Open it. Android will ask to allow "install unknown apps" for your browser/file manager - allow it for this install.
 3. Tap Install. On Android 13+ allow notifications when prompted if you want the monthly "new tools" notice.
 
-(Or with a computer: `adb install -r jds-toolkit-v1.0.5.apk`.) Verify with `apksigner verify`; the release APK is signed with the
+(Or with a computer: `adb install -r jds-toolkit-v1.0.6.apk`.) Verify with `apksigner verify`; the release APK is signed with the
 project's own key. A debug build installs the same way but is signed with a debug key (uninstall one before installing the other).
 
 ## Build from source

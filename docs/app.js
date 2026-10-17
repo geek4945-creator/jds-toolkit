@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  var APP_VERSION = '1.0.5-web';
+  var APP_VERSION = '1.0.6-web';
   var REMOTE_URL = 'https://raw.githubusercontent.com/geek4945-creator/jds-toolkit/main/catalog.json';
   var REPO_URL = 'https://github.com/geek4945-creator/jds-toolkit';
   var CHECK_EVERY_MS = 30 * 86400000;
@@ -343,6 +343,10 @@
     var v = h('div');
     var badge = catBadge(c, true);
     if (badge || c.blurb) v.appendChild(h('div', { class: 'cat-head' }, [badge, c.blurb ? h('p', { class: 'muted', text: c.blurb }) : null]));
+    if (cid === 'money') v.appendChild(h('a', { class: 'feature', href: '#/trades', id: 'trades-card' }, [
+      h('div', { class: 'ft', text: 'Politician Trades digest' }),
+      h('div', { class: 'fd', text: 'Recent stock trades reported by members of Congress in their public STOCK Act disclosures. Search by name or ticker.' }),
+      h('div', { class: 'fa', text: 'Open the digest' })]));
     v.appendChild(tagChips(topTags(all, 24), sel, function (g) { catTags[cid] = toggleIn(sel, g); render(true); }));
     v.appendChild(h('p', { class: 'muted', text: plural(shown.length, 'tool') }));
     v.appendChild(listOf(shown, 'No tools match these filters.'));
@@ -430,10 +434,115 @@
     v.appendChild(h('div', { class: 'panel' }, [h('h3', { text: 'What is in the list' }),
       h('p', { text: 'Catalog v' + catalog.version + ' (' + catalog.date + '): ' + plural(catalog.tools.length, 'tool') + '. Only openly readable parts of sources are listed (nothing behind a sign-up or paywall). Categories and tags are assigned automatically from keywords, so a few may be off.' })]));
     v.appendChild(h('div', { class: 'panel' }, [h('h3', { text: 'Privacy' }),
-      h('p', { text: 'No account, no ads, no analytics. Favorites and history stay on your device. The only request this app makes itself is downloading the public catalog file from GitHub.' })]));
+      h('p', { text: 'No account, no ads, no analytics. Favorites and history stay on your device. The only requests this app makes itself are downloading the public catalog file from GitHub and, when you open Politician Trades, the public trades list from this site.' })]));
     v.appendChild(h('a', { class: 'btn block', href: REPO_URL, target: '_blank', rel: 'noopener noreferrer', text: 'Project page on GitHub' }));
     v.appendChild(h('p', { class: 'muted', text: 'Version ' + APP_VERSION }));
     return { title: 'About', node: v, back: true, tab: 'settings' };
+  }
+
+
+  /* ---------- Politician Trades digest (static trades.json built nightly from public STOCK Act filings) ---------- */
+  var TRADE_LINKS = [
+    ['Capitol Trades', 'https://www.capitoltrades.com/', 'Browse by politician, company and date'],
+    ['Quiver Quantitative: Congress Trading', 'https://www.quiverquant.com/congresstrading/', 'Charts of reported trades; some features paid'],
+    ['Unusual Whales: Politician Trading', 'https://unusualwhales.com/politics', 'Trades by politician; some data paid'],
+    ['House Financial Disclosures (official)', 'https://disclosures-clerk.house.gov/FinancialDisclosure', 'The original House filings'],
+    ['Senate Financial Disclosures (official)', 'https://efdsearch.senate.gov/search/home/', 'The original Senate filings']
+  ];
+  var tradesData = null, tradesState = { q: '', chamber: '', side: '' }, tradesStatus = '';
+  function tradeLink(t) {
+    if (t.u && /^https:\/\//.test(t.u)) return t.u;
+    if (t.c === 'House' && t.doc && t.fd) return 'https://disclosures-clerk.house.gov/public_disc/ptr-pdfs/' + t.fd.slice(0, 4) + '/' + t.doc + '.pdf';
+    return null;
+  }
+  function loadTrades() {
+    return fetch('trades.json', { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) {
+        if (!d || d.schema !== 1 || !Array.isArray(d.trades)) throw new Error('unexpected file');
+        d.trades = d.trades.filter(function (t) { return t && t.p; });
+        tradesData = d; tradesStatus = '';
+      }).catch(function (e) { tradesStatus = 'Could not load the trades list: ' + e.message; });
+  }
+  function filterTrades(rows, q, chamber, side) {
+    var words = q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    return rows.filter(function (t) {
+      if (chamber && t.c !== chamber) return false;
+      if (side === 'buy' && t.s !== 'buy') return false;
+      if (side === 'sell' && t.s.indexOf('sell') !== 0) return false;
+      var p = t.p.toLowerCase(), tk = (t.t || '').toLowerCase(), a = (t.a || '').toLowerCase();
+      return words.every(function (w) { return p.indexOf(w) >= 0 || tk.indexOf(w) === 0 || a.indexOf(w) >= 0; });
+    });
+  }
+  function tradeCard(t, types) {
+    var link = tradeLink(t);
+    var side = t.s ? t.s.charAt(0).toUpperCase() + t.s.slice(1) : '';
+    var meta = 'Traded ' + t.td + ' \u00B7 Filed ' + t.fd + (t.o ? ' \u00B7 ' + t.o : '') + (t.ty && types[t.ty] && types[t.ty] !== 'Stock' ? ' \u00B7 ' + types[t.ty] : '');
+    var body = [
+      h('div', { class: 'tr-top' }, [h('span', { class: 'tr-name', text: t.p }), h('span', { class: 'tr-side ' + (t.s === 'buy' ? 'buy' : t.s.indexOf('sell') === 0 ? 'sell' : ''), text: side })]),
+      h('div', { class: 'tr-ch', text: t.c + (t.st ? ' \u00B7 ' + t.st : '') }),
+      h('div', { class: 'tr-as', text: (t.t ? t.t + '  \u2014  ' : '') + t.a }),
+      h('div', { class: 'tr-amt', text: t.amt }),
+      h('div', { class: 'muted', text: meta })];
+    return link ? h('a', { class: 'card trade', href: link, target: '_blank', rel: 'noopener noreferrer', 'aria-label': 'Open filing for ' + t.p }, [h('div', { class: 'body' }, body)])
+                : h('div', { class: 'card trade' }, [h('div', { class: 'body' }, body)]);
+  }
+  function fmtStamp(iso) {
+    var d = new Date(iso); if (isNaN(d.getTime())) return iso;
+    try { return d.toLocaleString(undefined, { year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return iso; }
+  }
+  function screenTrades() {
+    var v = h('div', { id: 'trades' });
+    var head = h('div', { class: 'panel' }), body = h('div');
+    v.appendChild(head); v.appendChild(body);
+    function paintHead() {
+      head.innerHTML = '';
+      head.appendChild(h('h3', { text: 'Politician Trades' }));
+      head.appendChild(h('p', { text: 'Stock trades that U.S. House members and senators have reported in public STOCK Act disclosures, shown as filed. This is information, not investment advice, and a trade appearing here does not say why it was made.' }));
+      head.appendChild(h('p', { class: 'strong', id: 'trades-delay', text: 'Filings can be made up to 45 days after a trade, so recent trades may be missing. Amounts are ranges, not exact values.' }));
+      var d = tradesData;
+      if (d) {
+        var latest = d.trades.reduce(function (m, t) { return t.fd > m ? t.fd : m; }, '');
+        head.appendChild(h('p', { class: 'muted', id: 'trades-stamp', text: 'List refreshed ' + fmtStamp(d.generated) + ' \u00B7 latest filing ' + latest + ' \u00B7 last ' + d.windowDays + ' days \u00B7 ' + d.trades.length + ' trades' }));
+        (d.sources || []).forEach(function (s) {
+          head.appendChild(h('p', { class: 'muted small', text: '\u2022 ' + s.name + ': ' + s.rows + ' trades' + (s.asOf ? ', data as of ' + s.asOf : '') + (s.filingsNotRead ? ', ' + s.filingsNotRead + ' scanned/paper filings not shown' : '') + (s.status && s.status !== 'ok' ? ' (' + s.status + ')' : '') }));
+        });
+      }
+      if (tradesStatus) head.appendChild(h('p', { class: 'muted', text: tradesStatus }));
+    }
+    function paintBody() {
+      body.innerHTML = '';
+      if (!tradesData) { body.appendChild(h('div', { class: 'empty', text: tradesStatus || 'Loading trades\u2026' })); }
+      else {
+        var types = tradesData.assetTypes || {};
+        var input = h('input', { class: 'search', type: 'search', id: 'tq', placeholder: 'Politician, ticker or company', autocomplete: 'off', autocapitalize: 'none', autocorrect: 'off', spellcheck: 'false', enterkeyhint: 'search', 'aria-label': 'Search trades', value: tradesState.q });
+        var chips = h('div', { class: 'chips', role: 'group', 'aria-label': 'Filter trades' });
+        var count = h('p', { class: 'muted' }), list = h('div', { class: 'list', id: 'trade-list' });
+        function chip(label, key, val) {
+          var on = tradesState[key] === val;
+          return h('button', { class: 'chip', type: 'button', 'data-f': key + ':' + val, 'aria-pressed': on ? 'true' : 'false', text: label, onclick: function () { tradesState[key] = on ? '' : val; paintBody(); } });
+        }
+        chips.appendChild(chip('House', 'chamber', 'House')); chips.appendChild(chip('Senate', 'chamber', 'Senate'));
+        chips.appendChild(chip('Buys', 'side', 'buy')); chips.appendChild(chip('Sells', 'side', 'sell'));
+        function run() {
+          var rows = filterTrades(tradesData.trades, tradesState.q, tradesState.chamber, tradesState.side);
+          count.textContent = plural(rows.length, 'trade') + (rows.length > 300 ? ' (showing the newest 300; narrow the search to see more)' : '');
+          list.innerHTML = '';
+          if (!rows.length) list.appendChild(h('div', { class: 'empty', text: 'No trades match. Try a shorter name or a ticker like NVDA.' }));
+          rows.slice(0, 300).forEach(function (t) { list.appendChild(tradeCard(t, types)); });
+        }
+        input.addEventListener('input', function () { tradesState.q = input.value; run(); });
+        body.appendChild(input); body.appendChild(chips); body.appendChild(count); body.appendChild(list); run();
+      }
+      body.appendChild(sec('More places to look'));
+      body.appendChild(h('p', { class: 'muted', text: "These sites have their own terms and may block automated access, so JD's Toolkit only links to them." }));
+      body.appendChild(h('div', { class: 'list' }, TRADE_LINKS.map(function (l) {
+        return h('a', { class: 'btn block linkbtn', href: l[1], target: '_blank', rel: 'noopener noreferrer' }, [h('span', { class: 'lt', text: l[0] }), h('span', { class: 'ld', text: l[2] })]);
+      })));
+      if (tradesData && tradesData.note) body.appendChild(h('p', { class: 'muted', text: tradesData.note }));
+    }
+    paintHead(); paintBody();
+    loadTrades().then(function () { if (document.body.contains(v)) { paintHead(); paintBody(); } });
+    return { title: 'Politician Trades', node: v, back: true, tab: 'home' };
   }
 
   /* ---------- router ---------- */
@@ -450,6 +559,7 @@
       case 'new': return Object.assign({ tab: 'home' }, screenNew());
       case 'settings': return screenSettings();
       case 'about': return screenAbout();
+      case 'trades': return screenTrades();
       default: return Object.assign({ tab: 'home' }, screenHome());
     }
   }

@@ -50,6 +50,7 @@ sealed interface Screen {
     data object NewItems : Screen
     data object Settings : Screen
     data object About : Screen
+    data object Trades : Screen
 }
 
 class MainActivity : ComponentActivity() {
@@ -113,6 +114,7 @@ fun AppRoot(repo: CatalogRepository, showNew: Boolean, onShowNewHandled: () -> U
                             Screen.NewItems -> "New tools"
                             Screen.Settings -> "Settings"
                             Screen.About -> "About"
+                            Screen.Trades -> "Politician Trades"
                         }, maxLines = 1, overflow = TextOverflow.Ellipsis, fontWeight = FontWeight.SemiBold,
                     )
                 },
@@ -144,7 +146,9 @@ fun AppRoot(repo: CatalogRepository, showNew: Boolean, onShowNewHandled: () -> U
                     onSeeNew = { go(Screen.NewItems) }, actions = actions)
                 is Screen.CategoryScreen -> ToolListScreen(
                     tools = catalog.tools.filter { it.category == s.id }.sortedBy { it.name.lowercase() },
-                    actions = actions, header = catalog.category(s.id)?.blurb ?: "", category = catalog.category(s.id))
+                    actions = actions, header = catalog.category(s.id)?.blurb ?: "", category = catalog.category(s.id),
+                    top = if (s.id == "money") ({ TradesFeatureCard { go(Screen.Trades) } }) else null)
+                Screen.Trades -> TradesScreen(repo.tradesStore)
                 Screen.Search -> SearchScreen(catalog, actions)
                 Screen.Favorites -> SavedScreen(favorites.mapNotNull { toolById[it] }, recents.mapNotNull { toolById[it] }, actions)
                 Screen.NewItems -> NewScreen(newIds.keys.mapNotNull { toolById[it] }, actions) { repo.clearNew() }
@@ -244,11 +248,12 @@ fun HomeScreen(
 
 /** Reusable list with the "use" tag filter on top. */
 @Composable
-fun ToolListScreen(tools: List<Tool>, actions: ToolActions, header: String = "", emptyText: String = "Nothing here yet.", category: Category? = null) {
+fun ToolListScreen(tools: List<Tool>, actions: ToolActions, header: String = "", emptyText: String = "Nothing here yet.", category: Category? = null, top: (@Composable () -> Unit)? = null) {
     var selected by rememberSaveable { mutableStateOf(setOf<String>()) }
     val tags = remember(tools) { tools.flatMap { it.tags }.groupingBy { it }.eachCount().entries.sortedByDescending { it.value }.map { it.key } }
     val shown = tools.filter { t -> selected.all { it in t.tags } }
     LazyColumn(contentPadding = PaddingValues(bottom = 16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        if (top != null) item { Box(Modifier.padding(horizontal = 16.dp)) { top() } }
         if (category != null) item {
             Row(Modifier.padding(horizontal = 16.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                 CategoryBadge(category, tile = 40.dp, glyph = 22.dp)
@@ -425,7 +430,7 @@ fun AboutScreen(catalog: Catalog) {
         item {
             Text("Privacy", fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.height(4.dp))
-            Text("No account, no ads, no analytics. Favorites and history stay on your phone. The only network request the app makes itself is downloading the public catalog file from GitHub.")
+            Text("No account, no ads, no analytics. Favorites and history stay on your phone. The only network requests the app makes itself are downloading the public catalog file from GitHub and, when you open Politician Trades, the public trades list from the same repository.")
         }
         item { OutlinedButton(onClick = { openUrl(ctx, BuildConfig.REPO_URL) }, modifier = Modifier.fillMaxWidth()) { Text("Project page on GitHub") } }
         item { Text("Version ${BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
