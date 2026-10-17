@@ -81,6 +81,15 @@ fun AppRoot(repo: CatalogRepository, showNew: Boolean, onShowNewHandled: () -> U
     val recents by repo.recents.collectAsStateWithLifecycle()
     val newIds by repo.newIds.collectAsStateWithLifecycle()
 
+    // In-app updater: daily silent check on open, Settings > App updates button, install via FileProvider.
+    val updateCtl = rememberAppUpdateController(remember { AppUpdater(ctx.applicationContext, "geek4945-creator/jds-toolkit", Regex("^jds-toolkit.*\\.apk$")) })
+    LaunchedEffect(Unit) { updateCtl.autoCheck() }
+    val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val obs = androidx.lifecycle.LifecycleEventObserver { _, e -> if (e == androidx.lifecycle.Lifecycle.Event.ON_RESUME) updateCtl.onResume() }
+        lifecycleOwner.lifecycle.addObserver(obs); onDispose { lifecycleOwner.lifecycle.removeObserver(obs) }
+    }
+
     val stack = remember { mutableStateListOf<Screen>(Screen.Home) }
     val current = stack.last()
     fun go(s: Screen) { if (stack.last() != s) stack.add(s) }
@@ -139,7 +148,14 @@ fun AppRoot(repo: CatalogRepository, showNew: Boolean, onShowNewHandled: () -> U
             }
         },
     ) { pad ->
-        Box(Modifier.padding(pad).fillMaxSize()) {
+        Column(Modifier.padding(pad).fillMaxSize()) {
+        if (updateCtl.hasUpdate && current != Screen.Settings) {
+            val v = ((updateCtl.state as? AppUpdateState.Available)?.info ?: (updateCtl.state as? AppUpdateState.Ready)?.info)?.version
+            Surface(color = MaterialTheme.colorScheme.primaryContainer, onClick = { goRoot(Screen.Settings) }, modifier = Modifier.fillMaxWidth()) {
+                Text("App update${if (v != null) " $v" else ""} available - tap to open Settings", Modifier.padding(horizontal = 16.dp, vertical = 10.dp), style = MaterialTheme.typography.bodyMedium)
+            }
+        }
+        Box(Modifier.weight(1f).fillMaxWidth()) {
             when (val s = current) {
                 Screen.Home -> HomeScreen(catalog, recents.mapNotNull { toolById[it] }.take(8), newIds.keys.mapNotNull { toolById[it] },
                     onCategory = { go(Screen.CategoryScreen(it)) }, onSearch = { goRoot(Screen.Search) },
@@ -152,9 +168,10 @@ fun AppRoot(repo: CatalogRepository, showNew: Boolean, onShowNewHandled: () -> U
                 Screen.Search -> SearchScreen(catalog, actions)
                 Screen.Favorites -> SavedScreen(favorites.mapNotNull { toolById[it] }, recents.mapNotNull { toolById[it] }, actions)
                 Screen.NewItems -> NewScreen(newIds.keys.mapNotNull { toolById[it] }, actions) { repo.clearNew() }
-                Screen.Settings -> SettingsScreen(repo, catalog, onAbout = { go(Screen.About) })
+                Screen.Settings -> SettingsScreen(repo, catalog, updateCtl, onAbout = { go(Screen.About) })
                 Screen.About -> AboutScreen(catalog)
             }
+        }
         }
     }
 }
@@ -331,7 +348,7 @@ fun NewScreen(tools: List<Tool>, actions: ToolActions, onClear: () -> Unit) {
 }
 
 @Composable
-fun SettingsScreen(repo: CatalogRepository, catalog: Catalog, onAbout: () -> Unit) {
+fun SettingsScreen(repo: CatalogRepository, catalog: Catalog, updateCtl: AppUpdateController, onAbout: () -> Unit) {
     val scope = rememberCoroutineScope()
     val theme by repo.theme.collectAsStateWithLifecycle()
     val last by repo.lastChecked.collectAsStateWithLifecycle()
@@ -351,6 +368,8 @@ fun SettingsScreen(repo: CatalogRepository, catalog: Catalog, onAbout: () -> Uni
                 }
             }
         }
+        item { SectionTitle("App updates") }
+        item { AppUpdateCard(updateCtl) }
         item { SectionTitle("Catalog updates") }
         item {
             Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
