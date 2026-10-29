@@ -48,6 +48,7 @@ CATEGORIES = [
     ("lifestyle", "Health, Food & Home", "Fitness, recipes, home, garden and health"),
     ("travel", "Travel, Maps & Local", "Maps, travel, cars and local info"),
     ("live", "Live Maps & Trackers", "Watch the world: flights, ships, weather, space, webcams and virtual travel"),
+    ("developer", "Developer & Reverse Engineering", "Disassemblers, decompilers, firmware and network analysis, WebAssembly, and practice labs for understanding software you own or have permission to examine."),
     ("uncat", UNCAT, "New items waiting for a category"),
 ]
 CAT_NAMES = {c[0]: c[1] for c in CATEGORIES}

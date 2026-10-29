@@ -38,5 +38,725 @@
   "post_title": "Added to JD's Toolkit",
   "post_date": "2026-10-16",
   "post_url": "https://github.com/geek4945-creator/jds-toolkit"
+ },
+ {
+  "name": "REA",
+  "url": "https://github.com/morluto/rea",
+  "description": "Connects AI coding agents to binary, Electron, .NET, web and runtime analysis, and reports evidence with its answers (docs: https://rea.tools/).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "IDA Pro MCP",
+  "url": "https://github.com/mrexodia/ida-pro-mcp",
+  "description": "Lets an AI agent drive IDA Pro (paid IDA Pro licence required).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "GhidrAssistMCP",
+  "url": "https://github.com/symgraph/GhidrAssistMCP",
+  "description": "AI agent connector for Ghidra.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "GhidraMCP",
+  "url": "https://github.com/LaurieWired/GhidraMCP",
+  "description": "AI agent connector for Ghidra.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "radare2 MCP",
+  "url": "https://github.com/radareorg/radare2-mcp",
+  "description": "AI agent connector for radare2.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Ghidra",
+  "url": "https://github.com/NationalSecurityAgency/ghidra",
+  "description": "NSA free reverse-engineering suite: disassembler, decompiler and scripting for native programs.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "radare2",
+  "url": "https://github.com/radareorg/radare2",
+  "description": "Command-line reverse-engineering framework.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Rizin",
+  "url": "https://github.com/rizinorg/rizin",
+  "description": "Fork of radare2 reverse-engineering framework.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Cutter",
+  "url": "https://github.com/rizinorg/cutter",
+  "description": "Desktop GUI for Rizin.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "ILSpy",
+  "url": "https://github.com/icsharpcode/ILSpy",
+  "description": ".NET decompiler.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "dnSpyEx",
+  "url": "https://github.com/dnSpyEx/dnSpy",
+  "description": ".NET debugger and assembly editor.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "dnlib",
+  "url": "https://github.com/0xd4d/dnlib",
+  "description": "Library for reading and writing .NET assemblies.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "de4dot",
+  "url": "https://github.com/de4dot/de4dot",
+  "description": "Removes .NET obfuscation (archived; dual-use).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Frida iOS guide",
+  "url": "https://frida.re/docs/ios/",
+  "description": "Guide to inspecting iOS apps while they run with Frida.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "OWASP MASTG",
+  "url": "https://mas.owasp.org/MASTG/",
+  "description": "OWASP Mobile Application Security Testing Guide.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "DVIA-v2",
+  "url": "https://github.com/prateek147/DVIA-v2",
+  "description": "Deliberately insecure iOS app for security practice.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "libimobiledevice",
+  "url": "https://github.com/libimobiledevice/libimobiledevice",
+  "description": "Talk to iPhones and iPads from a PC.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Electron ASAR",
+  "url": "https://github.com/electron/asar",
+  "description": "Unpacks and packs Electron app archives.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Electron process model",
+  "url": "https://www.electronjs.org/docs/latest/tutorial/process-model",
+  "description": "Official Electron process-model documentation.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Source Map Explorer",
+  "url": "https://github.com/danvk/source-map-explorer",
+  "description": "Shows what is inside a JavaScript bundle via source maps.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "AST Explorer",
+  "url": "https://astexplorer.net/",
+  "description": "Web tool that shows the structure of parsed code.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Babel Parser",
+  "url": "https://github.com/babel/babel/tree/main/packages/babel-parser",
+  "description": "JavaScript parser used by Babel.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Chrome DevTools Protocol",
+  "url": "https://chromedevtools.github.io/devtools-protocol/",
+  "description": "Reference for controlling Chrome from code.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Chrome DevTools",
+  "url": "https://developer.chrome.com/docs/devtools/",
+  "description": "Docs for Chrome built-in developer tools.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Puppeteer",
+  "url": "https://github.com/puppeteer/puppeteer",
+  "description": "Automate Chromium from Node.js.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Playwright",
+  "url": "https://github.com/microsoft/playwright",
+  "description": "Automate Chromium, Firefox and WebKit from code.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Binwalk",
+  "url": "https://github.com/ReFirmLabs/binwalk",
+  "description": "Unpacks and analyzes firmware images.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "EMBA",
+  "url": "https://github.com/e-m-b-a/emba",
+  "description": "Firmware security analyzer.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "FACT Core",
+  "url": "https://github.com/fkie-cad/FACT_core",
+  "description": "Firmware analysis and comparison toolkit.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "FirmAE",
+  "url": "https://github.com/pr0v3rbs/FirmAE",
+  "description": "Runs firmware in emulation for analysis.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "WABT",
+  "url": "https://github.com/WebAssembly/wabt",
+  "description": "WebAssembly Binary Toolkit (includes wasm-decompile, wasm2c).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Binaryen",
+  "url": "https://github.com/WebAssembly/binaryen",
+  "description": "WebAssembly optimizer and compiler toolkit.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "wasm-tools",
+  "url": "https://github.com/bytecodealliance/wasm-tools",
+  "description": "WebAssembly parsing and transformation utilities.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Wireshark",
+  "url": "https://www.wireshark.org/",
+  "description": "Network traffic analyzer.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Scapy",
+  "url": "https://github.com/secdev/scapy",
+  "description": "Build, send and dissect network packets in Python.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Zeek",
+  "url": "https://github.com/zeek/zeek",
+  "description": "Network security monitoring framework.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Boofuzz",
+  "url": "https://github.com/jtpereyda/boofuzz",
+  "description": "Network protocol fuzzer.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "OpenSecurityTraining2",
+  "url": "https://ost2.fyi/",
+  "description": "Free security courses including x86-64 assembly.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "pwn.college",
+  "url": "https://pwn.college/",
+  "description": "Free security courses and hands-on challenges.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "pwn.college: Reversing Hell",
+  "url": "https://pwn.college/reversing-hell/",
+  "description": "Reverse-engineering challenge track on pwn.college.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Malware Unicorn RE101",
+  "url": "https://malwareunicorn.org/workshops/re101.html",
+  "description": "Malware reverse-engineering workshop.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "crackmes.one",
+  "url": "https://crackmes.one/",
+  "description": "Legal practice binaries built to be cracked.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Wasmer",
+  "url": "https://wasmer.io/",
+  "description": "WebAssembly runtime and sandbox.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "RevAPK",
+  "url": "https://github.com/marcoantap/RevAPK",
+  "description": "Downloads apps from Google Play and decompiles them to readable source (third-party download path; check Play terms).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Revenant",
+  "url": "https://github.com/DatanoiseTV/revenant",
+  "description": "AI reverse-engineering agent project.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Awesome LLM Reverse Engineering",
+  "url": "https://github.com/ram-elgov/awesome-llm-reverse-engineering",
+  "description": "Curated list of LLM reverse-engineering resources.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "AgentRE-Bench",
+  "url": "https://github.com/agentrebench/AgentRE-Bench",
+  "description": "Benchmark for agent reverse-engineering tasks.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Keystone",
+  "url": "https://www.keystone-engine.org/",
+  "description": "Lightweight multi-architecture assembler framework.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "GNU Binutils",
+  "url": "https://www.gnu.org/software/binutils/",
+  "description": "GNU binary utilities (objdump, readelf, nm, and more).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "GDB",
+  "url": "https://sourceware.org/gdb/",
+  "description": "GNU Debugger.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "LLDB",
+  "url": "https://lldb.llvm.org/",
+  "description": "LLVM debugger.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "pwntools",
+  "url": "https://github.com/Gallopsled/pwntools",
+  "description": "CTF framework and exploit-development library for Python.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "ROPgadget",
+  "url": "https://github.com/JonathanSalwan/ROPgadget",
+  "description": "Finds ROP gadgets in binaries.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Detect It Easy",
+  "url": "https://github.com/horsicq/Detect-It-Easy",
+  "description": "Detects file types, packers and compilers.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "capa",
+  "url": "https://github.com/mandiant/capa",
+  "description": "Detects capabilities in executable files (Mandiant).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "YARA",
+  "url": "https://github.com/VirusTotal/yara",
+  "description": "Pattern-matching tool for malware researchers.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "AsmResolver",
+  "url": "https://github.com/Washi1337/AsmResolver",
+  "description": ".NET assembly inspection and rewriting library.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Harmony",
+  "url": "https://github.com/pardeike/Harmony",
+  "description": "Library for patching .NET methods at runtime.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Mono.Cecil",
+  "url": "https://github.com/jbevain/cecil",
+  "description": "Library to inspect and modify .NET programs and libraries.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "ios-deploy",
+  "url": "https://github.com/ios-control/ios-deploy",
+  "description": "Install and debug iOS apps from the command line.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "class-dump",
+  "url": "https://github.com/nygard/class-dump",
+  "description": "Examine Objective-C runtime information in Mach-O files.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "ipsw",
+  "url": "https://github.com/blacktop/ipsw",
+  "description": "Research tool for iOS/macOS firmware and IPSW files.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Objection",
+  "url": "https://github.com/sensepost/objection",
+  "description": "Runtime mobile exploration toolkit built on Frida.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Electron Security Guide",
+  "url": "https://www.electronjs.org/docs/latest/tutorial/security",
+  "description": "Official Electron security checklist and guide.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "source-map",
+  "url": "https://github.com/mozilla/source-map",
+  "description": "Mozilla library for consuming and generating JavaScript source maps.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Esprima",
+  "url": "https://esprima.org/",
+  "description": "ECMAScript parser.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Acorn",
+  "url": "https://github.com/acornjs/acorn",
+  "description": "Small, fast JavaScript parser.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "JS Beautifier",
+  "url": "https://beautifier.io/",
+  "description": "Beautifies and deobfuscates JavaScript, HTML and CSS.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "OWASP ZAP",
+  "url": "https://www.zaproxy.org/",
+  "description": "OWASP Zed Attack Proxy for finding web vulnerabilities.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "HTTP Toolkit",
+  "url": "https://httptoolkit.com/",
+  "description": "Intercept, view and debug HTTP(S) traffic.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "WebSocket King",
+  "url": "https://websocketking.com/",
+  "description": "WebSocket client for testing and debugging.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Firefox DevTools",
+  "url": "https://firefox-source-docs.mozilla.org/devtools-user/",
+  "description": "Firefox developer tools documentation.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "HAR Specification",
+  "url": "https://w3c.github.io/web-performance/specs/HAR/Overview.html",
+  "description": "HTTP Archive (HAR) format specification.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "sasquatch",
+  "url": "https://github.com/devttys0/sasquatch",
+  "description": "Patches and builds firmware squashfs tools for non-standard images.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "ubi_reader",
+  "url": "https://github.com/onekey-sec/ubi_reader",
+  "description": "Extracts files from UBI and UBIFS images.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Jefferson",
+  "url": "https://github.com/onekey-sec/jefferson",
+  "description": "JFFS2 filesystem extraction tool.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Firmware Mod Kit",
+  "url": "https://github.com/rampageX/firmware-mod-kit",
+  "description": "Unpack, modify and repack firmware images.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Firmware Analysis Toolkit",
+  "url": "https://github.com/attify/firmware-analysis-toolkit",
+  "description": "Toolkit to automate firmware analysis with QEMU.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Wasmtime",
+  "url": "https://wasmtime.dev/",
+  "description": "Fast and secure WebAssembly runtime (Bytecode Alliance).",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "tcpdump",
+  "url": "https://www.tcpdump.org/",
+  "description": "Command-line packet analyzer.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "PcapPlusPlus",
+  "url": "https://pcapplusplus.github.io/",
+  "description": "C++ library for capturing, parsing and crafting network packets.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Construct",
+  "url": "https://github.com/construct/construct",
+  "description": "Declarative binary parsing and building for Python.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Netzob",
+  "url": "https://github.com/netzob/netzob",
+  "description": "Protocol reverse-engineering and traffic generation.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Wireshark Display Filters",
+  "url": "https://wiki.wireshark.org/DisplayFilters",
+  "description": "Wireshark display filter reference.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "RPISEC Modern Binary Exploitation",
+  "url": "https://github.com/RPISEC/MBE",
+  "description": "RPISEC course materials on modern binary exploitation.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Microcorruption",
+  "url": "https://microcorruption.com/",
+  "description": "Embedded security CTF / war game.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Flare-On",
+  "url": "https://flare-on.com/",
+  "description": "Annual reverse-engineering challenge from Mandiant FLARE.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "Malware Traffic Analysis",
+  "url": "https://www.malware-traffic-analysis.net/",
+  "description": "PCAP exercises and malware traffic write-ups.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "OverTheWire",
+  "url": "https://overthewire.org/wargames/",
+  "description": "Wargames for learning security concepts.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+ },
+ {
+  "name": "picoCTF",
+  "url": "https://picoctf.org/",
+  "description": "Free beginner-friendly CTF platform from Carnegie Mellon.",
+  "post_title": "The AI reverse-engineering toolkit (r/SATNA_PROJECT)",
+  "post_date": "2026-10-29",
+  "post_url": "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
  }
 ]
