@@ -45,7 +45,7 @@ cannot run background jobs or send reliable notifications, so it shows an in-app
 See [IOS.md](IOS.md) for install steps and the optional native App Store route (Capacitor, Mac + Xcode, $99/yr Apple Developer account).
 
 ## What the app does
-- Home screen with category cards and tool counts (12 categories + an "Uncategorized / New" bucket)
+- Home screen with category cards and tool counts (14 categories + an "Uncategorized / New" bucket)
 - Category screens, search across every tool, and **use/tag filters** (Free, PDF, Video, AI, Games, ...)
 - Favorites, recently opened, share a tool, "New" badges on newly added tools
 - Opens sites in an in-app browser (Chrome Custom Tab, falls back to your default browser)

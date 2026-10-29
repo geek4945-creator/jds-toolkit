@@ -36,7 +36,7 @@ const OUT = process.env.OUT || '/tmp/icon-shots'; fs.mkdirSync(OUT, { recursive:
     const { ctx, page, errs, ext } = await mk(scheme);
     await page.goto(base); await page.waitForSelector('.cat .cat-ico svg path');
     const info = await cardInfo(page);
-    ok(`[${scheme}] 13 category cards all have an inline SVG icon`, info.length === 13 && info.every(i => i.icon && i.paths > 0 && i.w > 6 && i.h > 6), info.length + ' cards');
+    ok(`[${scheme}] 14 category cards all have an inline SVG icon`, info.length === 14 && info.every(i => i.icon && i.paths > 0 && i.w > 6 && i.h > 6), info.length + ' cards');
     ok(`[${scheme}] every card has a different icon`, new Set(info.map(i => i.icon)).size === info.length, info.map(i => i.icon).join(','));
     ok(`[${scheme}] icon colour differs from tile colour`, info.every(i => i.fg !== i.bg), info[0].fg + ' on ' + info[0].bg);
     ok(`[${scheme}] no horizontal overflow`, await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
@@ -45,6 +45,18 @@ const OUT = process.env.OUT || '/tmp/icon-shots'; fs.mkdirSync(OUT, { recursive:
     ok(`[${scheme}] category screen shows the small badge`, await page.isVisible('.cat-head .cat-ico.sm'));
     await page.screenshot({ path: `${OUT}/category-${scheme}.png` });
     ok(`[${scheme}] no console errors / no external requests`, errs.length === 0 && ext.length === 0, errs.concat(ext).join(' | '));
+    await ctx.close();
+  }
+
+  // Developer category has no use-tags; the screen must still open and list every hand-added tool
+  {
+    const { ctx, page, errs } = await mk('light');
+    await page.goto(base + '#/c/developer');
+    await page.waitForSelector('.cat-head');
+    const names = await page.$$eval('.card .nm', els => els.map(e => e.textContent.replace(/\s+/g, ' ').trim()));
+    ok('developer category opens and lists all 90 tools', names.length === 90 && ['REA', 'RevAPK', 'de4dot'].every(n => names.some(t => t.startsWith(n))), names.length + ' cards');
+    ok('developer category has no console errors', errs.length === 0, errs.join(' | '));
+    await page.screenshot({ path: `${OUT}/developer-category.png` });
     await ctx.close();
   }
 
@@ -68,7 +80,7 @@ const OUT = process.env.OUT || '/tmp/icon-shots'; fs.mkdirSync(OUT, { recursive:
   // icons.json unavailable -> app still works, just without icons
   t = await mk('light', route => route.request().url().endsWith('/icons.json') ? route.fulfill({ status: 404, body: '' }) : route.continue());
   await t.page.goto(base); await t.page.waitForSelector('.cat');
-  ok('without icons.json the cards still render (no icon, no crash)', (await t.page.$$('.cat')).length === 13 && (await t.page.$$('.cat-ico')).length === 0 && !t.errs.some(e => e.startsWith('Uncaught') || e.includes('TypeError')));
+  ok('without icons.json the cards still render (no icon, no crash)', (await t.page.$$('.cat')).length === 14 && (await t.page.$$('.cat-ico')).length === 0 && !t.errs.some(e => e.startsWith('Uncaught') || e.includes('TypeError')));
   await t.ctx.close();
 
   // service worker precaches icons.json

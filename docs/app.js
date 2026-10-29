@@ -347,7 +347,8 @@
       h('div', { class: 'ft', text: 'Politician Trades digest' }),
       h('div', { class: 'fd', text: 'Recent stock trades reported by members of Congress in their public STOCK Act disclosures. Search by name or ticker.' }),
       h('div', { class: 'fa', text: 'Open the digest' })]));
-    v.appendChild(tagChips(topTags(all, 24), sel, function (g) { catTags[cid] = toggleIn(sel, g); render(true); }));
+    var chips = tagChips(topTags(all, 24), sel, function (g) { catTags[cid] = toggleIn(sel, g); render(true); });
+    if (chips) v.appendChild(chips);
     v.appendChild(h('p', { class: 'muted', text: plural(shown.length, 'tool') }));
     v.appendChild(listOf(shown, 'No tools match these filters.'));
     return { title: c.name, node: v, back: true };

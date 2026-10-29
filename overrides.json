@@ -397,5 +397,455 @@
   "category": "money",
   "tags": [],
   "_name": "Unusual Whales: Politician Trading"
+ },
+ "github.com/morluto/rea": {
+  "category": "developer",
+  "tags": [],
+  "_name": "REA"
+ },
+ "github.com/mrexodia/ida-pro-mcp": {
+  "category": "developer",
+  "tags": [],
+  "_name": "IDA Pro MCP"
+ },
+ "github.com/symgraph/ghidrassistmcp": {
+  "category": "developer",
+  "tags": [],
+  "_name": "GhidrAssistMCP"
+ },
+ "github.com/lauriewired/ghidramcp": {
+  "category": "developer",
+  "tags": [],
+  "_name": "GhidraMCP"
+ },
+ "github.com/radareorg/radare2-mcp": {
+  "category": "developer",
+  "tags": [],
+  "_name": "radare2 MCP"
+ },
+ "github.com/nationalsecurityagency/ghidra": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Ghidra"
+ },
+ "github.com/radareorg/radare2": {
+  "category": "developer",
+  "tags": [],
+  "_name": "radare2"
+ },
+ "github.com/rizinorg/rizin": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Rizin"
+ },
+ "github.com/rizinorg/cutter": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Cutter"
+ },
+ "github.com/icsharpcode/ilspy": {
+  "category": "developer",
+  "tags": [],
+  "_name": "ILSpy"
+ },
+ "github.com/dnspyex/dnspy": {
+  "category": "developer",
+  "tags": [],
+  "_name": "dnSpyEx"
+ },
+ "github.com/0xd4d/dnlib": {
+  "category": "developer",
+  "tags": [],
+  "_name": "dnlib"
+ },
+ "github.com/de4dot/de4dot": {
+  "category": "developer",
+  "tags": [],
+  "_name": "de4dot"
+ },
+ "frida.re/docs/ios": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Frida iOS guide"
+ },
+ "mas.owasp.org/mastg": {
+  "category": "developer",
+  "tags": [],
+  "_name": "OWASP MASTG"
+ },
+ "github.com/prateek147/dvia-v2": {
+  "category": "developer",
+  "tags": [],
+  "_name": "DVIA-v2"
+ },
+ "github.com/libimobiledevice/libimobiledevice": {
+  "category": "developer",
+  "tags": [],
+  "_name": "libimobiledevice"
+ },
+ "github.com/electron/asar": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Electron ASAR"
+ },
+ "electronjs.org/docs/latest/tutorial/process-model": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Electron process model"
+ },
+ "github.com/danvk/source-map-explorer": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Source Map Explorer"
+ },
+ "astexplorer.net": {
+  "category": "developer",
+  "tags": [],
+  "_name": "AST Explorer"
+ },
+ "github.com/babel/babel/tree/main/packages/babel-parser": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Babel Parser"
+ },
+ "chromedevtools.github.io/devtools-protocol": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Chrome DevTools Protocol"
+ },
+ "developer.chrome.com/docs/devtools": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Chrome DevTools"
+ },
+ "github.com/puppeteer/puppeteer": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Puppeteer"
+ },
+ "github.com/microsoft/playwright": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Playwright"
+ },
+ "github.com/refirmlabs/binwalk": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Binwalk"
+ },
+ "github.com/e-m-b-a/emba": {
+  "category": "developer",
+  "tags": [],
+  "_name": "EMBA"
+ },
+ "github.com/fkie-cad/fact_core": {
+  "category": "developer",
+  "tags": [],
+  "_name": "FACT Core"
+ },
+ "github.com/pr0v3rbs/firmae": {
+  "category": "developer",
+  "tags": [],
+  "_name": "FirmAE"
+ },
+ "github.com/webassembly/wabt": {
+  "category": "developer",
+  "tags": [],
+  "_name": "WABT"
+ },
+ "github.com/webassembly/binaryen": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Binaryen"
+ },
+ "github.com/bytecodealliance/wasm-tools": {
+  "category": "developer",
+  "tags": [],
+  "_name": "wasm-tools"
+ },
+ "wireshark.org": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Wireshark"
+ },
+ "github.com/secdev/scapy": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Scapy"
+ },
+ "github.com/zeek/zeek": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Zeek"
+ },
+ "github.com/jtpereyda/boofuzz": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Boofuzz"
+ },
+ "ost2.fyi": {
+  "category": "developer",
+  "tags": [],
+  "_name": "OpenSecurityTraining2"
+ },
+ "pwn.college": {
+  "category": "developer",
+  "tags": [],
+  "_name": "pwn.college"
+ },
+ "pwn.college/reversing-hell": {
+  "category": "developer",
+  "tags": [],
+  "_name": "pwn.college: Reversing Hell"
+ },
+ "malwareunicorn.org/workshops/re101.html": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Malware Unicorn RE101"
+ },
+ "crackmes.one": {
+  "category": "developer",
+  "tags": [],
+  "_name": "crackmes.one"
+ },
+ "wasmer.io": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Wasmer"
+ },
+ "github.com/marcoantap/revapk": {
+  "category": "developer",
+  "tags": [],
+  "_name": "RevAPK"
+ },
+ "github.com/datanoisetv/revenant": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Revenant"
+ },
+ "github.com/ram-elgov/awesome-llm-reverse-engineering": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Awesome LLM Reverse Engineering"
+ },
+ "github.com/agentrebench/agentre-bench": {
+  "category": "developer",
+  "tags": [],
+  "_name": "AgentRE-Bench"
+ },
+ "keystone-engine.org": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Keystone"
+ },
+ "gnu.org/software/binutils": {
+  "category": "developer",
+  "tags": [],
+  "_name": "GNU Binutils"
+ },
+ "sourceware.org/gdb": {
+  "category": "developer",
+  "tags": [],
+  "_name": "GDB"
+ },
+ "lldb.llvm.org": {
+  "category": "developer",
+  "tags": [],
+  "_name": "LLDB"
+ },
+ "github.com/gallopsled/pwntools": {
+  "category": "developer",
+  "tags": [],
+  "_name": "pwntools"
+ },
+ "github.com/jonathansalwan/ropgadget": {
+  "category": "developer",
+  "tags": [],
+  "_name": "ROPgadget"
+ },
+ "github.com/horsicq/detect-it-easy": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Detect It Easy"
+ },
+ "github.com/mandiant/capa": {
+  "category": "developer",
+  "tags": [],
+  "_name": "capa"
+ },
+ "github.com/virustotal/yara": {
+  "category": "developer",
+  "tags": [],
+  "_name": "YARA"
+ },
+ "github.com/washi1337/asmresolver": {
+  "category": "developer",
+  "tags": [],
+  "_name": "AsmResolver"
+ },
+ "github.com/pardeike/harmony": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Harmony"
+ },
+ "github.com/jbevain/cecil": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Mono.Cecil"
+ },
+ "github.com/ios-control/ios-deploy": {
+  "category": "developer",
+  "tags": [],
+  "_name": "ios-deploy"
+ },
+ "github.com/nygard/class-dump": {
+  "category": "developer",
+  "tags": [],
+  "_name": "class-dump"
+ },
+ "github.com/blacktop/ipsw": {
+  "category": "developer",
+  "tags": [],
+  "_name": "ipsw"
+ },
+ "github.com/sensepost/objection": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Objection"
+ },
+ "electronjs.org/docs/latest/tutorial/security": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Electron Security Guide"
+ },
+ "github.com/mozilla/source-map": {
+  "category": "developer",
+  "tags": [],
+  "_name": "source-map"
+ },
+ "esprima.org": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Esprima"
+ },
+ "github.com/acornjs/acorn": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Acorn"
+ },
+ "beautifier.io": {
+  "category": "developer",
+  "tags": [],
+  "_name": "JS Beautifier"
+ },
+ "zaproxy.org": {
+  "category": "developer",
+  "tags": [],
+  "_name": "OWASP ZAP"
+ },
+ "httptoolkit.com": {
+  "category": "developer",
+  "tags": [],
+  "_name": "HTTP Toolkit"
+ },
+ "websocketking.com": {
+  "category": "developer",
+  "tags": [],
+  "_name": "WebSocket King"
+ },
+ "firefox-source-docs.mozilla.org/devtools-user": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Firefox DevTools"
+ },
+ "w3c.github.io/web-performance/specs/har/overview.html": {
+  "category": "developer",
+  "tags": [],
+  "_name": "HAR Specification"
+ },
+ "github.com/devttys0/sasquatch": {
+  "category": "developer",
+  "tags": [],
+  "_name": "sasquatch"
+ },
+ "github.com/onekey-sec/ubi_reader": {
+  "category": "developer",
+  "tags": [],
+  "_name": "ubi_reader"
+ },
+ "github.com/onekey-sec/jefferson": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Jefferson"
+ },
+ "github.com/rampagex/firmware-mod-kit": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Firmware Mod Kit"
+ },
+ "github.com/attify/firmware-analysis-toolkit": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Firmware Analysis Toolkit"
+ },
+ "wasmtime.dev": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Wasmtime"
+ },
+ "tcpdump.org": {
+  "category": "developer",
+  "tags": [],
+  "_name": "tcpdump"
+ },
+ "pcapplusplus.github.io": {
+  "category": "developer",
+  "tags": [],
+  "_name": "PcapPlusPlus"
+ },
+ "github.com/construct/construct": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Construct"
+ },
+ "github.com/netzob/netzob": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Netzob"
+ },
+ "wiki.wireshark.org/displayfilters": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Wireshark Display Filters"
+ },
+ "github.com/rpisec/mbe": {
+  "category": "developer",
+  "tags": [],
+  "_name": "RPISEC Modern Binary Exploitation"
+ },
+ "microcorruption.com": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Microcorruption"
+ },
+ "flare-on.com": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Flare-On"
+ },
+ "malware-traffic-analysis.net": {
+  "category": "developer",
+  "tags": [],
+  "_name": "Malware Traffic Analysis"
+ },
+ "overthewire.org/wargames": {
+  "category": "developer",
+  "tags": [],
+  "_name": "OverTheWire"
+ },
+ "picoctf.org": {
+  "category": "developer",
+  "tags": [],
+  "_name": "picoCTF"
  }
 }

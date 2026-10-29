@@ -17,8 +17,8 @@ android {
         applicationId 'com.geek4945.mattytools'
         minSdk 23
         targetSdk 34
-        versionCode 8
-        versionName '1.0.7'
+        versionCode 9
+        versionName '1.0.8'
         // Where the monthly update check downloads the catalog from (the repo's catalog.json on the main branch).
         buildConfigField 'String', 'CATALOG_URL', '"https://raw.githubusercontent.com/geek4945-creator/jds-toolkit/main/catalog.json"'
         buildConfigField 'String', 'TRADES_URL', '"https://raw.githubusercontent.com/geek4945-creator/jds-toolkit/main/trades.json"'

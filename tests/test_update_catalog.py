@@ -167,6 +167,12 @@ class SheetImport(unittest.TestCase):
     def test_new_live_category_exists(self):
         self.assertEqual(u.CAT_NAMES["live"], "Live Maps & Trackers")
 
+    def test_developer_category_exists(self):
+        self.assertEqual(u.CAT_NAMES["developer"], "Developer & Reverse Engineering")
+        blurb = dict((c[0], c[2]) for c in u.CATEGORIES)["developer"]
+        self.assertIn("Disassemblers", blurb)
+        self.assertTrue(blurb.endswith("."))
+
 class Credits(unittest.TestCase):
     def write(self, d, obj):
         p = os.path.join(d, "credits.json"); json.dump(obj, open(p, "w")); return p
@@ -277,6 +283,21 @@ class LinkFixes(unittest.TestCase):
             self.assertEqual(self.items[iid]["category"], "money", iid)
             self.assertTrue(self.items[iid]["url"].startswith("https://"))
             self.assertGreaterEqual(self.items[iid]["addedVersion"], 4)
+    def test_developer_tools_match_the_hand_added_list(self):
+        reddit = "https://www.reddit.com/r/SATNA_PROJECT/comments/1xg6lxl/the_ai_reverseengineering_toolkit_free_tools/"
+        manual = json.load(open(os.path.join(self.root, "manual_items.json")))
+        expected = [m for m in manual if m.get("post_url") == reddit]
+        self.assertEqual(len(expected), 90)
+        by_url = {i["url"]: i for i in self.c["items"]}
+        for m in expected:
+            i = by_url[m["url"]]
+            self.assertEqual((i["name"], i["description"], i["category"]), (m["name"], m["description"], "developer"))
+            self.assertTrue(any(s.get("url") == reddit for s in i["sources"]), m["name"])
+        for name in ("REA", "RevAPK", "de4dot"):
+            self.assertIn(name, {i["name"] for i in self.c["items"] if i["category"] == "developer"})
+        cat = next(c for c in self.c["categories"] if c["id"] == "developer")
+        self.assertEqual((cat["name"], cat["icon"]), ("Developer & Reverse Engineering", "code"))
+
     def test_sheet_row_with_bad_address_is_redirected_and_keeps_its_id(self):
         raw = [{"name": "Capitol Trades", "url": "https://www.app.capitoltrades.com", "description": "d", "hint": None, "replaces": None,
                 "video": None, "number": None, "post": {"title": "Sheet", "date": "", "url": "x"}}]
