@@ -1,5 +1,5 @@
 {
- "version": 5,
+ "version": 6,
  "items": [
   {
    "id": "ai-art-tokyo-en",
@@ -5892,6 +5892,25 @@
    "added": "2026-10-16"
   },
   {
+   "id": "obsidian-md",
+   "name": "Obsidian",
+   "url": "https://obsidian.md/",
+   "host": "obsidian.md",
+   "description": "A note-taking app that connects all your ideas in a visual graph. Basically a second brain. Visit Obsidian",
+   "category": "productivity",
+   "tags": [],
+   "sources": [
+    {
+     "title": "9 Powerful Websites Worth Bookmarking",
+     "date": "2026-10-26",
+     "url": "https://www.mattymctech.com/p/powerful-websites-302-310",
+     "number": 303
+    }
+   ],
+   "addedVersion": 6,
+   "added": "2026-11-03"
+  },
+  {
    "id": "theofficestaremachine-com",
    "name": "Office stare machine",
    "url": "http://theofficestaremachine.com/",
@@ -7069,9 +7088,36 @@
    ],
    "addedVersion": 2,
    "added": "2026-10-16"
+  },
+  {
+   "id": "whatsmyname-app",
+   "name": "What's My Name",
+   "url": "https://whatsmyname.app/",
+   "host": "whatsmyname.app",
+   "description": "Search a username across different platforms to find matching public profiles. Visit What's My Name",
+   "category": "uncat",
+   "tags": [],
+   "sources": [
+    {
+     "title": "9 Powerful Websites Worth Bookmarking",
+     "date": "2026-10-26",
+     "url": "https://www.mattymctech.com/p/powerful-websites-302-310",
+     "number": 302
+    }
+   ],
+   "addedVersion": 6,
+   "added": "2026-11-03"
   }
  ],
  "posts": [
+  {
+   "slug": "powerful-websites-302-310",
+   "title": "9 Powerful Websites Worth Bookmarking",
+   "date": "2026-10-26",
+   "url": "https://www.mattymctech.com/p/powerful-websites-302-310",
+   "gated": true,
+   "toolsFound": 2
+  },
   {
    "slug": "powerful-websites-296-301",
    "title": "Powerful Websites (296-301)",
@@ -7353,8 +7399,8 @@
    "toolsFound": 1
   }
  ],
- "date": "2026-10-29",
- "itemCount": 333,
+ "date": "2026-11-03",
+ "itemCount": 335,
  "schema": 1,
  "title": "JD's Toolkit catalog",
  "source": "https://www.mattymctech.com",
